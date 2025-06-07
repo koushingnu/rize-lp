@@ -1,4 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# RIZE 5th Anniversary Live Special Website
+
+RIZE 5周年記念ライブの特設サイトです。モダンでリッチなUI/UXを実現するため、Next.js、TypeScript、Tailwind CSS、Framer Motionを採用しています。
+
+## 技術スタック
+
+- Next.js (最新版)
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- Heroicons
+- Headless UI
+
+## 開発環境のセットアップ
+
+```bash
+# リポジトリのクローン
+git clone [your-repo-url]
+cd rize-lp
+
+# 依存関係のインストール
+npm install
+
+# 開発サーバーの起動
+npm run dev
+```
+
+## 必要な環境変数
+
+現時点では特別な環境変数は必要ありません。
+
+## ディレクトリ構成
+
+```
+.
+├── src/
+│   ├── app/              # Next.js App Router
+│   ├── components/       # 共通コンポーネント
+│   │   └── sections/    # ページセクションコンポーネント
+│   └── styles/          # グローバルスタイル
+├── public/              # 静的ファイル
+│   └── images/         # 画像ファイル
+└── package.json        # 依存関係とスクリプト
+```
+
+## デプロイ
+
+このプロジェクトはVercelへのデプロイを想定しています。以下の手順で簡単にデプロイできます：
+
+1. Vercelアカウントを作成（まだの場合）
+2. このリポジトリをGitHubにプッシュ
+3. Vercelでリポジトリをインポート
+4. デプロイ設定を確認して「Deploy」をクリック
+
+## 開発ガイドライン
+
+- コミットメッセージは[Conventional Commits](https://www.conventionalcommits.org/)に従ってください
+- 新機能の追加は必ずブランチを切って作業してください
+- PRを出す前に`npm run lint`と`npm run build`を実行してエラーがないことを確認してください
+
+## ライセンス
+
+このプロジェクトは[MIT License](LICENSE)の下で公開されています。
 
 ## Getting Started
 
