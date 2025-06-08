@@ -1,96 +1,38 @@
-"use client";
-
-import { motion } from "framer-motion";
-
-const fadeInUpVariants = {
-  hidden: {
-    y: 20,
-    opacity: 0,
-  },
-  visible: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      duration: 0.6,
-    },
-  },
-};
-
-const containerVariants = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.2,
-    },
-  },
-};
+import Link from "next/link";
+import SectionTitle from "../ui/SectionTitle";
 
 export default function Ticket() {
   return (
-    <section className="relative overflow-hidden bg-zinc-900 py-20 md:py-32">
-      <div className="container mx-auto px-4">
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          className="flex flex-col items-center"
-        >
-          {/* セクションタイトル */}
-          <motion.h2
-            variants={fadeInUpVariants}
-            className="mb-12 text-center text-3xl font-bold tracking-wider md:text-4xl"
-          >
-            TICKET
-          </motion.h2>
+    <section className="py-20 relative overflow-hidden" id="ticket">
+      <div className="container-custom">
+        <SectionTitle title="TICKET" variant="ticket" />
 
-          {/* チケット情報 */}
-          <motion.div
-            variants={fadeInUpVariants}
-            className="mb-12 w-full max-w-2xl rounded-2xl bg-black/50 p-8 text-center backdrop-blur-sm md:p-12"
-          >
-            <h3 className="mb-8 text-2xl font-bold md:text-3xl">
-              チケット料金
-            </h3>
-            <dl className="mb-8 space-y-4 text-lg md:text-xl">
-              <div>
-                <dt className="font-medium text-gray-400">前売り</dt>
-                <dd className="mt-1">¥5,500 (税込・ドリンク代別)</dd>
-              </div>
-              <div>
-                <dt className="font-medium text-gray-400">当日</dt>
-                <dd className="mt-1">¥6,000 (税込・ドリンク代別)</dd>
-              </div>
-            </dl>
+        {/* チケット情報 */}
+        <div className="max-w-2xl mx-auto space-y-8">
+          <div className="text-center space-y-4">
+            <h3 className="font-bold text-xl">チケット料金</h3>
+            <p className="text-lg">前売り：¥5,000（税込）</p>
+            <p className="text-lg">当日：¥5,500（税込）</p>
+            <p className="text-sm text-gray-600">※ドリンク代別途必要</p>
+          </div>
 
-            <div className="space-y-2 text-sm text-gray-400">
-              <p>※ 1ドリンク代 ¥600が別途必要です</p>
-              <p>※ 整理番号付き</p>
-              <p>※ オールスタンディング</p>
-            </div>
-          </motion.div>
-
-          {/* 予約ボタン */}
-          <motion.div variants={fadeInUpVariants} className="text-center">
-            <a
-              href="#"
-              className="group relative inline-flex items-center justify-center overflow-hidden rounded-full bg-gradient-to-r from-pink-500 to-purple-500 p-0.5 font-bold transition-all duration-300 hover:scale-105"
-            >
-              <span className="relative rounded-full bg-black px-8 py-3 transition-all duration-300 group-hover:bg-opacity-0 md:px-12 md:py-4 md:text-lg">
-                チケット予約はこちら
-              </span>
-            </a>
-            <p className="mt-4 text-sm text-gray-400">
-              ※ 予約開始：2024年4月1日 12:00〜
+          <div className="text-center space-y-4">
+            <h3 className="font-bold text-xl">販売期間</h3>
+            <p className="text-lg">
+              2024年3月1日(金) 10:00 〜 5月4日(土) 23:59
             </p>
-          </motion.div>
-        </motion.div>
-      </div>
+          </div>
 
-      {/* 装飾的な背景要素 */}
-      <div className="pointer-events-none absolute inset-0 overflow-hidden opacity-30">
-        <div className="absolute left-1/4 top-0 h-[300px] w-[300px] rotate-45 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 blur-3xl" />
-        <div className="absolute bottom-0 right-1/4 h-[400px] w-[400px] -rotate-45 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 blur-3xl" />
+          <div className="text-center space-y-4">
+            <h3 className="font-bold text-xl">注意事項</h3>
+            <ul className="text-sm text-gray-600 space-y-2">
+              <li>※未就学児入場不可</li>
+              <li>※営利目的の転売禁止</li>
+              <li>※撮影・録音機材の持ち込み禁止</li>
+              <li>※アルコール類の持ち込み禁止</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
   );

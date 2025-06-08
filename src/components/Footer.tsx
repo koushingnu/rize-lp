@@ -1,67 +1,25 @@
-"use client";
-
-import { motion } from "framer-motion";
-
-const fadeInUpVariants = {
-  hidden: {
-    y: 20,
-    opacity: 0,
-  },
-  visible: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      duration: 0.6,
-    },
-  },
-};
+import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden bg-zinc-950 py-12">
-      <div className="container mx-auto px-4">
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={fadeInUpVariants}
-          className="flex flex-col items-center justify-center space-y-6 text-center"
-        >
-          <h2 className="text-2xl font-bold tracking-wider md:text-3xl">
-            RIZE 5th Anniversary Live
-          </h2>
-          <p className="text-sm text-gray-400">
-            お問い合わせ：info@example.com
-          </p>
-          <div className="flex items-center space-x-6">
-            <a
-              href="#"
-              className="text-gray-400 transition-colors hover:text-white"
-            >
-              Twitter
-            </a>
-            <a
-              href="#"
-              className="text-gray-400 transition-colors hover:text-white"
-            >
-              Instagram
-            </a>
-            <a
-              href="#"
-              className="text-gray-400 transition-colors hover:text-white"
-            >
-              YouTube
-            </a>
+    <footer className="bg-[#B87C8B] py-8">
+      <div className="max-w-[1400px] mx-auto px-6">
+        <div className="flex flex-col items-center">
+          {/* ロゴ */}
+          <div className="relative w-[120px] h-[22px] mb-4">
+            <Image
+              src="/images/footer/footer_logo.webp"
+              alt="MY DEAR DARLIN'"
+              fill
+              className="object-contain brightness-0 invert opacity-90"
+            />
           </div>
-          <p className="text-xs text-gray-600">
-            © 2024 RIZE. All Rights Reserved.
-          </p>
-        </motion.div>
-      </div>
 
-      {/* 装飾的な背景要素 */}
-      <div className="pointer-events-none absolute inset-0 overflow-hidden opacity-10">
-        <div className="absolute left-1/4 top-0 h-[200px] w-[200px] rotate-45 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 blur-3xl" />
+          {/* コピーライト */}
+          <p className="text-white text-[11px] tracking-[0.05em] opacity-70 font-light">
+            Copyright © grabss Inc. All Right Reserved.
+          </p>
+        </div>
       </div>
     </footer>
   );

@@ -3,41 +3,144 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 255, 255, 255;
-  --background-start-rgb: 0, 0, 0;
-  --background-end-rgb: 0, 0, 0;
+  --color-primary: #ffc4d0;
+  --color-secondary: #ffd6de;
+  --color-accent: #ffb6c1;
+  --color-background: #fff;
+  --color-text: #333;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-    to bottom,
-    rgb(var(--background-start-rgb)),
-    rgb(var(--background-end-rgb))
-  );
+  color: var(--color-text);
+  background: var(--color-background);
+  font-feature-settings: "palt";
+  letter-spacing: 0.02em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: url("/about/bg-pattern.png");
+  background-repeat: repeat;
+  background-size: 300px;
+  background-attachment: fixed;
+}
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply min-h-screen text-[14px] leading-relaxed;
+  }
+
+  section {
+    @apply relative py-[60px];
+  }
+
+  section:first-of-type {
+    @apply pt-0;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply mx-auto px-5 max-w-[1000px] w-full;
+  }
+
+  .section-title {
+    @apply relative text-center mb-[50px];
+  }
+
+  .section-title h2 {
+    @apply text-[28px] font-bold tracking-widest inline-block;
+    background: linear-gradient(45deg, #ffc4d0, #ffd6de);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  .section-title::after {
+    content: "";
+    @apply absolute left-1/2 -translate-x-1/2 -bottom-4 w-12 h-[1px];
+    background: linear-gradient(45deg, #ffc4d0, #ffd6de);
+  }
+
+  .card {
+    @apply bg-white rounded-2xl p-8 shadow-sm;
+    box-shadow: 0 4px 6px rgba(255, 196, 208, 0.1);
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-10 py-3 bg-[#FFC4D0] text-white rounded-full 
+    font-bold tracking-wider hover:bg-[#FFB6C1] transition-colors duration-300 min-w-[240px] text-[15px];
+  }
+
+  .member-grid {
+    @apply grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 max-w-[800px] mx-auto;
+  }
+
+  .member-card {
+    @apply aspect-[3/4] relative overflow-hidden rounded-lg;
+  }
+
+  .member-card img {
+    @apply object-cover w-full h-full transition-transform duration-300;
+  }
+
+  .member-card:hover img {
+    @apply scale-110;
+  }
+
+  .member-name {
+    @apply absolute bottom-0 left-0 right-0 bg-white/90 backdrop-blur-sm 
+    text-center py-2.5 text-[13px] font-bold tracking-wider;
+  }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
-}
 
-/* アニメーション用のユーティリティクラス */
-@layer components {
-  .fade-in {
-    @apply opacity-0 transition-opacity duration-500 ease-in-out;
+  .gradient-border {
+    position: relative;
   }
 
-  .fade-in.visible {
-    @apply opacity-100;
+  .gradient-border::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 1px;
+    border-radius: 16px;
+    background: linear-gradient(45deg, #ffc4d0, #ffd6de);
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
   }
 
-  .slide-up {
-    @apply translate-y-8 opacity-0 transition-all duration-700 ease-out;
+  @keyframes scroll-down {
+    0% {
+      transform: scale(1, 0);
+      transform-origin: top center;
+    }
+    50% {
+      transform: scale(1, 1);
+      transform-origin: top center;
+    }
+    50.1% {
+      transform: scale(1, 1);
+      transform-origin: bottom center;
+    }
+    100% {
+      transform: scale(1, 0);
+      transform-origin: bottom center;
+    }
   }
 
-  .slide-up.visible {
-    @apply translate-y-0 opacity-100;
+  .animate-scroll-down {
+    animation: scroll-down 2s ease-in-out infinite;
   }
 }

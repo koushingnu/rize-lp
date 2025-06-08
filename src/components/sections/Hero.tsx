@@ -1,131 +1,46 @@
-"use client";
-
-import { motion } from "framer-motion";
 import Image from "next/image";
-
-const fadeInUpVariants = {
-  hidden: {
-    y: 20,
-    opacity: 0,
-  },
-  visible: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      duration: 0.8,
-    },
-  },
-};
-
-const backgroundVariants = {
-  hidden: {
-    scale: 1.1,
-    opacity: 0,
-  },
-  visible: {
-    scale: 1,
-    opacity: 1,
-    transition: {
-      duration: 1.5,
-      ease: "easeOut",
-    },
-  },
-};
-
-const scrollIndicatorVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      delay: 2,
-      duration: 1,
-    },
-  },
-};
 
 export default function Hero() {
   return (
-    <section className="relative h-screen w-full overflow-hidden">
-      {/* 背景画像 */}
-      <motion.div
-        variants={backgroundVariants}
-        initial="hidden"
-        animate="visible"
-        className="absolute inset-0"
-      >
-        <Image
-          src="/images/hero-bg.jpg"
-          alt="Hero Background"
-          fill
-          sizes="100vw"
-          quality={90}
-          priority
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-black/50" />
-      </motion.div>
+    <section className="relative h-[calc(100vh-60px)] flex flex-col items-center justify-center">
+      {/* メインビジュアル */}
+      <div className="absolute inset-0 w-full h-full">
+        <div className="relative w-full h-full max-w-[1200px] mx-auto">
+          <Image
+            src="/images/hero/hero.webp"
+            alt="MY DEAR DARLIN' 5th ANNIVERSARY LIVE"
+            fill
+            sizes="(max-width: 1200px) 100vw, 1200px"
+            quality={90}
+            className="object-contain"
+            priority
+          />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/10 to-transparent" />
+      </div>
 
-      {/* メインコンテンツ */}
-      <div className="relative flex h-full flex-col items-center justify-center px-4 text-center">
-        <motion.h1
-          variants={fadeInUpVariants}
-          initial="hidden"
-          animate="visible"
-          transition={{ delay: 0.5 }}
-          className="mb-4 text-4xl font-bold tracking-tight md:text-6xl lg:text-7xl"
-        >
-          RIZE 5th Anniversary Live
-        </motion.h1>
+      {/* タイトルとコンテンツ */}
+      <div className="container-custom relative z-10 text-center mt-auto pb-20">
+        <h1 className="font-bold">
+          <span className="block text-[40px] leading-tight tracking-wider">
+            MY DEAR DARLIN'
+          </span>
+          <span className="block text-[32px] mt-2 tracking-wider">
+            5th ANNIVERSARY LIVE
+          </span>
+        </h1>
 
-        <motion.div
-          variants={fadeInUpVariants}
-          initial="hidden"
-          animate="visible"
-          transition={{ delay: 0.8 }}
-          className="mb-8 text-xl tracking-wide md:text-2xl lg:text-3xl"
-        >
-          <p className="mb-2">2024.06.15 SAT</p>
-          <p>at 渋谷O-EAST</p>
-        </motion.div>
-
-        <motion.button
-          variants={fadeInUpVariants}
-          initial="hidden"
-          animate="visible"
-          transition={{ delay: 1.1 }}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="rounded-full bg-white px-8 py-3 text-lg font-semibold text-black transition-all duration-300 hover:bg-opacity-90 hover:shadow-lg md:text-xl"
-        >
-          チケット予約はこちら
-        </motion.button>
+        <div className="mt-6 space-y-2">
+          <p className="text-[20px] tracking-wider">2024.5.5 (日)</p>
+          <p className="text-[16px] tracking-wider">at 新宿BLAZE</p>
+        </div>
       </div>
 
       {/* スクロールインジケーター */}
-      <motion.div
-        variants={scrollIndicatorVariants}
-        initial="hidden"
-        animate="visible"
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
-      >
-        <div className="flex flex-col items-center">
-          <span className="mb-2 text-sm font-light tracking-widest">
-            SCROLL
-          </span>
-          <motion.div
-            animate={{
-              y: [0, 10, 0],
-            }}
-            transition={{
-              duration: 1.5,
-              repeat: Infinity,
-              repeatType: "loop",
-              ease: "easeInOut",
-            }}
-            className="h-12 w-[1px] bg-white"
-          />
-        </div>
-      </motion.div>
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-center">
+        <p className="text-[13px] tracking-[0.2em] mb-2">SCROLL</p>
+        <div className="w-[1px] h-12 bg-black mx-auto animate-scroll-down" />
+      </div>
     </section>
   );
 }

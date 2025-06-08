@@ -1,23 +1,29 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Noto_Sans_JP } from "next/font/google";
 import "./globals.css";
+import Footer from "@/components/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const notoSansJP = Noto_Sans_JP({
+  subsets: ["latin"],
+  variable: "--font-noto-sans-jp",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
-  title: "RIZE 5th Anniversary Live",
-  description: "RIZE 5周年記念ライブ特設サイト",
+  title: "MY DEAR DARLIN' 5th ANNIVERSARY LIVE",
+  description: "MY DEAR DARLIN' 5周年記念ライブ特設サイト",
 };
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
-    <html lang="ja">
-      <body className={inter.className}>
-        <main className="min-h-screen bg-black text-white">{children}</main>
+    <html lang="ja" className={notoSansJP.variable}>
+      <body className="min-h-screen flex flex-col">
+        <main className="flex-grow">{children}</main>
+        <Footer />
       </body>
     </html>
   );

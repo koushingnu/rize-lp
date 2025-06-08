@@ -1,98 +1,30 @@
-# RIZE 5th Anniversary Live Special Website
+# Goal
 
-RIZE 5周年記念ライブの特設サイトです。モダンでリッチなUI/UXを実現するため、Next.js、TypeScript、Tailwind CSS、Framer Motionを採用しています。
+下記の参考サイトとほぼ同じ構成・UIを、**TypeScriptで**React（Next.js）を用いて作成してください。  
+また、よりモダンでリッチなUI/UX・アニメーションを加え、スマホファーストで実装してください。
 
-## 技術スタック
+# 参考サイト
 
-- Next.js (最新版)
-- TypeScript
-- Tailwind CSS
-- Framer Motion
-- Heroicons
-- Headless UI
+https://event.tiget.net/mydeardalin_5th_anniversarylive
 
-## 開発環境のセットアップ
+# 必須条件
 
-```bash
-# リポジトリのクローン
-git clone [your-repo-url]
-cd rize-lp
+- 参考サイトの構成・デザイン・アニメーションを忠実に再現しつつ、さらに洗練された体験になるよう工夫すること
+- **TypeScriptで実装すること**
+- Next.js最新版＋最適なUI/アニメーション用ライブラリ（Tailwind CSS, Framer Motion推奨）で
+- ファイル構成・ディレクトリ分け・設計は最新のベストプラクティスに従うこと（詳細はAIに任せる）
+- スマホ閲覧を最優先（モバイルファーストデザイン）
+- Vercelにすぐデプロイ可能な形、READMEなどドキュメントもセットで
+- 仮画像・ダミーテキストOK、差し替えしやすく
 
-# 依存関係のインストール
-npm install
+# 追加要件
 
-# 開発サーバーの起動
-npm run dev
-```
+- コード内に適切な型注釈やTypeScriptらしい記述を用いる
+- コメントも分かりやすく付けて
+- まずHero/トップセクションだけ実装し、確認後に他セクションも追加
+- アニメーションは参考サイト以上に体験向上を意識すること
 
-## 必要な環境変数
+# 備考
 
-現時点では特別な環境変数は必要ありません。
-
-## ディレクトリ構成
-
-```
-.
-├── src/
-│   ├── app/              # Next.js App Router
-│   ├── components/       # 共通コンポーネント
-│   │   └── sections/    # ページセクションコンポーネント
-│   └── styles/          # グローバルスタイル
-├── public/              # 静的ファイル
-│   └── images/         # 画像ファイル
-└── package.json        # 依存関係とスクリプト
-```
-
-## デプロイ
-
-このプロジェクトはVercelへのデプロイを想定しています。以下の手順で簡単にデプロイできます：
-
-1. Vercelアカウントを作成（まだの場合）
-2. このリポジトリをGitHubにプッシュ
-3. Vercelでリポジトリをインポート
-4. デプロイ設定を確認して「Deploy」をクリック
-
-## 開発ガイドライン
-
-- コミットメッセージは[Conventional Commits](https://www.conventionalcommits.org/)に従ってください
-- 新機能の追加は必ずブランチを切って作業してください
-- PRを出す前に`npm run lint`と`npm run build`を実行してエラーがないことを確認してください
-
-## ライセンス
-
-このプロジェクトは[MIT License](LICENSE)の下で公開されています。
-
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- 技術選定やディレクトリ構成はAI判断に任せる
+- 参考サイトよりもユーザー体験を向上させるアイデアがあれば積極的に提案・反映してOK
