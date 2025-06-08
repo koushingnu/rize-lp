@@ -3,7 +3,10 @@ import SectionTitle from "../ui/SectionTitle";
 
 export default function Ticket() {
   return (
-    <section className="py-20 relative overflow-hidden" id="ticket">
+    <section
+      className="py-20 relative overflow-hidden bg-[#FFFBF2]"
+      id="ticket"
+    >
       <div className="container-custom">
         <SectionTitle title="TICKET" variant="ticket" />
 

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 interface SectionTitleProps {
   title: string;
-  variant: "about" | "member" | "ticket";
+  variant: "about" | "member" | "ticket" | "goods";
 }
 
 export default function SectionTitle({ title, variant }: SectionTitleProps) {
@@ -10,6 +10,7 @@ export default function SectionTitle({ title, variant }: SectionTitleProps) {
     about: "/images/about/about.webp",
     member: "/images/member/members.webp",
     ticket: "/images/tike/ticket.webp",
+    goods: "/images/goods/goods.webp",
   }[variant];
 
   return (

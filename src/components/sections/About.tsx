@@ -12,7 +12,7 @@ const members = [
 
 export default function About() {
   return (
-    <section className="py-20 relative overflow-hidden" id="about">
+    <section className="py-20 relative overflow-hidden bg-[#FFFBF2]" id="about">
       <div className="container-custom">
         <SectionTitle title="ABOUT" variant="about" />
         <div className="text-center text-gray-700 mb-20">
@@ -46,7 +46,7 @@ export default function About() {
         </div>
 
         {/* メンバー紹介 */}
-        <div className="mt-32">
+        <div className="mt-32" id="member">
           <SectionTitle title="MEMBER" variant="member" />
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
             {members.map((member) => (
