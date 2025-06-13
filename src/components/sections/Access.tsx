@@ -18,7 +18,10 @@ export default function Access() {
         <div className="relative inline-block mb-16">
           <h2
             className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-sky-400 to-blue-300 tracking-wider drop-shadow-lg text-left"
-            style={{ letterSpacing: "0.08em", fontFamily: "serif" }}
+            style={{
+              letterSpacing: "0.08em",
+              fontFamily: "'Shippori Mincho B1'",
+            }}
           >
             Access
           </h2>
@@ -36,11 +39,22 @@ export default function Access() {
             className="p-6 rounded-lg"
             style={{ background: "rgba(255,255,255,0.5)" }}
           >
-            <div className="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-700 via-sky-400 to-blue-300 mb-4">
+            <div
+              className="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-700 via-sky-400 to-blue-300 mb-4"
+              style={{ fontFamily: "serif" }}
+            >
               会場情報
             </div>
-            <div className="text-xl font-bold text-blue-800 mb-2">豊洲PIT</div>
-            <div className="text-base text-slate-700">
+            <div
+              className="text-xl font-bold text-blue-800 mb-2 pl-4"
+              style={{ fontFamily: "serif" }}
+            >
+              豊洲PIT
+            </div>
+            <div
+              className="text-base text-slate-700 pl-8"
+              style={{ fontFamily: "serif" }}
+            >
               〒135-0061 東京都江東区豊洲6-1-23
             </div>
           </div>
@@ -50,7 +64,10 @@ export default function Access() {
             className="p-6 rounded-lg"
             style={{ background: "rgba(255,255,255,0.5)" }}
           >
-            <div className="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-700 via-sky-400 to-blue-300 mb-4">
+            <div
+              className="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-700 via-sky-400 to-blue-300 mb-4"
+              style={{ fontFamily: "serif" }}
+            >
               地図
             </div>
             <div className="flex flex-col items-center">
@@ -78,26 +95,42 @@ export default function Access() {
             className="p-6 rounded-lg"
             style={{ background: "rgba(255,255,255,0.5)" }}
           >
-            <div className="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-700 via-sky-400 to-blue-300 mb-4">
+            <div
+              className="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-700 via-sky-400 to-blue-300 mb-4"
+              style={{ fontFamily: "serif" }}
+            >
               アクセス
             </div>
-            <ul className="list-none space-y-4 text-[15px] text-slate-700">
+            <ul
+              className="list-none space-y-4 text-[15px] text-slate-700 pl-8"
+              style={{ fontFamily: "serif" }}
+            >
               <li className="flex items-start">
                 <span className="text-blue-400 mr-2">•</span>
                 <div>
-                  <div className="font-bold text-blue-800 mb-1">
+                  <div
+                    className="font-bold text-blue-800 mb-1 pl-4"
+                    style={{ fontFamily: "serif" }}
+                  >
                     東京メトロ有楽町線「豊洲駅」
                   </div>
-                  <div>7番出口より徒歩3分</div>
+                  <div className="pl-8" style={{ fontFamily: "serif" }}>
+                    7番出口より徒歩3分
+                  </div>
                 </div>
               </li>
               <li className="flex items-start">
                 <span className="text-blue-400 mr-2">•</span>
                 <div>
-                  <div className="font-bold text-blue-800 mb-1">
+                  <div
+                    className="font-bold text-blue-800 mb-1 pl-4"
+                    style={{ fontFamily: "serif" }}
+                  >
                     ゆりかもめ「豊洲駅」
                   </div>
-                  <div>徒歩3分</div>
+                  <div className="pl-8" style={{ fontFamily: "serif" }}>
+                    徒歩3分
+                  </div>
                 </div>
               </li>
             </ul>
@@ -108,10 +141,16 @@ export default function Access() {
             className="p-6 rounded-lg"
             style={{ background: "rgba(255,255,255,0.5)" }}
           >
-            <div className="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-700 via-sky-400 to-blue-300 mb-4">
+            <div
+              className="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-700 via-sky-400 to-blue-300 mb-4"
+              style={{ fontFamily: "serif" }}
+            > 
               ご注意事項
             </div>
-            <ul className="list-none space-y-2 text-[15px] text-slate-700">
+            <ul
+              className="list-none space-y-2 text-[15px] text-slate-700 pl-8"
+              style={{ fontFamily: "serif" }}
+            >
               <li className="flex items-start">
                 <span className="text-blue-400 mr-2">•</span>
                 会場内は禁煙です

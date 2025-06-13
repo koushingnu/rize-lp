@@ -11,7 +11,10 @@ export default function Movie() {
         <div className="relative inline-block">
           <h2
             className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-sky-400 to-blue-300 tracking-wider drop-shadow-lg text-left"
-            style={{ letterSpacing: "0.08em", fontFamily: "serif" }}
+            style={{
+              letterSpacing: "0.08em",
+              fontFamily: "'Shippori Mincho B1'",
+            }}
           >
             Movie
           </h2>
@@ -24,12 +27,13 @@ export default function Movie() {
         </div>
       </div>
       {/* 動画 */}
-      <div className="w-full max-w-4xl px-4">
+      <div className="w-full max-w-6xl px-4">
         <div
           className="w-full aspect-video overflow-hidden mb-4"
           style={{
             border: "2px solid #b0c4de",
             boxShadow: "0 8px 0 0 #b0c4de, 0 16px 32px 0 rgba(79,195,247,0.15)",
+            fontFamily: "serif",
           }}
         >
           <iframe

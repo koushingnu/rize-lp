@@ -25,8 +25,11 @@ export default function Message() {
       <div className="mb-16 w-full max-w-6xl px-4">
         <div className="relative inline-block">
           <h2
-            className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-sky-400 to-blue-300 tracking-wider drop-shadow-lg text-left"
-            style={{ letterSpacing: "0.08em", fontFamily: "serif" }}
+            className="text-4xl pb-1 font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-sky-400 to-blue-300 tracking-wider drop-shadow-lg text-left"
+            style={{
+              letterSpacing: "0.08em",
+              fontFamily: "Shippori Mincho B1",
+            }}
           >
             Message
           </h2>

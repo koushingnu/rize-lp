@@ -19,9 +19,12 @@ export default function Ticket() {
         <div className="relative inline-block mb-16">
           <h2
             className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-sky-400 to-blue-300 tracking-wider drop-shadow-lg text-left"
-            style={{ letterSpacing: "0.08em", fontFamily: "serif" }}
+            style={{
+              letterSpacing: "0.08em",
+              fontFamily: "'Shippori Mincho B1', serif",
+            }}
           >
-            TICKET
+            Ticket
           </h2>
           <span
             className="block mt-2 h-1 w-24 rounded-full"
@@ -37,7 +40,10 @@ export default function Ticket() {
             className="p-6 rounded-lg"
             style={{ background: "rgba(255,255,255,0.5)" }}
           >
-            <div className="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-700 via-sky-400 to-blue-300 mb-4">
+            <div
+              className="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-700 via-sky-400 to-blue-300 mb-4"
+              style={{ fontFamily: "serif" }}
+            >
               エリアマップ
             </div>
             <div className="flex justify-center">
@@ -90,7 +96,10 @@ export default function Ticket() {
 
           {/* チケット料金 */}
           <div className="space-y-6">
-            <div className="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-700 via-sky-400 to-blue-300">
+            <div
+              className="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-700 via-sky-400 to-blue-300 mb-4 ml-6"
+              style={{ fontFamily: "serif" }}
+            >
               チケット料金
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -100,14 +109,20 @@ export default function Ticket() {
                 style={{ background: "rgba(255,255,255,0.5)" }}
               >
                 <div className="flex items-center justify-between mb-4">
-                  <div className="inline-block bg-gradient-to-r from-blue-600 to-sky-400 text-white text-sm font-bold px-4 py-2 rounded">
+                  <div
+                    className="inline-block bg-gradient-to-r from-blue-600 to-sky-400 text-white text-sm font-bold px-4 py-2 rounded"
+                    style={{ fontFamily: "serif" }}
+                  >
                     VIPシーティング
                   </div>
                   <span className="text-xl font-bold text-blue-800">
                     ¥15,000
                   </span>
                 </div>
-                <ul className="list-none space-y-2 text-[15px] text-slate-700">
+                <ul
+                  className="list-none space-y-2 text-[15px] text-slate-700 pl-8"
+                  style={{ fontFamily: "serif" }}
+                >
                   <li className="flex items-start">
                     <span className="text-blue-400 mr-2">•</span>
                     VIPシーティングエリア内自由席、整理番号
@@ -133,14 +148,20 @@ export default function Ticket() {
                 style={{ background: "rgba(255,255,255,0.5)" }}
               >
                 <div className="flex items-center justify-between mb-4">
-                  <div className="inline-block bg-gradient-to-r from-blue-600 to-sky-400 text-white text-sm font-bold px-4 py-2 rounded">
+                  <div
+                    className="inline-block bg-gradient-to-r from-blue-600 to-sky-400 text-white text-sm font-bold px-4 py-2 rounded"
+                    style={{ fontFamily: "serif" }}
+                  >
                     VIPスタンディング
                   </div>
                   <span className="text-xl font-bold text-blue-800">
                     ¥15,000
                   </span>
                 </div>
-                <ul className="list-none space-y-2 text-[15px] text-slate-700">
+                <ul
+                  className="list-none space-y-2 text-[15px] text-slate-700 pl-8"
+                  style={{ fontFamily: "serif" }}
+                >
                   <li className="flex items-start">
                     <span className="text-blue-400 mr-2">•</span>
                     VIPエリア内自由、整理番号
@@ -166,14 +187,20 @@ export default function Ticket() {
                 style={{ background: "rgba(255,255,255,0.5)" }}
               >
                 <div className="flex items-center justify-between mb-4">
-                  <div className="inline-block bg-gradient-to-r from-blue-500 to-sky-300 text-white text-sm font-bold px-4 py-2 rounded">
+                  <div
+                    className="inline-block bg-gradient-to-r from-blue-600 to-sky-400 text-white text-sm font-bold px-4 py-2 rounded"
+                    style={{ fontFamily: "serif" }}
+                  >
                     A+チケット シーティング
                   </div>
                   <span className="text-xl font-bold text-blue-800">
                     ¥7,500
                   </span>
                 </div>
-                <ul className="list-none space-y-2 text-[15px] text-slate-700">
+                <ul
+                  className="list-none space-y-2 text-[15px] text-slate-700 pl-8"
+                  style={{ fontFamily: "serif" }}
+                >
                   <li className="flex items-start">
                     <span className="text-blue-400 mr-2">•</span>
                     Aチケットエリア内自由席、整理番号
@@ -199,14 +226,20 @@ export default function Ticket() {
                 style={{ background: "rgba(255,255,255,0.5)" }}
               >
                 <div className="flex items-center justify-between mb-4">
-                  <div className="inline-block bg-gradient-to-r from-blue-500 to-sky-300 text-white text-sm font-bold px-4 py-2 rounded">
+                  <div
+                    className="inline-block bg-gradient-to-r from-blue-600 to-sky-400 text-white text-sm font-bold px-4 py-2 rounded"
+                    style={{ fontFamily: "serif" }}
+                  >
                     A+チケット スタンディング
                   </div>
                   <span className="text-xl font-bold text-blue-800">
                     ¥7,500
                   </span>
                 </div>
-                <ul className="list-none space-y-2 text-[15px] text-slate-700">
+                <ul
+                  className="list-none space-y-2 text-[15px] text-slate-700 pl-8"
+                  style={{ fontFamily: "serif" }}
+                >
                   <li className="flex items-start">
                     <span className="text-blue-400 mr-2">•</span>
                     Aチケットエリア内自由、整理番号
@@ -232,14 +265,20 @@ export default function Ticket() {
                 style={{ background: "rgba(255,255,255,0.5)" }}
               >
                 <div className="flex items-center justify-between mb-4">
-                  <div className="inline-block bg-gradient-to-r from-blue-400 to-sky-200 text-white text-sm font-bold px-4 py-2 rounded">
+                  <div
+                    className="inline-block bg-gradient-to-r from-blue-600 to-sky-400 text-white text-sm font-bold px-4 py-2 rounded"
+                    style={{ fontFamily: "serif" }}
+                  >
                     Aチケット シーティング
                   </div>
                   <span className="text-xl font-bold text-blue-800">
                     ¥3,000
                   </span>
                 </div>
-                <ul className="list-none space-y-2 text-[15px] text-slate-700">
+                <ul
+                  className="list-none space-y-2 text-[15px] text-slate-700 pl-8"
+                  style={{ fontFamily: "serif" }}
+                >
                   <li className="flex items-start">
                     <span className="text-blue-400 mr-2">•</span>
                     Aチケットエリア内自由席、整理番号
@@ -265,14 +304,20 @@ export default function Ticket() {
                 style={{ background: "rgba(255,255,255,0.5)" }}
               >
                 <div className="flex items-center justify-between mb-4">
-                  <div className="inline-block bg-gradient-to-r from-blue-400 to-sky-200 text-white text-sm font-bold px-4 py-2 rounded">
+                  <div
+                    className="inline-block bg-gradient-to-r from-blue-600 to-sky-400 text-white text-sm font-bold px-4 py-2 rounded"
+                    style={{ fontFamily: "serif" }}
+                  >
                     Aチケット スタンディング
                   </div>
                   <span className="text-xl font-bold text-blue-800">
                     ¥3,000
                   </span>
                 </div>
-                <ul className="list-none space-y-2 text-[15px] text-slate-700">
+                <ul
+                  className="list-none space-y-2 text-[15px] text-slate-700 pl-8"
+                  style={{ fontFamily: "serif" }}
+                >
                   <li className="flex items-start">
                     <span className="text-blue-400 mr-2">•</span>
                     Aチケットエリア内自由席、整理番号
@@ -298,12 +343,18 @@ export default function Ticket() {
                 style={{ background: "rgba(255,255,255,0.5)" }}
               >
                 <div className="flex items-center justify-between mb-4">
-                  <div className="inline-block bg-gradient-to-r from-blue-300 to-sky-100 text-white text-sm font-bold px-4 py-2 rounded">
+                  <div
+                    className="inline-block bg-gradient-to-r from-blue-600 to-sky-400 text-white text-sm font-bold px-4 py-2 rounded"
+                    style={{ fontFamily: "serif" }}
+                  >
                     Bチケット
                   </div>
                   <span className="text-xl font-bold text-blue-800">¥500</span>
                 </div>
-                <ul className="list-none space-y-2 text-[15px] text-slate-700">
+                <ul
+                  className="list-none space-y-2 text-[15px] text-slate-700 pl-8"
+                  style={{ fontFamily: "serif" }}
+                >
                   <li className="flex items-start">
                     <span className="text-blue-400 mr-2">•</span>
                     Bチケットエリア内自由、整理番号（スタンディング・シーティングの事前選択不可）
@@ -329,14 +380,20 @@ export default function Ticket() {
                 style={{ background: "rgba(255,255,255,0.5)" }}
               >
                 <div className="flex items-center justify-between mb-4">
-                  <div className="inline-block bg-gradient-to-r from-blue-600 to-sky-400 text-white text-sm font-bold px-4 py-2 rounded">
+                  <div
+                    className="inline-block bg-gradient-to-r from-blue-600 to-sky-400 text-white text-sm font-bold px-4 py-2 rounded"
+                    style={{ fontFamily: "serif" }}
+                  >
                     カメラチケット
                   </div>
                   <span className="text-xl font-bold text-blue-800">
                     ¥15,000
                   </span>
                 </div>
-                <ul className="list-none space-y-2 text-[15px] text-slate-700">
+                <ul
+                  className="list-none space-y-2 text-[15px] text-slate-700 pl-8"
+                  style={{ fontFamily: "serif" }}
+                >
                   <li className="flex items-start">
                     <span className="text-blue-400 mr-2">•</span>
                     カメラチケットエリア内自由、整理番号
@@ -363,13 +420,24 @@ export default function Ticket() {
             className="p-6 rounded-lg"
             style={{ background: "rgba(255,255,255,0.5)" }}
           >
-            <div className="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-700 via-sky-400 to-blue-300 mb-4">
+            <div
+              className="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-700 via-sky-400 to-blue-300 mb-4"
+              style={{ fontFamily: "serif" }}
+            >
               チケット販売情報
             </div>
-            <div className="space-y-6">
+            <div className="space-y-6" style={{ fontFamily: "serif" }}>
               <div>
-                <div className="font-bold text-blue-800 mb-2">VIP先行予約</div>
-                <div className="text-[15px] text-slate-700">
+                <div
+                  className="font-bold text-blue-800 mb-2 pl-8"
+                  style={{ fontFamily: "serif" }}
+                >
+                  VIP先行予約
+                </div>
+                <div
+                  className="text-[15px] text-slate-700 pl-12"
+                  style={{ fontFamily: "serif" }}
+                >
                   抽選／お一人様1枚まで／WEB受付
                   <br />
                   受付期間：6月11日(水)21:00〜6月19日(木)23:59
@@ -378,61 +446,104 @@ export default function Ticket() {
                 </div>
               </div>
               <div>
-                <div className="font-bold text-blue-800 mb-2">一般販売</div>
-                <div className="space-y-4">
+                <div
+                  className="font-bold text-blue-800 mb-2 pl-8"
+                  style={{ fontFamily: "serif" }}
+                >
+                  一般販売
+                </div>
+                <div className="space-y-4" style={{ fontFamily: "serif" }}>
                   <div>
-                    <div className="font-bold text-blue-800">
+                    <div
+                      className="font-bold text-blue-800 pl-12"
+                      style={{ fontFamily: "serif" }}
+                    >
                       カメラチケット
                     </div>
-                    <div className="text-[15px] text-slate-700">
+                    <div
+                      className="text-[15px] text-slate-700 pl-16"
+                      style={{ fontFamily: "serif" }}
+                    >
                       先着／お一人様1枚まで／WEB受付
                       <br />
                       6月10日(火)20:00〜7月24日23:59
                     </div>
                   </div>
                   <div>
-                    <div className="font-bold text-blue-800">
+                    <div
+                      className="font-bold text-blue-800 pl-12"
+                      style={{ fontFamily: "serif" }}
+                    >
                       A+チケット スタンディング
                     </div>
-                    <div className="text-[15px] text-slate-700">
+                    <div
+                      className="text-[15px] text-slate-700 pl-16"
+                      style={{ fontFamily: "serif" }}
+                    >
                       先着／お一人様2枚まで／WEB受付
                       <br />
                       6月24日(火)21:00〜7月24日23:59
                     </div>
                   </div>
                   <div>
-                    <div className="font-bold text-blue-800">
+                    <div
+                      className="font-bold text-blue-800 pl-12"
+                      style={{ fontFamily: "serif" }}
+                    >
                       A+チケット シーティング
                     </div>
-                    <div className="text-[15px] text-slate-700">
+                    <div
+                      className="text-[15px] text-slate-700 pl-16"
+                      style={{ fontFamily: "serif" }}
+                    >
                       先着／お一人様2枚まで／WEB受付
                       <br />
                       6月24日(火)21:30〜7月24日23:59
                     </div>
                   </div>
                   <div>
-                    <div className="font-bold text-blue-800">
+                    <div
+                      className="font-bold text-blue-800 pl-12"
+                      style={{ fontFamily: "serif" }}
+                    >
                       Aチケット スタンディング
                     </div>
-                    <div className="text-[15px] text-slate-700">
+                    <div
+                      className="text-[15px] text-slate-700 pl-16"
+                      style={{ fontFamily: "serif" }}
+                    >
                       先着／お一人様4枚まで／WEB受付
                       <br />
                       6月25日(水)21:30〜7月24日23:59
                     </div>
                   </div>
                   <div>
-                    <div className="font-bold text-blue-800">
+                    <div
+                      className="font-bold text-blue-800 pl-12"
+                      style={{ fontFamily: "serif" }}
+                    >
                       Aチケット シーティング
                     </div>
-                    <div className="text-[15px] text-slate-700">
+                    <div
+                      className="text-[15px] text-slate-700 pl-16"
+                      style={{ fontFamily: "serif" }}
+                    >
                       先着／お一人様4枚まで／WEB受付
                       <br />
                       6月25日(水)22:00〜7月24日23:59
                     </div>
                   </div>
                   <div>
-                    <div className="font-bold text-blue-800">Bチケット</div>
-                    <div className="text-[15px] text-slate-700">
+                    <div
+                      className="font-bold text-blue-800 pl-12"
+                      style={{ fontFamily: "serif" }}
+                    >
+                      Bチケット
+                    </div>
+                    <div
+                      className="text-[15px] text-slate-700 pl-16"
+                      style={{ fontFamily: "serif" }}
+                    >
                       先着／お一人様4枚まで／WEB受付
                       <br />
                       6月30日(月)21:00〜7月24日23:59
@@ -448,10 +559,16 @@ export default function Ticket() {
             className="p-6 rounded-lg"
             style={{ background: "rgba(255,255,255,0.5)" }}
           >
-            <div className="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-700 via-sky-400 to-blue-300 mb-4">
+            <div
+              className="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-700 via-sky-400 to-blue-300 mb-4"
+              style={{ fontFamily: "serif" }}
+            >
               お問い合わせ
             </div>
-            <div className="text-[15px] text-slate-700">
+            <div
+              className="text-[15px] text-slate-700 pl-12"
+              style={{ fontFamily: "serif" }}
+            >
               【チケットに関するお問い合わせ】
               <br />
               ウドー音楽事務所　TEL:03-3402-5999（営業時間：月曜・水曜・金曜　12:00〜15:00）
@@ -463,10 +580,16 @@ export default function Ticket() {
             className="p-6 rounded-lg"
             style={{ background: "rgba(255,255,255,0.5)" }}
           >
-            <div className="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-700 via-sky-400 to-blue-300 mb-4">
+            <div
+              className="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-700 via-sky-400 to-blue-300 mb-4"
+              style={{ fontFamily: "serif" }}
+            >
               ご注意事項
             </div>
-            <ul className="list-none space-y-2 text-[15px] text-slate-700">
+            <ul
+              className="list-none space-y-2 text-[15px] text-slate-700 pl-8"
+              style={{ fontFamily: "serif" }}
+            >
               <li className="flex items-start">
                 <span className="text-blue-400 mr-2">•</span>
                 撮影チケット：脚立90cm以内／三脚OK／フラッシュ禁止／全編静止画のみ
@@ -523,10 +646,17 @@ export default function Ticket() {
             className="p-6 rounded-lg"
             style={{ background: "rgba(255,255,255,0.5)" }}
           >
-            <div className="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-700 via-sky-400 to-blue-300 mb-4">
+            <div
+              className="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-700 via-sky-400 to-blue-300 mb-4"
+              style={{ fontFamily: "serif" }}
+            >
               ご来場者様へのお願い
             </div>
-            <ul className="list-none space-y-2 text-[15px] text-slate-700">
+
+            <ul
+              className="list-none space-y-2 text-[15px] text-slate-700 pl-8"
+              style={{ fontFamily: "serif" }}
+            >
               <li className="flex items-start">
                 <span className="text-blue-400 mr-2">•</span>
                 係員の指示に従ってください
