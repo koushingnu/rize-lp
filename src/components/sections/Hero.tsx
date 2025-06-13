@@ -5,9 +5,9 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="relative w-screen h-[100dvh] flex items-center justify-center overflow-hidden bg-transparent">
+    <section className="relative w-screen h-screen flex items-center justify-center overflow-hidden bg-transparent">
       <motion.div
-        className="relative w-full h-full"
+        className="w-screen flex justify-center items-center"
         initial={{
           scale: 1.05,
           opacity: 0,
@@ -20,9 +20,6 @@ export default function Hero() {
           duration: 1.5,
           ease: "easeInOut",
         }}
-        style={{
-          transformOrigin: "center center",
-        }}
       >
         <Image
           src="/images/hero/0725MDD_fullband_flyer_250604.jpg"
@@ -30,11 +27,7 @@ export default function Hero() {
           width={1920}
           height={1080}
           priority
-          className="object-contain md:object-cover w-full h-full"
-          sizes="100vw"
-          style={{
-            objectPosition: "center center",
-          }}
+          className="w-screen h-auto"
         />
       </motion.div>
       {/* 筆文字タイトル画像は無し */}
