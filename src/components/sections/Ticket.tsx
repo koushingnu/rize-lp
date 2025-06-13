@@ -1,13 +1,55 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
+
+const fadeInUp = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+      ease: "easeOut",
+    },
+  },
+};
+
+const titleVariants = {
+  hidden: { x: -20, opacity: 0 },
+  visible: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+      ease: "easeOut",
+    },
+  },
+};
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      delayChildren: 0.3,
+      staggerChildren: 0.2,
+    },
+  },
+};
 
 export default function Ticket() {
   return (
-    <section
+    <motion.section
       className="w-full flex justify-center py-24 bg-transparent"
       id="ticket"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-100px" }}
+      variants={containerVariants}
     >
-      <div
+      <motion.div
         className="w-full max-w-6xl p-12 flex flex-col items-start relative backdrop-blur-sm"
         style={{
           background:
@@ -15,30 +57,36 @@ export default function Ticket() {
           boxShadow: "0 8px 32px rgba(31, 38, 135, 0.15)",
           border: "1px solid rgba(255, 255, 255, 0.18)",
         }}
+        variants={fadeInUp}
       >
         <div className="relative inline-block mb-16">
-          <h2
+          <motion.h2
+            variants={titleVariants}
             className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-sky-400 to-blue-300 tracking-wider drop-shadow-lg text-left"
             style={{
-              letterSpacing: "0.08em",
+              letterSpacing: "0.05em",
               fontFamily: "'Shippori Mincho B1', serif",
             }}
           >
             Ticket
-          </h2>
-          <span
+          </motion.h2>
+          <motion.span
+            initial={{ width: 0 }}
+            whileInView={{ width: "6rem" }}
+            transition={{ duration: 0.5, delay: 0.2 }}
             className="block mt-2 h-1 w-24 rounded-full"
             style={{
               background: "linear-gradient(90deg, #4fc3f7 0%, #b0c4de 100%)",
             }}
-          ></span>
+          ></motion.span>
         </div>
 
-        <div className="w-full space-y-12">
+        <motion.div className="w-full space-y-12" variants={fadeInUp}>
           {/* エリアマップ */}
-          <div
+          <motion.div
             className="p-6 rounded-lg"
             style={{ background: "rgba(255,255,255,0.5)" }}
+            variants={fadeInUp}
           >
             <div
               className="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-700 via-sky-400 to-blue-300 mb-4"
@@ -58,20 +106,30 @@ export default function Ticket() {
                 }}
               />
             </div>
-          </div>
+          </motion.div>
 
           {/* イベント基本情報 */}
-          <div
+          <motion.div
             className="space-y-4 p-6 rounded-lg"
             style={{ background: "rgba(255,255,255,0.5)" }}
+            variants={fadeInUp}
           >
-            <div className="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-700 via-sky-400 to-blue-300">
+            <div
+              className="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-700 via-sky-400 to-blue-300"
+              style={{ fontFamily: "serif" }}
+            >
               イベント情報
             </div>
-            <div className="text-xl font-bold text-blue-800">
-              MyDearDarlin&#39;フルバンドセットワンマンLIVE『ALL IN the LIVE』
+            <div
+              className="text-xl font-bold text-blue-800"
+              style={{ fontFamily: "serif" }}
+            >
+              MyDearDarlin'フルバンドセットワンマンLIVE『ALL IN the LIVE』
             </div>
-            <div className="text-sm text-slate-600 mb-4">
+            <div
+              className="text-sm text-slate-600 mb-4"
+              style={{ fontFamily: "serif" }}
+            >
               読み：マイディアダーリン フルバンドセットワンマン ライブ オール
               イン ザ ライブ
             </div>
@@ -80,10 +138,16 @@ export default function Ticket() {
                 <div className="text-sm font-bold text-blue-600 mb-1">
                   公演日時
                 </div>
-                <div className="text-base text-slate-700">
+                <div
+                  className="text-base text-slate-700"
+                  style={{ fontFamily: "serif" }}
+                >
                   2025年7月25日（金）
                 </div>
-                <div className="text-base text-slate-700">
+                <div
+                  className="text-base text-slate-700"
+                  style={{ fontFamily: "serif" }}
+                >
                   開場：17:30　開演：18:30
                 </div>
               </div>
@@ -92,10 +156,10 @@ export default function Ticket() {
                 <div className="text-base text-slate-700">豊洲PIT</div>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* チケット料金 */}
-          <div className="space-y-6">
+          <motion.div className="space-y-6" variants={fadeInUp}>
             <div
               className="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-700 via-sky-400 to-blue-300 mb-4 ml-6"
               style={{ fontFamily: "serif" }}
@@ -104,9 +168,12 @@ export default function Ticket() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* VIPチケット */}
-              <div
+              <motion.div
+                whileHover={{ scale: 1.02, y: -5 }}
+                transition={{ duration: 0.3 }}
                 className="p-6 rounded-lg transition-all duration-300 hover:shadow-lg"
                 style={{ background: "rgba(255,255,255,0.5)" }}
+                variants={fadeInUp}
               >
                 <div className="flex items-center justify-between mb-4">
                   <div
@@ -115,7 +182,13 @@ export default function Ticket() {
                   >
                     VIPシーティング
                   </div>
-                  <span className="text-xl font-bold text-blue-800">
+                  <span
+                    className="text-xl font-bold text-blue-800"
+                    style={{
+                      fontFamily: "'Shippori Mincho B1', serif",
+                      fontWeight: 700,
+                    }}
+                  >
                     ¥15,000
                   </span>
                 </div>
@@ -140,12 +213,13 @@ export default function Ticket() {
                     お一人様1枚まで
                   </li>
                 </ul>
-              </div>
+              </motion.div>
 
               {/* VIPスタンディング */}
-              <div
+              <motion.div
                 className="p-6 rounded-lg transition-all duration-300 hover:shadow-lg"
                 style={{ background: "rgba(255,255,255,0.5)" }}
+                variants={fadeInUp}
               >
                 <div className="flex items-center justify-between mb-4">
                   <div
@@ -154,7 +228,13 @@ export default function Ticket() {
                   >
                     VIPスタンディング
                   </div>
-                  <span className="text-xl font-bold text-blue-800">
+                  <span
+                    className="text-xl font-bold text-blue-800"
+                    style={{
+                      fontFamily: "'Shippori Mincho B1', serif",
+                      fontWeight: 700,
+                    }}
+                  >
                     ¥15,000
                   </span>
                 </div>
@@ -179,12 +259,13 @@ export default function Ticket() {
                     お一人様1枚まで
                   </li>
                 </ul>
-              </div>
+              </motion.div>
 
               {/* A+チケット シーティング */}
-              <div
+              <motion.div
                 className="p-6 rounded-lg transition-all duration-300 hover:shadow-lg"
                 style={{ background: "rgba(255,255,255,0.5)" }}
+                variants={fadeInUp}
               >
                 <div className="flex items-center justify-between mb-4">
                   <div
@@ -193,7 +274,13 @@ export default function Ticket() {
                   >
                     A+チケット シーティング
                   </div>
-                  <span className="text-xl font-bold text-blue-800">
+                  <span
+                    className="text-xl font-bold text-blue-800"
+                    style={{
+                      fontFamily: "'Shippori Mincho B1', serif",
+                      fontWeight: 700,
+                    }}
+                  >
                     ¥7,500
                   </span>
                 </div>
@@ -218,12 +305,13 @@ export default function Ticket() {
                     お一人様2枚まで
                   </li>
                 </ul>
-              </div>
+              </motion.div>
 
               {/* A+チケット スタンディング */}
-              <div
+              <motion.div
                 className="p-6 rounded-lg transition-all duration-300 hover:shadow-lg"
                 style={{ background: "rgba(255,255,255,0.5)" }}
+                variants={fadeInUp}
               >
                 <div className="flex items-center justify-between mb-4">
                   <div
@@ -232,7 +320,13 @@ export default function Ticket() {
                   >
                     A+チケット スタンディング
                   </div>
-                  <span className="text-xl font-bold text-blue-800">
+                  <span
+                    className="text-xl font-bold text-blue-800"
+                    style={{
+                      fontFamily: "'Shippori Mincho B1', serif",
+                      fontWeight: 700,
+                    }}
+                  >
                     ¥7,500
                   </span>
                 </div>
@@ -257,12 +351,13 @@ export default function Ticket() {
                     お一人様2枚まで
                   </li>
                 </ul>
-              </div>
+              </motion.div>
 
               {/* Aチケット シーティング */}
-              <div
+              <motion.div
                 className="p-6 rounded-lg transition-all duration-300 hover:shadow-lg"
                 style={{ background: "rgba(255,255,255,0.5)" }}
+                variants={fadeInUp}
               >
                 <div className="flex items-center justify-between mb-4">
                   <div
@@ -271,7 +366,13 @@ export default function Ticket() {
                   >
                     Aチケット シーティング
                   </div>
-                  <span className="text-xl font-bold text-blue-800">
+                  <span
+                    className="text-xl font-bold text-blue-800"
+                    style={{
+                      fontFamily: "'Shippori Mincho B1', serif",
+                      fontWeight: 700,
+                    }}
+                  >
                     ¥3,000
                   </span>
                 </div>
@@ -296,12 +397,13 @@ export default function Ticket() {
                     お一人様4枚まで
                   </li>
                 </ul>
-              </div>
+              </motion.div>
 
               {/* Aチケット スタンディング */}
-              <div
+              <motion.div
                 className="p-6 rounded-lg transition-all duration-300 hover:shadow-lg"
                 style={{ background: "rgba(255,255,255,0.5)" }}
+                variants={fadeInUp}
               >
                 <div className="flex items-center justify-between mb-4">
                   <div
@@ -310,7 +412,13 @@ export default function Ticket() {
                   >
                     Aチケット スタンディング
                   </div>
-                  <span className="text-xl font-bold text-blue-800">
+                  <span
+                    className="text-xl font-bold text-blue-800"
+                    style={{
+                      fontFamily: "'Shippori Mincho B1', serif",
+                      fontWeight: 700,
+                    }}
+                  >
                     ¥3,000
                   </span>
                 </div>
@@ -335,12 +443,13 @@ export default function Ticket() {
                     お一人様4枚まで
                   </li>
                 </ul>
-              </div>
+              </motion.div>
 
               {/* Bチケット */}
-              <div
+              <motion.div
                 className="p-6 rounded-lg transition-all duration-300 hover:shadow-lg"
                 style={{ background: "rgba(255,255,255,0.5)" }}
+                variants={fadeInUp}
               >
                 <div className="flex items-center justify-between mb-4">
                   <div
@@ -349,7 +458,15 @@ export default function Ticket() {
                   >
                     Bチケット
                   </div>
-                  <span className="text-xl font-bold text-blue-800">¥500</span>
+                  <span
+                    className="text-xl font-bold text-blue-800"
+                    style={{
+                      fontFamily: "'Shippori Mincho B1', serif",
+                      fontWeight: 700,
+                    }}
+                  >
+                    ¥500
+                  </span>
                 </div>
                 <ul
                   className="list-none space-y-2 text-[15px] text-slate-700 pl-8"
@@ -372,12 +489,13 @@ export default function Ticket() {
                     お一人様4枚まで
                   </li>
                 </ul>
-              </div>
+              </motion.div>
 
               {/* カメラチケット */}
-              <div
+              <motion.div
                 className="p-6 rounded-lg transition-all duration-300 hover:shadow-lg"
                 style={{ background: "rgba(255,255,255,0.5)" }}
+                variants={fadeInUp}
               >
                 <div className="flex items-center justify-between mb-4">
                   <div
@@ -386,7 +504,13 @@ export default function Ticket() {
                   >
                     カメラチケット
                   </div>
-                  <span className="text-xl font-bold text-blue-800">
+                  <span
+                    className="text-xl font-bold text-blue-800"
+                    style={{
+                      fontFamily: "'Shippori Mincho B1', serif",
+                      fontWeight: 700,
+                    }}
+                  >
                     ¥15,000
                   </span>
                 </div>
@@ -411,14 +535,15 @@ export default function Ticket() {
                     お一人様1枚まで
                   </li>
                 </ul>
-              </div>
+              </motion.div>
             </div>
-          </div>
+          </motion.div>
 
           {/* チケット販売情報 */}
-          <div
+          <motion.div
             className="p-6 rounded-lg"
             style={{ background: "rgba(255,255,255,0.5)" }}
+            variants={fadeInUp}
           >
             <div
               className="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-700 via-sky-400 to-blue-300 mb-4"
@@ -552,12 +677,13 @@ export default function Ticket() {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* お問い合わせ */}
-          <div
+          <motion.div
             className="p-6 rounded-lg"
             style={{ background: "rgba(255,255,255,0.5)" }}
+            variants={fadeInUp}
           >
             <div
               className="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-700 via-sky-400 to-blue-300 mb-4"
@@ -573,12 +699,13 @@ export default function Ticket() {
               <br />
               ウドー音楽事務所　TEL:03-3402-5999（営業時間：月曜・水曜・金曜　12:00〜15:00）
             </div>
-          </div>
+          </motion.div>
 
           {/* 注意事項 */}
-          <div
+          <motion.div
             className="p-6 rounded-lg"
             style={{ background: "rgba(255,255,255,0.5)" }}
+            variants={fadeInUp}
           >
             <div
               className="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-700 via-sky-400 to-blue-300 mb-4"
@@ -600,7 +727,7 @@ export default function Ticket() {
               </li>
               <li className="flex items-start">
                 <span className="text-blue-400 mr-2">•</span>
-                SNS投稿は運営許可が必要（MyDearDarlin&#39;公式XのDMへファイル送付）
+                SNS投稿は運営許可が必要（MyDearDarlin'公式XのDMへファイル送付）
               </li>
               <li className="flex items-start">
                 <span className="text-blue-400 mr-2">•</span>
@@ -639,12 +766,13 @@ export default function Ticket() {
                 入待ち・出待ち禁止
               </li>
             </ul>
-          </div>
+          </motion.div>
 
           {/* ご来場者様へのお願い */}
-          <div
+          <motion.div
             className="p-6 rounded-lg"
             style={{ background: "rgba(255,255,255,0.5)" }}
+            variants={fadeInUp}
           >
             <div
               className="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-700 via-sky-400 to-blue-300 mb-4"
@@ -682,9 +810,9 @@ export default function Ticket() {
                 規約違反や不正行為が発覚した場合、退場や今後の参加制限措置あり
               </li>
             </ul>
-          </div>
-        </div>
-      </div>
-    </section>
+          </motion.div>
+        </motion.div>
+      </motion.div>
+    </motion.section>
   );
 }

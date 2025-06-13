@@ -1,10 +1,40 @@
+"use client";
+
 import Image from "next/image";
+import { motion } from "framer-motion";
+
+const fadeInUp = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+      ease: "easeOut",
+    },
+  },
+};
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      delayChildren: 0.3,
+      staggerChildren: 0.2,
+    },
+  },
+};
 
 export default function Introduction() {
   return (
-    <section
+    <motion.section
       className="w-full flex justify-center py-24 bg-transparent"
       style={{ position: "relative" }}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-100px" }}
+      variants={containerVariants}
     >
       {/* 白い半透明フィルター（さらに透明に） */}
       <div
@@ -15,22 +45,16 @@ export default function Introduction() {
           zIndex: 0,
         }}
       />
-      <div
+      <motion.div
         className="w-full max-w-4xl mx-auto flex flex-col items-start relative px-8"
         style={{ zIndex: 1 }}
+        variants={fadeInUp}
       >
-        {/*
-        <div className="mb-16 w-full">
-          <div className="relative inline-block">
-            <h2 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-sky-400 to-blue-300 tracking-wider drop-shadow-lg text-left" style={{letterSpacing: '0.08em', fontFamily: 'serif'}}>Introduction</h2>
-            <span className="block mt-2 h-1 w-24 rounded-full" style={{background: 'linear-gradient(90deg, #4fc3f7 0%, #b0c4de 100%)'}}></span>
-          </div>
-        </div>
-        */}
-        <div className="w-full">
-          <p
+        <motion.div className="w-full" variants={fadeInUp}>
+          <motion.p
             className="text-left text-slate-700 text-base md:text-lg font-light leading-relaxed tracking-wide mb-12 break-words text-balance"
             style={{ fontFamily: "serif", letterSpacing: "0.04em" }}
+            variants={fadeInUp}
           >
             いつも応援してくださる皆さまへ。
             <br />
@@ -53,10 +77,11 @@ export default function Introduction() {
             <br />
             <br />
             それでは、会場でお会いできることをメンバー・スタッフ一同、心より楽しみにしております。素晴らしい一日を一緒に過ごしましょう！
-          </p>
-          <div
+          </motion.p>
+          <motion.div
             className="flex items-start"
             style={{ width: "180px", paddingTop: "0" }}
+            variants={fadeInUp}
           >
             <Image
               src="/images/0725MDD豊洲LP/logo_bl.png"
@@ -66,9 +91,9 @@ export default function Introduction() {
               className="object-contain opacity-90"
               priority
             />
-          </div>
-        </div>
-      </div>
-    </section>
+          </motion.div>
+        </motion.div>
+      </motion.div>
+    </motion.section>
   );
 }
