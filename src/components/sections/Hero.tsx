@@ -5,14 +5,23 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="relative w-screen min-h-screen flex items-center justify-center overflow-x-hidden p-0 m-0 bg-transparent">
+    <section className="relative w-screen h-screen flex items-center justify-center overflow-hidden bg-transparent">
       <motion.div
-        className="w-screen flex justify-center items-center"
-        initial={{ scale: 1.1, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
+        className="w-full h-full flex justify-center items-center"
+        initial={{
+          scale: 1.05,
+          opacity: 0,
+        }}
+        animate={{
+          scale: 1,
+          opacity: 1,
+        }}
         transition={{
-          duration: 1.2,
-          ease: "easeOut",
+          duration: 1.5,
+          ease: "easeInOut",
+        }}
+        style={{
+          transformOrigin: "center center",
         }}
       >
         <Image
@@ -21,7 +30,7 @@ export default function Hero() {
           width={1920}
           height={1080}
           priority
-          className="w-screen h-auto"
+          className="w-full h-auto object-cover"
         />
       </motion.div>
       {/* 筆文字タイトル画像は無し */}
