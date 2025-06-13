@@ -65,7 +65,7 @@ export default function Access() {
                   minHeight: "400px",
                   boxShadow: "0 8px 32px rgba(31, 38, 135, 0.15)",
                 }}
-                allowFullScreen=""
+                allowFullScreen={true}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 title="豊洲PIT Google Map"
