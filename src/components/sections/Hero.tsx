@@ -5,9 +5,9 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="relative w-screen h-screen flex items-center justify-center overflow-hidden bg-transparent">
+    <section className="relative w-screen h-[100dvh] flex items-center justify-center overflow-hidden bg-transparent">
       <motion.div
-        className="w-full h-full flex justify-center items-center"
+        className="relative w-full h-full"
         initial={{
           scale: 1.05,
           opacity: 0,
@@ -30,7 +30,11 @@ export default function Hero() {
           width={1920}
           height={1080}
           priority
-          className="w-full h-auto object-cover"
+          className="object-contain md:object-cover w-full h-full"
+          sizes="100vw"
+          style={{
+            objectPosition: "center center",
+          }}
         />
       </motion.div>
       {/* 筆文字タイトル画像は無し */}

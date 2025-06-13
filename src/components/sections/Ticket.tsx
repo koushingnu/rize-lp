@@ -727,7 +727,7 @@ export default function Ticket() {
               </li>
               <li className="flex items-start">
                 <span className="text-blue-400 mr-2">•</span>
-                SNS投稿は運営許可が必要（MyDearDarlin'公式XのDMへファイル送付）
+                SNS投稿は運営許可が必要（MyDearDarlin&apos;公式XのDMへファイル送付）
               </li>
               <li className="flex items-start">
                 <span className="text-blue-400 mr-2">•</span>
