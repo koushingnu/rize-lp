@@ -63,7 +63,7 @@ export default function Ticket() {
               イベント情報
             </div>
             <div className="text-xl font-bold text-blue-800">
-              MyDearDarlin'フルバンドセットワンマンLIVE『ALL IN the LIVE』
+              MyDearDarlin&#39;フルバンドセットワンマンLIVE『ALL IN the LIVE』
             </div>
             <div className="text-sm text-slate-600 mb-4">
               読み：マイディアダーリン フルバンドセットワンマン ライブ オール
@@ -477,7 +477,7 @@ export default function Ticket() {
               </li>
               <li className="flex items-start">
                 <span className="text-blue-400 mr-2">•</span>
-                SNS投稿は運営許可が必要（MyDearDarlin'公式XのDMへファイル送付）
+                SNS投稿は運営許可が必要（MyDearDarlin&#39;公式XのDMへファイル送付）
               </li>
               <li className="flex items-start">
                 <span className="text-blue-400 mr-2">•</span>
