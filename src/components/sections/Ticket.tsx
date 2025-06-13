@@ -124,7 +124,7 @@ export default function Ticket() {
               className="text-xl font-bold text-blue-800"
               style={{ fontFamily: "serif" }}
             >
-              MyDearDarlin'フルバンドセットワンマンLIVE『ALL IN the LIVE』
+              MyDearDarlin&apos; フルバンドセットワンマンLIVE『ALL IN the LIVE』
             </div>
             <div
               className="text-sm text-slate-600 mb-4"
