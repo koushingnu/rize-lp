@@ -32,3 +32,4 @@ export default function SectionTitle({ title, variant }: SectionTitleProps) {
     </div>
   );
 }
+ 

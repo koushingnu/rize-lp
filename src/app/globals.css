@@ -3,24 +3,24 @@
 @tailwind utilities;
 
 :root {
-  --color-primary: #ffc4d0;
-  --color-secondary: #ffd6de;
-  --color-accent: #ffb6c1;
-  --color-background: #fff;
-  --color-text: #333;
+  --color-primary: #4fc3f7;
+  --color-secondary: #b3e5fc;
+  --color-accent: #0288d1;
+  --color-background: #f0f7fa;
+  --color-text: #222f3e;
 }
 
 body {
   color: var(--color-text);
-  background: var(--color-background);
+  background: url("/images/0725エリアマップ背景.jpg") no-repeat center center
+    fixed;
+  background-size: cover;
   font-feature-settings: "palt";
   letter-spacing: 0.02em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url("/about/bg-pattern.png");
-  background-repeat: repeat;
-  background-size: 300px;
-  background-attachment: fixed;
+  overflow-x: hidden;
+  font-family: var(--font-noto-sans-jp), "Noto Sans JP", sans-serif;
 }
 
 @layer base {
@@ -52,7 +52,7 @@ body {
 
   .section-title h2 {
     @apply text-[28px] font-bold tracking-widest inline-block;
-    background: linear-gradient(45deg, #ffc4d0, #ffd6de);
+    background: linear-gradient(45deg, #4fc3f7, #b3e5fc);
     -webkit-background-clip: text;
     color: transparent;
   }
@@ -60,17 +60,17 @@ body {
   .section-title::after {
     content: "";
     @apply absolute left-1/2 -translate-x-1/2 -bottom-4 w-12 h-[1px];
-    background: linear-gradient(45deg, #ffc4d0, #ffd6de);
+    background: linear-gradient(45deg, #4fc3f7, #b3e5fc);
   }
 
   .card {
     @apply bg-white rounded-2xl p-8 shadow-sm;
-    box-shadow: 0 4px 6px rgba(255, 196, 208, 0.1);
+    box-shadow: 0 4px 6px rgba(79, 195, 247, 0.1);
   }
 
   .btn-primary {
-    @apply inline-flex items-center justify-center px-10 py-3 bg-[#FFC4D0] text-white rounded-full 
-    font-bold tracking-wider hover:bg-[#FFB6C1] transition-colors duration-300 min-w-[240px] text-[15px];
+    @apply inline-flex items-center justify-center px-10 py-3 bg-[#4fc3f7] text-white rounded-full 
+    font-bold tracking-wider hover:bg-[#0288d1] transition-colors duration-300 min-w-[240px] text-[15px];
   }
 
   .member-grid {

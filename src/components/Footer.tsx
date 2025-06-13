@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#B87C8B] py-8">
+    <footer className="bg-gradient-to-r from-blue-700 to-sky-500 py-8">
       <div className="max-w-[1400px] mx-auto px-6">
         <div className="flex flex-col items-center">
           {/* ロゴ */}
@@ -11,12 +11,13 @@ export default function Footer() {
               src="/images/footer/footer_logo.webp"
               alt="MY DEAR DARLIN'"
               fill
-              className="object-contain brightness-0 invert opacity-90"
+              className="object-contain opacity-90"
+              style={{ filter: "brightness(0) invert(1)" }}
             />
           </div>
 
           {/* コピーライト */}
-          <p className="text-white text-[11px] tracking-[0.05em] opacity-70 font-light">
+          <p className="text-sky-50 text-[11px] tracking-[0.05em] opacity-80 font-light">
             Copyright © grabss Inc. All Right Reserved.
           </p>
         </div>
