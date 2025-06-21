@@ -539,277 +539,276 @@ export default function Ticket() {
             </div>
           </motion.div>
 
-          {/* チケット販売情報 */}
+          {/* チケット販売情報からご来場者様へのお願いまでをまとめたカード */}
           <motion.div
             className="p-6 rounded-lg"
             style={{ background: "rgba(255,255,255,0.5)" }}
             variants={fadeInUp}
           >
-            <div
-              className="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-700 via-sky-400 to-blue-300 mb-4"
-              style={{ fontFamily: "serif" }}
-            >
-              チケット販売情報
-            </div>
-            <div className="space-y-6" style={{ fontFamily: "serif" }}>
-              <div>
-                <div
-                  className="font-bold text-blue-800 mb-2 pl-8"
-                  style={{ fontFamily: "serif" }}
-                >
-                  VIP先行予約
+            {/* チケット販売情報 */}
+            <div className="mb-8">
+              <div
+                className="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-700 via-sky-400 to-blue-300 mb-4"
+                style={{ fontFamily: "serif" }}
+              >
+                チケット販売情報
+              </div>
+              <div className="space-y-6" style={{ fontFamily: "serif" }}>
+                <div>
+                  <div
+                    className="font-bold text-blue-800 mb-2 pl-8"
+                    style={{ fontFamily: "serif" }}
+                  >
+                    VIP先行予約
+                  </div>
+                  <div
+                    className="text-[15px] text-slate-700 pl-12"
+                    style={{ fontFamily: "serif" }}
+                  >
+                    抽選／お一人様1枚まで／WEB受付
+                    <br />
+                    受付期間：6月11日(水)21:00〜6月19日(木)23:59
+                    <br />
+                    当落発表：6月24日(火)15:00
+                  </div>
                 </div>
-                <div
-                  className="text-[15px] text-slate-700 pl-12"
-                  style={{ fontFamily: "serif" }}
-                >
-                  抽選／お一人様1枚まで／WEB受付
-                  <br />
-                  受付期間：6月11日(水)21:00〜6月19日(木)23:59
-                  <br />
-                  当落発表：6月24日(火)15:00
+                <div>
+                  <div
+                    className="font-bold text-blue-800 mb-2 pl-8"
+                    style={{ fontFamily: "serif" }}
+                  >
+                    一般販売
+                  </div>
+                  <div className="space-y-4" style={{ fontFamily: "serif" }}>
+                    <div>
+                      <div
+                        className="font-bold text-blue-800 pl-12"
+                        style={{ fontFamily: "serif" }}
+                      >
+                        カメラチケット
+                      </div>
+                      <div
+                        className="text-[15px] text-slate-700 pl-16"
+                        style={{ fontFamily: "serif" }}
+                      >
+                        先着／お一人様1枚まで／WEB受付
+                        <br />
+                        6月10日(火)20:00〜7月24日23:59
+                      </div>
+                    </div>
+                    <div>
+                      <div
+                        className="font-bold text-blue-800 pl-12"
+                        style={{ fontFamily: "serif" }}
+                      >
+                        A+チケット スタンディング
+                      </div>
+                      <div
+                        className="text-[15px] text-slate-700 pl-16"
+                        style={{ fontFamily: "serif" }}
+                      >
+                        先着／お一人様2枚まで／WEB受付
+                        <br />
+                        6月24日(火)21:00〜7月24日23:59
+                      </div>
+                    </div>
+                    <div>
+                      <div
+                        className="font-bold text-blue-800 pl-12"
+                        style={{ fontFamily: "serif" }}
+                      >
+                        A+チケット シーティング
+                      </div>
+                      <div
+                        className="text-[15px] text-slate-700 pl-16"
+                        style={{ fontFamily: "serif" }}
+                      >
+                        先着／お一人様2枚まで／WEB受付
+                        <br />
+                        6月24日(火)21:30〜7月24日23:59
+                      </div>
+                    </div>
+                    <div>
+                      <div
+                        className="font-bold text-blue-800 pl-12"
+                        style={{ fontFamily: "serif" }}
+                      >
+                        Aチケット スタンディング
+                      </div>
+                      <div
+                        className="text-[15px] text-slate-700 pl-16"
+                        style={{ fontFamily: "serif" }}
+                      >
+                        先着／お一人様4枚まで／WEB受付
+                        <br />
+                        6月25日(水)21:30〜7月24日23:59
+                      </div>
+                    </div>
+                    <div>
+                      <div
+                        className="font-bold text-blue-800 pl-12"
+                        style={{ fontFamily: "serif" }}
+                      >
+                        Aチケット シーティング
+                      </div>
+                      <div
+                        className="text-[15px] text-slate-700 pl-16"
+                        style={{ fontFamily: "serif" }}
+                      >
+                        先着／お一人様4枚まで／WEB受付
+                        <br />
+                        6月25日(水)22:00〜7月24日23:59
+                      </div>
+                    </div>
+                    <div>
+                      <div
+                        className="font-bold text-blue-800 pl-12"
+                        style={{ fontFamily: "serif" }}
+                      >
+                        Bチケット
+                      </div>
+                      <div
+                        className="text-[15px] text-slate-700 pl-16"
+                        style={{ fontFamily: "serif" }}
+                      >
+                        先着／お一人様4枚まで／WEB受付
+                        <br />
+                        6月30日(月)21:00〜7月24日23:59
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div>
-                <div
-                  className="font-bold text-blue-800 mb-2 pl-8"
-                  style={{ fontFamily: "serif" }}
-                >
-                  一般販売
-                </div>
-                <div className="space-y-4" style={{ fontFamily: "serif" }}>
-                  <div>
-                    <div
-                      className="font-bold text-blue-800 pl-12"
-                      style={{ fontFamily: "serif" }}
-                    >
-                      カメラチケット
-                    </div>
-                    <div
-                      className="text-[15px] text-slate-700 pl-16"
-                      style={{ fontFamily: "serif" }}
-                    >
-                      先着／お一人様1枚まで／WEB受付
-                      <br />
-                      6月10日(火)20:00〜7月24日23:59
-                    </div>
-                  </div>
-                  <div>
-                    <div
-                      className="font-bold text-blue-800 pl-12"
-                      style={{ fontFamily: "serif" }}
-                    >
-                      A+チケット スタンディング
-                    </div>
-                    <div
-                      className="text-[15px] text-slate-700 pl-16"
-                      style={{ fontFamily: "serif" }}
-                    >
-                      先着／お一人様2枚まで／WEB受付
-                      <br />
-                      6月24日(火)21:00〜7月24日23:59
-                    </div>
-                  </div>
-                  <div>
-                    <div
-                      className="font-bold text-blue-800 pl-12"
-                      style={{ fontFamily: "serif" }}
-                    >
-                      A+チケット シーティング
-                    </div>
-                    <div
-                      className="text-[15px] text-slate-700 pl-16"
-                      style={{ fontFamily: "serif" }}
-                    >
-                      先着／お一人様2枚まで／WEB受付
-                      <br />
-                      6月24日(火)21:30〜7月24日23:59
-                    </div>
-                  </div>
-                  <div>
-                    <div
-                      className="font-bold text-blue-800 pl-12"
-                      style={{ fontFamily: "serif" }}
-                    >
-                      Aチケット スタンディング
-                    </div>
-                    <div
-                      className="text-[15px] text-slate-700 pl-16"
-                      style={{ fontFamily: "serif" }}
-                    >
-                      先着／お一人様4枚まで／WEB受付
-                      <br />
-                      6月25日(水)21:30〜7月24日23:59
-                    </div>
-                  </div>
-                  <div>
-                    <div
-                      className="font-bold text-blue-800 pl-12"
-                      style={{ fontFamily: "serif" }}
-                    >
-                      Aチケット シーティング
-                    </div>
-                    <div
-                      className="text-[15px] text-slate-700 pl-16"
-                      style={{ fontFamily: "serif" }}
-                    >
-                      先着／お一人様4枚まで／WEB受付
-                      <br />
-                      6月25日(水)22:00〜7月24日23:59
-                    </div>
-                  </div>
-                  <div>
-                    <div
-                      className="font-bold text-blue-800 pl-12"
-                      style={{ fontFamily: "serif" }}
-                    >
-                      Bチケット
-                    </div>
-                    <div
-                      className="text-[15px] text-slate-700 pl-16"
-                      style={{ fontFamily: "serif" }}
-                    >
-                      先着／お一人様4枚まで／WEB受付
-                      <br />
-                      6月30日(月)21:00〜7月24日23:59
-                    </div>
-                  </div>
-                </div>
+            </div>
+
+            {/* 区切り線 */}
+            <div className="w-full h-px bg-gray-200 my-8"></div>
+
+            {/* お問い合わせ */}
+            <div className="mb-8">
+              <div
+                className="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-700 via-sky-400 to-blue-300 mb-4"
+                style={{ fontFamily: "serif" }}
+              >
+                お問い合わせ
+              </div>
+              <div
+                className="text-[15px] text-slate-700 pl-12"
+                style={{ fontFamily: "serif" }}
+              >
+                【チケットに関するお問い合わせ】
+                <br />
+                ウドー音楽事務所　TEL:03-3402-5999（営業時間：月曜・水曜・金曜　12:00〜15:00）
               </div>
             </div>
-          </motion.div>
 
-          {/* お問い合わせ */}
-          <motion.div
-            className="p-6 rounded-lg"
-            style={{ background: "rgba(255,255,255,0.5)" }}
-            variants={fadeInUp}
-          >
-            <div
-              className="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-700 via-sky-400 to-blue-300 mb-4"
-              style={{ fontFamily: "serif" }}
-            >
-              お問い合わせ
-            </div>
-            <div
-              className="text-[15px] text-slate-700 pl-12"
-              style={{ fontFamily: "serif" }}
-            >
-              【チケットに関するお問い合わせ】
-              <br />
-              ウドー音楽事務所　TEL:03-3402-5999（営業時間：月曜・水曜・金曜　12:00〜15:00）
-            </div>
-          </motion.div>
+            {/* 区切り線 */}
+            <div className="w-full h-px bg-gray-200 my-8"></div>
 
-          {/* 注意事項 */}
-          <motion.div
-            className="p-6 rounded-lg"
-            style={{ background: "rgba(255,255,255,0.5)" }}
-            variants={fadeInUp}
-          >
-            <div
-              className="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-700 via-sky-400 to-blue-300 mb-4"
-              style={{ fontFamily: "serif" }}
-            >
-              ご注意事項
-            </div>
-            <ul
-              className="list-none space-y-2 text-[15px] text-slate-700 pl-8"
-              style={{ fontFamily: "serif" }}
-            >
-              <li className="flex items-start">
-                <span className="text-blue-400 mr-2">•</span>
-                撮影チケット：脚立90cm以内／三脚OK／フラッシュ禁止／全編静止画のみ
-              </li>
-              <li className="flex items-start">
-                <span className="text-blue-400 mr-2">•</span>
-                撮影素材の転売・無断使用禁止
-              </li>
-              <li className="flex items-start">
-                <span className="text-blue-400 mr-2">•</span>
-                SNS投稿は運営許可が必要（MyDearDarlin&apos;公式XのDMへファイル送付）
-              </li>
-              <li className="flex items-start">
-                <span className="text-blue-400 mr-2">•</span>
-                入場順：VIP → A+ → A → B（カメラチケットは別案内）
-              </li>
-              <li className="flex items-start">
-                <span className="text-blue-400 mr-2">•</span>
-                重複予約／転売／交換禁止
-              </li>
-              <li className="flex items-start">
-                <span className="text-blue-400 mr-2">•</span>
-                VIP・カメラチケット：顔写真付き身分証による本人確認あり
-              </li>
-              <li className="flex items-start">
-                <span className="text-blue-400 mr-2">•</span>
-                割り込み／場所取り禁止
-              </li>
-              <li className="flex items-start">
-                <span className="text-blue-400 mr-2">•</span>
-                BOT購入禁止（発覚時は入場不可）
-              </li>
-              <li className="flex items-start">
-                <span className="text-blue-400 mr-2">•</span>
-                モッシュ／リフト／ダイブ禁止（注意後改善なければ退場）
-              </li>
-              <li className="flex items-start">
-                <span className="text-blue-400 mr-2">•</span>
-                飲食物・危険物持込禁止
-              </li>
-              <li className="flex items-start">
-                <span className="text-blue-400 mr-2">•</span>
-                無許可の撮影・録音・録画禁止
-              </li>
-              <li className="flex items-start">
-                <span className="text-blue-400 mr-2">•</span>
-                入待ち・出待ち禁止
-              </li>
-            </ul>
-          </motion.div>
-
-          {/* ご来場者様へのお願い */}
-          <motion.div
-            className="p-6 rounded-lg"
-            style={{ background: "rgba(255,255,255,0.5)" }}
-            variants={fadeInUp}
-          >
-            <div
-              className="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-700 via-sky-400 to-blue-300 mb-4"
-              style={{ fontFamily: "serif" }}
-            >
-              ご来場者様へのお願い
+            {/* 注意事項 */}
+            <div className="mb-8">
+              <div
+                className="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-700 via-sky-400 to-blue-300 mb-4"
+                style={{ fontFamily: "serif" }}
+              >
+                ご注意事項
+              </div>
+              <ul
+                className="list-none space-y-2 text-[15px] text-slate-700 pl-8"
+                style={{ fontFamily: "serif" }}
+              >
+                <li className="flex items-start">
+                  <span className="text-blue-400 mr-2">•</span>
+                  撮影チケット：脚立90cm以内／三脚OK／フラッシュ禁止／全編静止画のみ
+                </li>
+                <li className="flex items-start">
+                  <span className="text-blue-400 mr-2">•</span>
+                  撮影素材の転売・無断使用禁止
+                </li>
+                <li className="flex items-start">
+                  <span className="text-blue-400 mr-2">•</span>
+                  SNS投稿は運営許可が必要（MyDearDarlin&apos;公式XのDMへファイル送付）
+                </li>
+                <li className="flex items-start">
+                  <span className="text-blue-400 mr-2">•</span>
+                  入場順：VIP → A+ → A → B（カメラチケットは別案内）
+                </li>
+                <li className="flex items-start">
+                  <span className="text-blue-400 mr-2">•</span>
+                  重複予約／転売／交換禁止
+                </li>
+                <li className="flex items-start">
+                  <span className="text-blue-400 mr-2">•</span>
+                  VIP・カメラチケット：顔写真付き身分証による本人確認あり
+                </li>
+                <li className="flex items-start">
+                  <span className="text-blue-400 mr-2">•</span>
+                  割り込み／場所取り禁止
+                </li>
+                <li className="flex items-start">
+                  <span className="text-blue-400 mr-2">•</span>
+                  BOT購入禁止（発覚時は入場不可）
+                </li>
+                <li className="flex items-start">
+                  <span className="text-blue-400 mr-2">•</span>
+                  モッシュ／リフト／ダイブ禁止（注意後改善なければ退場）
+                </li>
+                <li className="flex items-start">
+                  <span className="text-blue-400 mr-2">•</span>
+                  飲食物・危険物持込禁止
+                </li>
+                <li className="flex items-start">
+                  <span className="text-blue-400 mr-2">•</span>
+                  無許可の撮影・録音・録画禁止
+                </li>
+                <li className="flex items-start">
+                  <span className="text-blue-400 mr-2">•</span>
+                  入待ち・出待ち禁止
+                </li>
+              </ul>
             </div>
 
-            <ul
-              className="list-none space-y-2 text-[15px] text-slate-700 pl-8"
-              style={{ fontFamily: "serif" }}
-            >
-              <li className="flex items-start">
-                <span className="text-blue-400 mr-2">•</span>
-                係員の指示に従ってください
-              </li>
-              <li className="flex items-start">
-                <span className="text-blue-400 mr-2">•</span>
-                体調不良時はスタッフへお申し出ください（症状により退場をお願いする場合あり）
-              </li>
-              <li className="flex items-start">
-                <span className="text-blue-400 mr-2">•</span>
-                貴重品・所持品の管理は各自で行ってください（紛失等は自己責任）
-              </li>
-              <li className="flex items-start">
-                <span className="text-blue-400 mr-2">•</span>
-                トラブル・怪我・破損等への主催者の責任は一切負いかねます
-              </li>
-              <li className="flex items-start">
-                <span className="text-blue-400 mr-2">•</span>
-                お客様都合による返金不可
-              </li>
-              <li className="flex items-start">
-                <span className="text-blue-400 mr-2">•</span>
-                規約違反や不正行為が発覚した場合、退場や今後の参加制限措置あり
-              </li>
-            </ul>
+            {/* 区切り線 */}
+            <div className="w-full h-px bg-gray-200 my-8"></div>
+
+            {/* ご来場者様へのお願い */}
+            <div>
+              <div
+                className="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-700 via-sky-400 to-blue-300 mb-4"
+                style={{ fontFamily: "serif" }}
+              >
+                ご来場者様へのお願い
+              </div>
+              <ul
+                className="list-none space-y-2 text-[15px] text-slate-700 pl-8"
+                style={{ fontFamily: "serif" }}
+              >
+                <li className="flex items-start">
+                  <span className="text-blue-400 mr-2">•</span>
+                  係員の指示に従ってください
+                </li>
+                <li className="flex items-start">
+                  <span className="text-blue-400 mr-2">•</span>
+                  体調不良時はスタッフへお申し出ください（症状により退場をお願いする場合あり）
+                </li>
+                <li className="flex items-start">
+                  <span className="text-blue-400 mr-2">•</span>
+                  貴重品・所持品の管理は各自で行ってください（紛失等は自己責任）
+                </li>
+                <li className="flex items-start">
+                  <span className="text-blue-400 mr-2">•</span>
+                  トラブル・怪我・破損等への主催者の責任は一切負いかねます
+                </li>
+                <li className="flex items-start">
+                  <span className="text-blue-400 mr-2">•</span>
+                  お客様都合による返金不可
+                </li>
+                <li className="flex items-start">
+                  <span className="text-blue-400 mr-2">•</span>
+                  規約違反や不正行為が発覚した場合、退場や今後の参加制限措置あり
+                </li>
+              </ul>
+            </div>
           </motion.div>
         </motion.div>
       </motion.div>

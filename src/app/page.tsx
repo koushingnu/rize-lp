@@ -11,10 +11,10 @@ export default function Home() {
       <main>
         <Hero />
         <Introduction />
-        <Movie />
         <Message />
         <Ticket />
         <Access />
+        <Movie />
       </main>
     </>
   );

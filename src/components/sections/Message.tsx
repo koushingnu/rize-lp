@@ -2,6 +2,9 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useState } from "react";
+import { FaTwitter, FaInstagram, FaTiktok } from "react-icons/fa";
+import MessagePopup from "../ui/MessagePopup";
 
 const members = [
   "01東條ゆりあ_2505.jpg",
@@ -118,7 +121,80 @@ const buttonVariants = {
   },
 };
 
+const memberData = [
+  {
+    id: 1,
+    name: "東條 ゆりあ",
+    nameEn: "Tojo Yuria",
+    social: {
+      twitter: "https://twitter.com/example1",
+      instagram: "https://instagram.com/example1",
+      tiktok: "https://tiktok.com/@example1",
+    },
+  },
+  {
+    id: 2,
+    name: "咲真 ゆか",
+    nameEn: "Sakuma Yuka",
+    social: {
+      twitter: "https://twitter.com/example2",
+      instagram: "https://instagram.com/example2",
+      tiktok: "https://tiktok.com/@example2",
+    },
+  },
+  {
+    id: 3,
+    name: "是枝 優美",
+    nameEn: "Koreeda Yumi",
+    social: {
+      twitter: "https://twitter.com/example3",
+      instagram: "https://instagram.com/example3",
+      tiktok: "https://tiktok.com/@example3",
+    },
+  },
+  {
+    id: 4,
+    name: "夢実 あすか",
+    nameEn: "Yumemi Asuka",
+    social: {
+      twitter: "https://twitter.com/example4",
+      instagram: "https://instagram.com/example4",
+      tiktok: "https://tiktok.com/@example4",
+    },
+  },
+  {
+    id: 5,
+    name: "濱田 菜々",
+    nameEn: "Hamada Nana",
+    social: {
+      twitter: "https://twitter.com/example5",
+      instagram: "https://instagram.com/example5",
+      tiktok: "https://tiktok.com/@example5",
+    },
+  },
+  {
+    id: 6,
+    name: "広山 楓",
+    nameEn: "Hiroyama Kaede",
+    social: {
+      twitter: "https://twitter.com/example6",
+      instagram: "https://instagram.com/example6",
+      tiktok: "https://tiktok.com/@example6",
+    },
+  },
+];
+
 export default function Message() {
+  const [selectedMember, setSelectedMember] = useState<number | null>(null);
+
+  const handleOpenPopup = (memberId: number) => {
+    setSelectedMember(memberId);
+  };
+
+  const handleClosePopup = () => {
+    setSelectedMember(null);
+  };
+
   return (
     <motion.section
       className="w-full flex flex-col items-center py-24 bg-transparent"
@@ -157,7 +233,7 @@ export default function Message() {
         className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 max-w-6xl w-full px-4"
         variants={containerVariants}
       >
-        {members.map((filename) => (
+        {members.map((filename, index) => (
           <motion.div
             key={filename}
             className="flex flex-col items-center"
@@ -198,12 +274,21 @@ export default function Message() {
               style={{ borderRadius: 0, fontFamily: "serif" }}
               variants={buttonVariants}
               whileTap="tap"
+              onClick={() => handleOpenPopup(index + 1)}
             >
               メッセージを読む
             </motion.button>
           </motion.div>
         ))}
       </motion.div>
+
+      {selectedMember && (
+        <MessagePopup
+          isOpen={true}
+          onClose={handleClosePopup}
+          memberData={memberData.find((m) => m.id === selectedMember)!}
+        />
+      )}
     </motion.section>
   );
 }
