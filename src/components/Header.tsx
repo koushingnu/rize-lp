@@ -21,21 +21,21 @@ export default function Header() {
       {/* ハンバーガーメニュー */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="relative z-50 w-14 h-14 flex flex-col justify-center items-center gap-[10px] rounded-full bg-white/95 backdrop-blur-sm shadow-lg hover:bg-white hover:shadow-xl hover:scale-105 transition-all duration-300"
+        className="relative z-50 w-14 h-14 flex flex-col justify-center items-center gap-[10px] rounded-full bg-white/50 backdrop-blur-sm shadow-lg hover:bg-white/90 hover:shadow-xl hover:scale-105 transition-all duration-300"
         aria-label="メニュー"
       >
         <span
-          className={`w-8 h-[3px] bg-[#B87C8B] rounded-full transition-all duration-300 ${
+          className={`w-8 h-[3px] bg-[#4fc3f7] rounded-full transition-all duration-300 ${
             isOpen ? "rotate-45 translate-y-[13px]" : ""
           }`}
         />
         <span
-          className={`w-8 h-[3px] bg-[#B87C8B] rounded-full transition-all duration-300 ${
+          className={`w-8 h-[3px] bg-[#4fc3f7] rounded-full transition-all duration-300 ${
             isOpen ? "opacity-0 scale-0" : "scale-100"
           }`}
         />
         <span
-          className={`w-8 h-[3px] bg-[#B87C8B] rounded-full transition-all duration-300 ${
+          className={`w-8 h-[3px] bg-[#4fc3f7] rounded-full transition-all duration-300 ${
             isOpen ? "-rotate-45 -translate-y-[13px]" : ""
           }`}
         />
@@ -43,13 +43,13 @@ export default function Header() {
 
       {/* アコーディオンメニュー */}
       <div
-        className={`fixed top-0 right-0 w-[300px] h-screen bg-white pt-24 px-12 transition-all duration-300 ${
+        className={`fixed top-0 right-0 w-[360px] h-screen bg-white backdrop-blur-sm pt-24 px-16 transition-all duration-300 ${
           isOpen
             ? "opacity-100 visible translate-x-0"
             : "opacity-0 invisible translate-x-4"
         }`}
       >
-        <ul className="space-y-8 text-right">
+        <ul className="space-y-8 text-right min-w-[280px]">
           {navigation.map((item) => (
             <li
               key={item.name}
@@ -58,7 +58,8 @@ export default function Header() {
               <Link
                 href={item.href}
                 onClick={() => setIsOpen(false)}
-                className="block text-2xl font-medium text-[#B87C8B] hover:text-[#D4A1AD] transition-all duration-300"
+                style={{ fontFamily: "var(--font-shippori-mincho)" }}
+                className="block text-2xl font-[700] tracking-widest text-[#4fc3f7] hover:text-[#0288d1] transition-all duration-300"
               >
                 {item.name}
               </Link>

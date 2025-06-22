@@ -67,7 +67,7 @@ export default function Access() {
               fontFamily: "'Shippori Mincho B1', serif",
             }}
           >
-            Access
+            ACCESS
           </motion.h2>
           <motion.span
             initial={{ width: 0 }}

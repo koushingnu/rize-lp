@@ -174,7 +174,7 @@ const Ticket = () => {
               fontFamily: "'Shippori Mincho B1', serif",
             }}
           >
-            Ticket
+            TICKET
           </motion.h2>
           <motion.span
             initial={{ width: 0 }}

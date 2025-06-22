@@ -215,7 +215,7 @@ export default function Message() {
               fontFamily: "'Shippori Mincho B1', serif",
             }}
           >
-            Member
+            MEMBER
           </motion.h2>
           <motion.span
             initial={{ width: 0 }}
