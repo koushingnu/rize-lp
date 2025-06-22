@@ -1,53 +1,70 @@
-import Image from "next/image";
+"use client";
+
 import Link from "next/link";
+import { useState } from "react";
 
 const navigation = [
+  { name: "HERO", href: "#hero" },
+  { name: "INTRODUCTION", href: "#introduction" },
+  { name: "MESSAGE", href: "#message" },
+  { name: "TICKET", href: "#ticket" },
+  { name: "ACCESS", href: "#access" },
   { name: "ABOUT", href: "#about" },
-  { name: "MEMBER", href: "#member" },
-  { name: "GOODS", href: "#goods" },
-  { name: "MUSIC", href: "#music" },
-  { name: "ATTENTION", href: "#attention" },
+  { name: "MOVIE", href: "#movie" },
 ];
 
 export default function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <header className="fixed top-0 left-0 right-0 h-[70px] bg-white z-50">
-      <div className="max-w-[1400px] mx-auto px-6 h-full">
-        <nav className="flex items-center justify-between h-full">
-          <Link href="/" className="relative w-[140px] h-[26px]">
-            <Image
-              src="/images/header/header_logo.webp"
-              alt="MY DEAR DARLIN'"
-              fill
-              className="object-contain"
-              priority
-            />
-          </Link>
+    <header className="fixed top-3 right-5 z-50">
+      {/* ハンバーガーメニュー */}
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="relative z-50 w-14 h-14 flex flex-col justify-center items-center gap-[10px] rounded-full bg-white/95 backdrop-blur-sm shadow-lg hover:bg-white hover:shadow-xl hover:scale-105 transition-all duration-300"
+        aria-label="メニュー"
+      >
+        <span
+          className={`w-8 h-[3px] bg-[#B87C8B] rounded-full transition-all duration-300 ${
+            isOpen ? "rotate-45 translate-y-[13px]" : ""
+          }`}
+        />
+        <span
+          className={`w-8 h-[3px] bg-[#B87C8B] rounded-full transition-all duration-300 ${
+            isOpen ? "opacity-0 scale-0" : "scale-100"
+          }`}
+        />
+        <span
+          className={`w-8 h-[3px] bg-[#B87C8B] rounded-full transition-all duration-300 ${
+            isOpen ? "-rotate-45 -translate-y-[13px]" : ""
+          }`}
+        />
+      </button>
 
-          <div className="hidden md:flex items-center">
-            {/* 通常のナビゲーション */}
-            <ul className="flex items-center">
-              {navigation.map((item) => (
-                <li key={item.name}>
-                  <Link
-                    href={item.href}
-                    className="px-4 text-[13px] tracking-[0.1em] font-medium text-[#B87C8B] hover:text-[#D4A1AD] transition-all duration-300"
-                  >
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-
-            {/* チケットボタン */}
-            <Link
-              href="#ticket"
-              className="ml-2 px-8 py-[14px] text-[13px] tracking-[0.1em] font-medium text-white bg-[#B87C8B] hover:opacity-90 transition-all duration-300"
+      {/* アコーディオンメニュー */}
+      <div
+        className={`fixed top-0 right-0 w-[300px] h-screen bg-white pt-24 px-12 transition-all duration-300 ${
+          isOpen
+            ? "opacity-100 visible translate-x-0"
+            : "opacity-0 invisible translate-x-4"
+        }`}
+      >
+        <ul className="space-y-8 text-right">
+          {navigation.map((item) => (
+            <li
+              key={item.name}
+              className="transform transition-all duration-200 hover:translate-x-[-8px]"
             >
-              TICKET
-            </Link>
-          </div>
-        </nav>
+              <Link
+                href={item.href}
+                onClick={() => setIsOpen(false)}
+                className="block text-2xl font-medium text-[#B87C8B] hover:text-[#D4A1AD] transition-all duration-300"
+              >
+                {item.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
       </div>
     </header>
   );
