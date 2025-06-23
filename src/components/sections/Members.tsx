@@ -93,7 +93,8 @@ const nameVariants = {
   },
 };
 
-const buttonVariants = {
+// メッセージ機能用のアニメーション設定（後で使用）
+/* const buttonVariants = {
   initial: {
     y: 0,
     opacity: 0.9,
@@ -118,7 +119,7 @@ const buttonVariants = {
       duration: 0.1,
     },
   },
-};
+}; */
 
 const memberData = [
   {
@@ -184,7 +185,8 @@ const memberData = [
 ];
 
 export default function Message() {
-  const [selectedMember, setSelectedMember] = useState<number | null>(null);
+  // メッセージ機能用のstate（後で使用）
+  /* const [selectedMember, setSelectedMember] = useState<number | null>(null);
 
   const handleOpenPopup = (memberId: number) => {
     setSelectedMember(memberId);
@@ -192,7 +194,7 @@ export default function Message() {
 
   const handleClosePopup = () => {
     setSelectedMember(null);
-  };
+  }; */
 
   return (
     <motion.section
@@ -263,18 +265,28 @@ export default function Message() {
                   {extractName(member)}
                 </h3>
               </motion.div>
+              {/* メッセージボタン（後で使用）
+              <motion.button
+                className="absolute bottom-4 right-4 px-4 py-2 bg-white/80 backdrop-blur-sm text-blue-600 rounded-full text-sm font-bold hover:bg-white/90 transition-all duration-300"
+                variants={buttonVariants}
+                whileTap="tap"
+                onClick={() => handleOpenPopup(memberData.find(m => extractName(member) === m.name)?.id || 0)}
+              >
+                メッセージを読む
+              </motion.button>
+              */}
             </motion.div>
           ))}
         </div>
       </motion.div>
 
+      {/* メッセージポップアップ（後で使用）
       {selectedMember && (
         <MessagePopup
-          isOpen={true}
+          member={memberData.find(m => m.id === selectedMember)!}
           onClose={handleClosePopup}
-          memberData={memberData.find((m) => m.id === selectedMember)!}
         />
-      )}
+      )} */}
     </motion.section>
   );
 }
