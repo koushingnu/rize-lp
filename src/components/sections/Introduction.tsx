@@ -29,6 +29,7 @@ const containerVariants = {
 export default function Introduction() {
   return (
     <motion.section
+      id="introduction"
       className="w-full flex justify-center py-24 bg-transparent"
       style={{ position: "relative" }}
       initial="hidden"

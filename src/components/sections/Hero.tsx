@@ -5,7 +5,10 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="relative w-screen h-screen flex items-center justify-center overflow-hidden bg-transparent">
+    <section
+      className="relative w-screen min-h-[120vh] flex items-center justify-center overflow-hidden bg-transparent"
+      id="hero"
+    >
       <motion.div
         className="w-screen flex justify-center items-center"
         initial={{

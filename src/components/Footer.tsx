@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 
@@ -74,14 +76,22 @@ export default function Footer() {
   ];
 
   const navigationLinks = [
-    { name: "HERO", href: "#hero" },
     { name: "INTRODUCTION", href: "#introduction" },
-    { name: "MESSAGE", href: "#message" },
+    { name: "MEMBERS", href: "#message" },
     { name: "TICKET", href: "#ticket" },
     { name: "ACCESS", href: "#access" },
-    { name: "ABOUT", href: "#about" },
-    { name: "MOVIE", href: "#movie" },
+    // { name: "MOVIE", href: "#movie" },
   ];
+
+  const handleClick = (href: string) => {
+    // スムーズスクロールのための遅延を追加
+    setTimeout(() => {
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 100);
+  };
 
   return (
     <footer className="bg-gradient-to-r from-blue-100 via-sky-50 to-blue-100 py-12 border-t border-sky-100">
@@ -90,7 +100,10 @@ export default function Footer() {
           {/* 左側のコンテンツ */}
           <div className="md:pl-0 xl:pl-16">
             {/* ロゴ */}
-            <div className="relative w-[240px] h-[44px]">
+            <button
+              onClick={() => handleClick("#hero")}
+              className="relative w-[240px] h-[44px] hover:opacity-80 transition-opacity duration-300"
+            >
               <Image
                 src="/images/footer/footer_logo.webp"
                 alt="MY DEAR DARLIN'"
@@ -98,7 +111,7 @@ export default function Footer() {
                 className="object-contain"
                 style={{ filter: "brightness(0)" }}
               />
-            </div>
+            </button>
           </div>
 
           {/* 右側のコンテンツ */}
@@ -108,12 +121,12 @@ export default function Footer() {
               <ul className="flex flex-wrap gap-x-8 gap-y-4 justify-start md:justify-end">
                 {navigationLinks.map((link) => (
                   <li key={link.name}>
-                    <Link
-                      href={link.href}
+                    <button
+                      onClick={() => handleClick(link.href)}
                       className="text-slate-700 hover:text-slate-900 transition-colors duration-300 text-sm tracking-wider"
                     >
                       {link.name}
-                    </Link>
+                    </button>
                   </li>
                 ))}
               </ul>

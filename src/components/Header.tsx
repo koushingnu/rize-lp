@@ -1,23 +1,57 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 
 const navigation = [
-  { name: "HERO", href: "#hero" },
+  // { name: "HERO", href: "#hero" },
   { name: "INTRODUCTION", href: "#introduction" },
-  { name: "MESSAGE", href: "#message" },
+  { name: "MEMBERS", href: "#message" },
   { name: "TICKET", href: "#ticket" },
   { name: "ACCESS", href: "#access" },
-  { name: "ABOUT", href: "#about" },
-  { name: "MOVIE", href: "#movie" },
+  // { name: "ABOUT", href: "#about" },
+  // { name: "MOVIE", href: "#movie" }, // ムービーはまだない
 ];
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
+  const handleClick = (href: string) => {
+    setIsOpen(false);
+    // スムーズスクロールのための遅延を追加
+    setTimeout(() => {
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 100);
+  };
+
   return (
-    <header className="fixed top-3 right-5 z-50">
+    <header className="fixed top-3 right-5 z-50 flex items-center justify-end">
+      {/* ロゴ（メニュー開閉と連動） */}
+      <div
+        className={`absolute right-[72px] z-50 transition-all duration-300 ${
+          isOpen
+            ? "opacity-100 visible -translate-x-4"
+            : "opacity-0 invisible translate-x-4"
+        }`}
+      >
+        <button
+          onClick={() => handleClick("#hero")}
+          className="relative w-[220px] h-14 block bg-white/50 backdrop-blur-sm rounded-full px-4"
+        >
+          <Image
+            src="/images/footer/footer_logo.webp"
+            alt="MY DEAR DARLIN'"
+            fill
+            className="object-contain"
+            style={{ filter: "brightness(0)" }}
+          />
+        </button>
+      </div>
+
       {/* ハンバーガーメニュー */}
       <button
         onClick={() => setIsOpen(!isOpen)}
@@ -55,14 +89,13 @@ export default function Header() {
               key={item.name}
               className="transform transition-all duration-200 hover:translate-x-[-8px]"
             >
-              <Link
-                href={item.href}
-                onClick={() => setIsOpen(false)}
+              <button
+                onClick={() => handleClick(item.href)}
                 style={{ fontFamily: "var(--font-shippori-mincho)" }}
                 className="block text-2xl font-[700] tracking-widest text-[#4fc3f7] hover:text-[#0288d1] transition-all duration-300"
               >
                 {item.name}
-              </Link>
+              </button>
             </li>
           ))}
         </ul>

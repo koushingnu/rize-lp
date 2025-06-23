@@ -268,7 +268,7 @@ export default function Message() {
               {extractName(filename)}
             </motion.div>
             {/* ボタン */}
-            <motion.button
+            {/* <motion.button
               className="px-8 py-2 bg-gradient-to-r from-blue-600 via-sky-400 to-blue-300 text-white font-semibold text-base tracking-wide shadow-md hover:from-blue-700 hover:to-sky-500 transition-all duration-300 border-none"
               style={{ borderRadius: 0, fontFamily: "serif" }}
               variants={buttonVariants}
@@ -276,7 +276,7 @@ export default function Message() {
               onClick={() => handleOpenPopup(index + 1)}
             >
               メッセージを読む
-            </motion.button>
+            </motion.button> */}
           </motion.div>
         ))}
       </motion.div>
