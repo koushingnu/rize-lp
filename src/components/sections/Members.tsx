@@ -206,17 +206,9 @@ export default function Message() {
       viewport={{ once: true, margin: "-100px" }}
       variants={containerVariants}
     >
-      <motion.div
-        className="w-full max-w-6xl p-12 flex flex-col items-start relative backdrop-blur-sm"
-        style={{
-          background:
-            "linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(240,247,250,0.95) 100%)",
-          boxShadow: "0 8px 32px rgba(31, 38, 135, 0.15)",
-          border: "1px solid rgba(255, 255, 255, 0.18)",
-        }}
-        variants={memberCardVariants}
-      >
-        <div className="relative inline-block mb-16">
+      {/* タイトル */}
+      <div className="mb-16 w-full max-w-6xl px-4">
+        <div className="relative inline-block">
           <motion.h2
             variants={titleVariants}
             className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-sky-400 to-blue-300 tracking-wider drop-shadow-lg text-left"
@@ -237,48 +229,61 @@ export default function Message() {
             }}
           ></motion.span>
         </div>
+      </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
-          {members.map((member) => (
+      {/* メンバーグリッド */}
+      <motion.div
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 max-w-6xl w-full px-4"
+        variants={containerVariants}
+      >
+        {members.map((filename) => (
+          <motion.div
+            key={filename}
+            className="flex flex-col items-center"
+            variants={memberCardVariants}
+            initial="initial"
+            whileHover="hover"
+          >
+            {/* 画像＋シルバー縁＋下に青系シャドウ（角丸なし） */}
             <motion.div
-              key={member}
-              className="relative aspect-[3/4] overflow-hidden rounded-lg shadow-lg"
-              variants={memberCardVariants}
-              whileHover="hover"
-              initial="initial"
+              className="relative w-full aspect-[3/4] overflow-hidden mb-6"
+              style={{
+                boxShadow:
+                  "0 8px 0 0 #b0c4de, 0 16px 32px 0 rgba(79,195,247,0.15)",
+                border: "2px solid #b0c4de",
+              }}
+              variants={imageHoverVariants}
             >
-              <motion.div
-                className="w-full h-full"
-                variants={imageHoverVariants}
-              >
-                <Image
-                  src={`/images/0725MDD豊洲LP/A写/個人/${member}`}
-                  alt={extractName(member)}
-                  fill
-                  className="object-cover"
-                />
-              </motion.div>
-              <motion.div
-                className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent"
-                variants={nameVariants}
-              >
-                <h3 className="text-white text-xl font-bold tracking-wider">
-                  {extractName(member)}
-                </h3>
-              </motion.div>
-              {/* メッセージボタン（後で使用）
-              <motion.button
-                className="absolute bottom-4 right-4 px-4 py-2 bg-white/80 backdrop-blur-sm text-blue-600 rounded-full text-sm font-bold hover:bg-white/90 transition-all duration-300"
-                variants={buttonVariants}
-                whileTap="tap"
-                onClick={() => handleOpenPopup(memberData.find(m => extractName(member) === m.name)?.id || 0)}
-              >
-                メッセージを読む
-              </motion.button>
-              */}
+              <Image
+                src={`/images/0725MDD豊洲LP/A写/個人/${filename}`}
+                alt={extractName(filename)}
+                fill
+                sizes="(max-width: 768px) 50vw, 25vw"
+                className="object-cover"
+                style={{ borderRadius: 0 }}
+              />
             </motion.div>
-          ))}
-        </div>
+            {/* 名前 */}
+            <motion.div
+              className="text-center font-bold text-slate-800 text-lg tracking-wide mb-4"
+              style={{ fontFamily: "serif" }}
+              variants={nameVariants}
+            >
+              {extractName(filename)}
+            </motion.div>
+
+            {/* メッセージボタン（後で使用）
+            <motion.button
+              className="px-8 py-2 bg-gradient-to-r from-blue-600 via-sky-400 to-blue-300 text-white font-semibold text-base tracking-wide shadow-md hover:from-blue-700 hover:to-sky-500 transition-all duration-300 border-none"
+              style={{ borderRadius: 0, fontFamily: "serif" }}
+              variants={buttonVariants}
+              whileTap="tap"
+              onClick={() => handleOpenPopup(memberData.find(m => extractName(filename) === m.name)?.id || 0)}
+            >
+              メッセージを読む
+            </motion.button> */}
+          </motion.div>
+        ))}
       </motion.div>
 
       {/* メッセージポップアップ（後で使用）
