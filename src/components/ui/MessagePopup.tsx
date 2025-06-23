@@ -1,4 +1,5 @@
-import { FaTwitter, FaInstagram, FaTiktok } from "react-icons/fa";
+import { FaInstagram, FaTiktok } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import Image from "next/image";
 
 interface MessagePopupProps {
@@ -54,9 +55,9 @@ const MessagePopup: React.FC<MessagePopupProps> = ({
                   href={memberData.social.twitter}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-700 hover:text-blue-400"
+                  className="text-gray-700 hover:text-black"
                 >
-                  <FaTwitter size={24} />
+                  <FaXTwitter size={24} />
                 </a>
                 <a
                   href={memberData.social.instagram}
@@ -84,4 +85,3 @@ const MessagePopup: React.FC<MessagePopupProps> = ({
 };
 
 export default MessagePopup;
- 

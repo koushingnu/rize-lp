@@ -3,8 +3,9 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { FaTwitter, FaInstagram, FaTiktok } from "react-icons/fa";
 import MessagePopup from "../ui/MessagePopup";
+import SectionTitle from "../ui/SectionTitle";
+import { FaXTwitter } from "react-icons/fa6";
 
 const members = [
   "01東條ゆりあ_2505.jpg",
