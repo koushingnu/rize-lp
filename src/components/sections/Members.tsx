@@ -1,9 +1,9 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import MessagePopup from "../ui/MessagePopup";
+/* import { useState } from "react";
+import MessagePopup from "../ui/MessagePopup"; */
 
 const members = [
   "01東條ゆりあ_2505.jpg",
@@ -121,6 +121,7 @@ const nameVariants = {
   },
 }; */
 
+/* メッセージ機能用のデータ（後で使用）
 const memberData = [
   {
     id: 1,
@@ -182,7 +183,7 @@ const memberData = [
       tiktok: "https://tiktok.com/@example6",
     },
   },
-];
+]; */
 
 export default function Message() {
   // メッセージ機能用のstate（後で使用）
