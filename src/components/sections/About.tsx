@@ -82,7 +82,7 @@ export default function About() {
             variants={itemVariants}
           >
             <p className="text-lg sm:text-xl leading-relaxed">
-              MY DEAR DARLIN'は、2019年に結成された6人組ガールズバンド。
+              MY DEAR DARLIN&apos;は、2019年に結成された6人組ガールズバンド。
               メンバー全員が作詞作曲、アレンジに携わり、オリジナル楽曲を制作。
               バンドサウンドを基調としながらも、ポップスやロック、ジャズなど
               様々なジャンルの要素を取り入れた楽曲で、独自の世界観を展開しています。
