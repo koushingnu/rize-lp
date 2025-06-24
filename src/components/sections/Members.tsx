@@ -20,18 +20,6 @@ function extractName(filename: string) {
   return match ? match[1] : filename;
 }
 
-const titleVariants = {
-  hidden: { x: -20, opacity: 0 },
-  visible: {
-    x: 0,
-    opacity: 1,
-    transition: {
-      duration: 0.5,
-      ease: "easeOut",
-    },
-  },
-};
-
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -185,7 +173,7 @@ const memberData = [
   },
 ]; */
 
-export default function Message() {
+export default function Members() {
   // メッセージ機能用のstate（後で使用）
   /* const [selectedMember, setSelectedMember] = useState<number | null>(null);
 
@@ -198,92 +186,92 @@ export default function Message() {
   }; */
 
   return (
-    <motion.section
-      className="w-full flex flex-col items-center py-24 bg-transparent"
+    <section
       id="message"
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, margin: "-100px" }}
-      variants={containerVariants}
+      className="relative w-full py-24 bg-gradient-to-b from-blue-50 to-white"
     >
-      {/* タイトル */}
-      <div className="mb-16 w-full max-w-6xl px-4">
-        <div className="relative inline-block">
-          <motion.h2
-            variants={titleVariants}
-            className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-sky-400 to-blue-300 tracking-wider drop-shadow-lg text-left"
-            style={{
-              letterSpacing: "0.05em",
-              fontFamily: "'Shippori Mincho B1', serif",
-            }}
-          >
-            MEMBERS
-          </motion.h2>
-          <motion.span
-            initial={{ width: 0 }}
-            whileInView={{ width: "6rem" }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="block mt-2 h-1 w-24 rounded-full"
-            style={{
-              background: "linear-gradient(90deg, #4fc3f7 0%, #b0c4de 100%)",
-            }}
-          ></motion.span>
-        </div>
-      </div>
-
-      {/* メンバーグリッド */}
       <motion.div
-        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 max-w-6xl w-full px-4"
+        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
         variants={containerVariants}
       >
-        {members.map((filename) => (
-          <motion.div
-            key={filename}
-            className="flex flex-col items-center"
-            variants={memberCardVariants}
-            initial="initial"
-            whileHover="hover"
-          >
-            {/* 画像＋シルバー縁＋下に青系シャドウ（角丸なし） */}
-            <motion.div
-              className="relative w-full aspect-[3/4] overflow-hidden mb-6"
+        {/* タイトル */}
+        <div className="mb-16">
+          <div className="relative inline-block">
+            <motion.h2
+              className="text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-sky-400 to-blue-300 tracking-wider drop-shadow-lg"
               style={{
-                boxShadow:
-                  "0 8px 0 0 #b0c4de, 0 16px 32px 0 rgba(79,195,247,0.15)",
-                border: "2px solid #b0c4de",
+                letterSpacing: "0.05em",
+                fontFamily: "'Shippori Mincho B1', serif",
               }}
-              variants={imageHoverVariants}
             >
-              <Image
-                src={`/images/0725MDD豊洲LP/A写/個人/${filename}`}
-                alt={extractName(filename)}
-                fill
-                sizes="(max-width: 768px) 50vw, 25vw"
-                className="object-cover"
-                style={{ borderRadius: 0 }}
-              />
-            </motion.div>
-            {/* 名前 */}
-            <motion.div
-              className="text-center font-bold text-slate-800 text-lg tracking-wide mb-4"
-              style={{ fontFamily: "serif" }}
-              variants={nameVariants}
-            >
-              {extractName(filename)}
-            </motion.div>
+              MEMBERS
+            </motion.h2>
+            <motion.span
+              initial={{ width: 0 }}
+              whileInView={{ width: "6rem" }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="block mt-2 h-1 w-24 rounded-full"
+              style={{
+                background: "linear-gradient(90deg, #4fc3f7 0%, #b0c4de 100%)",
+              }}
+            ></motion.span>
+          </div>
+        </div>
 
-            {/* メッセージボタン（後で使用）
-            <motion.button
-              className="px-8 py-2 bg-gradient-to-r from-blue-600 via-sky-400 to-blue-300 text-white font-semibold text-base tracking-wide shadow-md hover:from-blue-700 hover:to-sky-500 transition-all duration-300 border-none"
-              style={{ borderRadius: 0, fontFamily: "serif" }}
-              variants={buttonVariants}
-              whileTap="tap"
-              onClick={() => handleOpenPopup(memberData.find(m => extractName(filename) === m.name)?.id || 0)}
+        {/* メンバーグリッド */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12">
+          {members.map((filename) => (
+            <motion.div
+              key={filename}
+              className="flex flex-col items-center"
+              variants={memberCardVariants}
+              initial="initial"
+              whileHover="hover"
             >
-              メッセージを読む
-            </motion.button> */}
-          </motion.div>
-        ))}
+              {/* 画像＋シルバー縁＋下に青系シャドウ（角丸なし） */}
+              <motion.div
+                className="relative w-full aspect-[3/4] overflow-hidden mb-6"
+                style={{
+                  boxShadow:
+                    "0 8px 0 0 #b0c4de, 0 16px 32px 0 rgba(79,195,247,0.15)",
+                  border: "2px solid #b0c4de",
+                }}
+                variants={imageHoverVariants}
+              >
+                <Image
+                  src={`/images/0725MDD豊洲LP/A写/個人/${filename}`}
+                  alt={extractName(filename)}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover"
+                  style={{ borderRadius: 0 }}
+                />
+              </motion.div>
+              {/* 名前 */}
+              <motion.div
+                className="text-center font-bold text-slate-800 text-lg sm:text-xl tracking-wide mb-4"
+                style={{ fontFamily: "serif" }}
+                variants={nameVariants}
+              >
+                {extractName(filename)}
+              </motion.div>
+
+              {/* メッセージボタン（後で使用）
+              <motion.button
+                className="px-8 py-2 bg-gradient-to-r from-blue-600 via-sky-400 to-blue-300 text-white font-semibold text-base tracking-wide shadow-md hover:from-blue-700 hover:to-sky-500 transition-all duration-300 border-none"
+                style={{ borderRadius: 0, fontFamily: "serif" }}
+                variants={buttonVariants}
+                whileTap="tap"
+                onClick={() => handleOpenPopup(memberData.find(m => extractName(filename) === m.name)?.id || 0)}
+              >
+                メッセージを読む
+              </motion.button> */}
+            </motion.div>
+          ))}
+        </div>
       </motion.div>
 
       {/* メッセージポップアップ（後で使用）
@@ -293,6 +281,6 @@ export default function Message() {
           onClose={handleClosePopup}
         />
       )} */}
-    </motion.section>
+    </section>
   );
 }

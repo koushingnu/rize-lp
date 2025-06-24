@@ -141,7 +141,7 @@ const Ticket = () => {
         "・カメラチケット：顔写真付き身分証による本人確認を実施する場合があります",
         "・撮影チケット：脚立90cm以内／三脚OK／フラッシュ禁止／全編静止画のみ",
         "・撮影素材の転売・無断使用禁止",
-        "・SNS投稿は運営許可が必要（MyDearDarlin’公式XのDMへファイル送付）",
+        "・SNS投稿は運営許可が必要（MyDearDarlin'公式XのDMへファイル送付）",
       ],
     },
   ];
@@ -156,7 +156,7 @@ const Ticket = () => {
       variants={containerVariants}
     >
       <motion.div
-        className="w-full max-w-6xl p-12 flex flex-col items-start relative backdrop-blur-sm"
+        className="w-full max-w-6xl p-6 sm:p-12 flex flex-col items-start relative backdrop-blur-sm mx-4"
         style={{
           background:
             "linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(240,247,250,0.95) 100%)",
@@ -205,13 +205,6 @@ const Ticket = () => {
               style={{ fontFamily: "serif" }}
             >
               MyDearDarlin&apos; フルバンドセットワンマンLIVE『ALL IN the LIVE』
-            </div>
-            <div
-              className="text-sm text-slate-600 mb-4"
-              style={{ fontFamily: "serif" }}
-            >
-              読み：マイディアダーリン フルバンドセットワンマン ライブ オール
-              イン ザ ライブ
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
               <div>
@@ -341,8 +334,8 @@ const Ticket = () => {
             style={{ background: "rgba(255,255,255,0.5)" }}
             variants={fadeInUp}
           >
-            <div className="flex justify-between">
-              <div className="w-40 shrink-0">
+            <div className="flex flex-col lg:flex-row lg:justify-between">
+              <div className="w-full lg:w-40 shrink-0 mb-4 lg:mb-0">
                 <div
                   className="text-lg font-bold whitespace-nowrap bg-clip-text text-transparent bg-gradient-to-r from-blue-700 via-sky-400 to-blue-300"
                   style={{ fontFamily: "serif" }}
@@ -350,13 +343,13 @@ const Ticket = () => {
                   エリアマップ
                 </div>
               </div>
-              <div className="w-[600px] flex justify-end">
+              <div className="w-full lg:w-[600px] flex justify-center lg:justify-end">
                 <Image
                   src="/images/0725MDD豊洲LP/0725エリアマップ-入場順.jpg"
                   alt="エリアマップ"
                   width={600}
                   height={1500}
-                  className="w-auto max-w-[600px] rounded-lg shadow-lg"
+                  className="w-full max-w-[600px] rounded-lg shadow-lg"
                   style={{
                     boxShadow: "0 8px 32px rgba(31, 38, 135, 0.15)",
                   }}
@@ -372,8 +365,8 @@ const Ticket = () => {
             variants={fadeInUp}
           >
             {/* チケット販売情報 */}
-            <div className="flex justify-between">
-              <div className="w-40 shrink-0">
+            <div className="flex flex-col lg:flex-row lg:justify-between">
+              <div className="w-full lg:w-40 shrink-0 mb-4 lg:mb-0">
                 <div
                   className="text-lg font-bold whitespace-nowrap bg-clip-text text-transparent bg-gradient-to-r from-blue-700 via-sky-400 to-blue-300"
                   style={{ fontFamily: "serif" }}
@@ -382,7 +375,7 @@ const Ticket = () => {
                 </div>
               </div>
               <div
-                className="w-[600px] text-base text-slate-700"
+                className="w-full lg:w-[600px] text-base text-slate-700"
                 style={{ fontFamily: "serif" }}
               >
                 <div className="space-y-6">
@@ -482,8 +475,8 @@ const Ticket = () => {
             <div className="w-full h-px bg-gradient-to-r from-blue-100 to-sky-100"></div>
 
             {/* 注意事項 */}
-            <div className="flex justify-between">
-              <div className="w-40 shrink-0">
+            <div className="flex flex-col lg:flex-row lg:justify-between">
+              <div className="w-full lg:w-40 shrink-0 mb-4 lg:mb-0">
                 <div
                   className="text-lg font-bold whitespace-nowrap bg-clip-text text-transparent bg-gradient-to-r from-blue-700 via-sky-400 to-blue-300"
                   style={{ fontFamily: "serif" }}
@@ -492,7 +485,7 @@ const Ticket = () => {
                 </div>
               </div>
               <div
-                className="w-[600px] text-base text-slate-700"
+                className="w-full lg:w-[600px] text-base text-slate-700"
                 style={{ fontFamily: "serif" }}
               >
                 <ul className="list-none space-y-2">
@@ -536,8 +529,8 @@ const Ticket = () => {
             <div className="w-full h-px bg-gradient-to-r from-blue-100 to-sky-100"></div>
 
             {/* お問い合わせ */}
-            <div className="flex justify-between">
-              <div className="w-40 shrink-0">
+            <div className="flex flex-col lg:flex-row lg:justify-between">
+              <div className="w-full lg:w-40 shrink-0 mb-4 lg:mb-0">
                 <div
                   className="text-lg font-bold whitespace-nowrap bg-clip-text text-transparent bg-gradient-to-r from-blue-700 via-sky-400 to-blue-300"
                   style={{ fontFamily: "serif" }}
@@ -546,7 +539,7 @@ const Ticket = () => {
                 </div>
               </div>
               <div
-                className="w-[600px] text-base text-slate-700"
+                className="w-full lg:w-[600px] text-base text-slate-700"
                 style={{ fontFamily: "serif" }}
               >
                 【チケットに関するお問い合わせ】
@@ -559,8 +552,8 @@ const Ticket = () => {
             <div className="w-full h-px bg-gradient-to-r from-blue-100 to-sky-100"></div>
 
             {/* ご来場者様へのお願い */}
-            <div className="flex justify-between">
-              <div className="w-40 shrink-0">
+            <div className="flex flex-col lg:flex-row lg:justify-between">
+              <div className="w-full lg:w-40 shrink-0 mb-4 lg:mb-0">
                 <div
                   className="text-lg font-bold whitespace-nowrap bg-clip-text text-transparent bg-gradient-to-r from-blue-700 via-sky-400 to-blue-300"
                   style={{ fontFamily: "serif", width: "fit-content" }}
@@ -571,7 +564,7 @@ const Ticket = () => {
                 </div>
               </div>
               <div
-                className="w-[600px] text-base text-slate-700"
+                className="w-full lg:w-[600px] text-base text-slate-700"
                 style={{ fontFamily: "serif" }}
               >
                 <ul className="list-none space-y-2">
