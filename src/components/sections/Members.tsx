@@ -186,10 +186,7 @@ export default function Members() {
   }; */
 
   return (
-    <section
-      id="message"
-      className="relative w-full py-24 bg-gradient-to-b from-blue-50 to-white"
-    >
+    <section id="message" className="relative w-full py-24 bg-transparent">
       <motion.div
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
         initial="hidden"
@@ -201,7 +198,7 @@ export default function Members() {
         <div className="mb-16">
           <div className="relative inline-block">
             <motion.h2
-              className="text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-sky-400 to-blue-300 tracking-wider drop-shadow-lg"
+              className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-sky-400 to-blue-300 tracking-wider drop-shadow-lg"
               style={{
                 letterSpacing: "0.05em",
                 fontFamily: "'Shippori Mincho B1', serif",
