@@ -381,19 +381,31 @@ const Ticket = () => {
                 <div className="space-y-6">
                   <div>
                     <div className="font-bold text-blue-800 mb-2">
-                      VIP先行予約
+                      <span className="line-through">VIP先行予約</span>
                     </div>
                     <div className="pl-4">
-                      抽選／お一人様1枚まで／WEB受付
-                      <br />
-                      受付期間：6月11日(水)21:00〜6月19日(木)23:59
-                      <br />
-                      当落発表：6月24日(火)15:00
+                      <span className="line-through">
+                        抽選／お一人様1枚まで／WEB受付
+                        <br />
+                        受付期間：6月11日(水)21:00〜6月19日(木)23:59
+                        <br />
+                        当落発表：6月24日(火)15:00
+                      </span>
                     </div>
                   </div>
                   <div>
                     <div className="font-bold text-blue-800 mb-2">一般販売</div>
                     <div className="space-y-4 pl-4">
+                      <div>
+                        <div className="font-bold text-blue-800">
+                          VIPチケット シーティング【一般販売】
+                        </div>
+                        <div className="pl-4">
+                          先着／お一人様1枚まで／WEB受付
+                          <br />
+                          6月24日(火)20:30〜7月24日(木)23:59
+                        </div>
+                      </div>
                       <div>
                         <div className="font-bold text-blue-800">
                           カメラチケット
