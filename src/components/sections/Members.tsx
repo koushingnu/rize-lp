@@ -239,7 +239,7 @@ export default function Members() {
                 variants={imageHoverVariants}
               >
                 <Image
-                  src={`/images/0725MDD豊洲LP/A写/個人/${filename}`}
+                  src={`images/0725MDD豊洲LP/A写/個人/${filename}`}
                   alt={extractName(filename)}
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"

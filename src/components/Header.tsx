@@ -42,7 +42,7 @@ export default function Header() {
           className="relative w-[220px] h-14 block bg-white/50 backdrop-blur-sm rounded-full px-4"
         >
           <Image
-            src="/images/footer/footer_logo.webp"
+            src="./images/footer/footer_logo.webp"
             alt="MY DEAR DARLIN'"
             fill
             className="object-contain"

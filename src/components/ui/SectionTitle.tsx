@@ -7,10 +7,10 @@ interface SectionTitleProps {
 
 export default function SectionTitle({ title, variant }: SectionTitleProps) {
   const ribbonSrc = {
-    about: "/images/about/about.webp",
-    member: "/images/member/members.webp",
-    ticket: "/images/tike/ticket.webp",
-    goods: "/images/goods/goods.webp",
+    about: "./images/about/about.webp",
+    member: "./images/member/members.webp",
+    ticket: "./images/tike/ticket.webp",
+    goods: "./images/goods/goods.webp",
   }[variant];
 
   return (
@@ -32,4 +32,3 @@ export default function SectionTitle({ title, variant }: SectionTitleProps) {
     </div>
   );
 }
- 

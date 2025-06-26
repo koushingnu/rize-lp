@@ -14,7 +14,7 @@ export default function Hero() {
       >
         <div className="relative w-full h-full flex items-center justify-center">
           <Image
-            src="/images/hero/0725MDD_fullband_flyer_250604.jpg"
+            src="./images/hero/0725MDD_fullband_flyer_250604.jpg"
             alt="MY DEAR DARLIN' 5th ANNIVERSARY LIVE"
             fill
             priority
@@ -61,7 +61,6 @@ export default function Hero() {
             width: 100% !important;
             height: 100% !important;
           }
-        }
         }
       `}</style>
     </section>

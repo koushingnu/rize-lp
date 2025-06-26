@@ -1,20 +1,20 @@
 import type { Metadata } from "next";
-import { Noto_Sans_JP, Shippori_Mincho_B1 } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer";
+import { Noto_Sans_JP, Shippori_Mincho_B1 } from "next/font/google";
 
 const notoSansJP = Noto_Sans_JP({
-  subsets: ["latin"],
   weight: ["400", "700", "900"],
-  variable: "--font-noto-sans-jp",
+  subsets: ["latin"],
   display: "swap",
+  variable: "--font-noto-sans-jp",
 });
 
-const shipporiMincho = Shippori_Mincho_B1({
-  subsets: ["latin"],
+const shipporiMinchoB1 = Shippori_Mincho_B1({
   weight: ["400", "700", "800"],
-  variable: "--font-shippori-mincho",
+  subsets: ["latin"],
   display: "swap",
+  variable: "--font-shippori-mincho-b1",
 });
 
 export const metadata: Metadata = {
@@ -27,12 +27,23 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const basePath =
+    process.env.NODE_ENV === "production" ? "/toyosupit-fullbandsetlive" : "";
+
   return (
     <html
       lang="ja"
-      className={`${notoSansJP.variable} ${shipporiMincho.variable}`}
+      className={`${notoSansJP.variable} ${shipporiMinchoB1.variable}`}
     >
-      <body className="relative min-h-screen bg-transparent font-jp before:content-[''] before:fixed before:inset-0 before:-z-10 before:bg-[url('/images/0725エリアマップ背景.jpg')] before:bg-cover before:bg-center before:bg-no-repeat before:bg-fixed">
+      <body className="relative min-h-screen bg-transparent font-jp">
+        <div className="fixed inset-0 -z-10">
+          <div
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed"
+            style={{
+              backgroundImage: `url('${basePath}/images/0725エリアマップ背景.jpg')`,
+            }}
+          />
+        </div>
         <main>{children}</main>
         <Footer />
       </body>

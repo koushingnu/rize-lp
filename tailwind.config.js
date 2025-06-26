@@ -8,13 +8,15 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#000000",
-        secondary: "#ffffff",
+        primary: "#4fc3f7",
+        secondary: "#b3e5fc",
+        accent: "#0288d1",
       },
       fontFamily: {
-        sans: ["var(--font-inter)", "sans-serif"],
+        jp: ["Noto Sans JP", "sans-serif"],
+        mincho: ["Shippori Mincho B1", "serif"],
       },
     },
   },
-  plugins: [require("@tailwindcss/forms"), require("@tailwindcss/typography")],
+  plugins: [],
 };

@@ -1,16 +1,15 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 
 const fadeInUp = {
-  hidden: { y: 20, opacity: 0 },
+  hidden: { opacity: 0, y: 20 },
   visible: {
-    y: 0,
     opacity: 1,
+    y: 0,
     transition: {
-      duration: 0.5,
+      duration: 0.6,
       ease: "easeOut",
     },
   },
@@ -39,112 +38,112 @@ const containerVariants = {
   },
 };
 
+const tickets = [
+  {
+    id: "vip_seating",
+    title: "VIPシーティング",
+    price: "¥15,000",
+    details: [
+      "・VIPシーティングエリア内自由席、整理番号",
+      "・ドリンク代別途",
+      "・特典付き",
+      "　・当日の終演後特典会優先案内",
+      "　・当日公演のBlu-ray",
+      "　・後日開催の「豊洲PITワンマン開催記念特典会イベント」参加権",
+      "・お一人様1枚まで",
+      "・VIP：顔写真付き身分証による本人確認を実施する場合があります",
+    ],
+  },
+  {
+    id: "vip_standing",
+    title: "VIPスタンディング",
+    price: "¥15,000",
+    details: [
+      "・VIPエリア内自由、整理番号",
+      "・ドリンク代別途",
+      "・特典付き（内容はVIPシーティングと同様）",
+      "・お一人様1枚まで",
+      "・VIP：顔写真付き身分証による本人確認を実施する場合があります",
+    ],
+  },
+  {
+    id: "a_plus_seating",
+    title: "A+チケット シーティング",
+    price: "¥7,500",
+    details: [
+      "・Aチケットエリア内自由席、整理番号",
+      "・ドリンク代別途",
+      "・特典付き",
+      "　・当日公演のBlu-ray",
+      "　・後日開催の特典会参加権",
+      "・お一人様2枚まで",
+    ],
+  },
+  {
+    id: "a_plus_standing",
+    title: "A+チケット スタンディング",
+    price: "¥7,500",
+    details: [
+      "・Aチケットエリア内自由、整理番号",
+      "・ドリンク代別途",
+      "・特典付き（内容はA+シーティングと同様）",
+      "・お一人様2枚まで",
+    ],
+  },
+  {
+    id: "a_seating",
+    title: "Aチケット シーティング",
+    price: "¥3,000",
+    details: [
+      "・Aチケットエリア内自由席、整理番号",
+      "・ドリンク代別途",
+      "・特典付き（特典会参加権）",
+      "・お一人様4枚まで",
+    ],
+  },
+  {
+    id: "a_standing",
+    title: "Aチケット スタンディング",
+    price: "¥3,000",
+    details: [
+      "・Aチケットエリア内自由、整理番号",
+      "・ドリンク代別途",
+      "・特典付き（内容はAチケットシーティングと同様）",
+      "・お一人様4枚まで",
+    ],
+  },
+  {
+    id: "b_ticket",
+    title: "Bチケット",
+    price: "¥500",
+    details: [
+      "・Bチケットエリア内自由、整理番号（スタンディング・シーティングの事前選択不可）",
+      "・ドリンク代別途",
+      "・特典付き（特典会参加権）",
+      "・お一人様4枚まで",
+    ],
+  },
+  {
+    id: "camera",
+    title: "カメラチケット",
+    price: "¥15,000",
+    details: [
+      "・カメラチケットエリア内自由、整理番号",
+      "・ドリンク代別途",
+      "・特典付き",
+      "　・当日公演のBlu-ray",
+      "　・後日開催の特典会参加権",
+      "・お一人様1枚まで",
+      "・カメラチケット：顔写真付き身分証による本人確認を実施する場合があります",
+      "・撮影チケット：脚立90cm以内／三脚OK／フラッシュ禁止／全編静止画のみ",
+      "・撮影素材の転売・無断使用禁止",
+      "・SNS投稿は運営許可が必要（MyDearDarlin'公式XのDMへファイル送付）",
+    ],
+  },
+];
+
 const Ticket = () => {
   const [selectedId, setSelectedId] = React.useState<string | null>(null);
-
-  const tickets = [
-    {
-      id: "vip_seating",
-      title: "VIPシーティング",
-      price: "¥15,000",
-      details: [
-        "・VIPシーティングエリア内自由席、整理番号",
-        "・ドリンク代別途",
-        "・特典付き",
-        "　・当日の終演後特典会優先案内",
-        "　・当日公演のBlu-ray",
-        "　・後日開催の「豊洲PITワンマン開催記念特典会イベント」参加権",
-        "・お一人様1枚まで",
-        "・VIP：顔写真付き身分証による本人確認を実施する場合があります",
-      ],
-    },
-    {
-      id: "vip_standing",
-      title: "VIPスタンディング",
-      price: "¥15,000",
-      details: [
-        "・VIPエリア内自由、整理番号",
-        "・ドリンク代別途",
-        "・特典付き（内容はVIPシーティングと同様）",
-        "・お一人様1枚まで",
-        "・VIP：顔写真付き身分証による本人確認を実施する場合があります",
-      ],
-    },
-    {
-      id: "a_plus_seating",
-      title: "A+チケット シーティング",
-      price: "¥7,500",
-      details: [
-        "・Aチケットエリア内自由席、整理番号",
-        "・ドリンク代別途",
-        "・特典付き",
-        "　・当日公演のBlu-ray",
-        "　・後日開催の特典会参加権",
-        "・お一人様2枚まで",
-      ],
-    },
-    {
-      id: "a_plus_standing",
-      title: "A+チケット スタンディング",
-      price: "¥7,500",
-      details: [
-        "・Aチケットエリア内自由、整理番号",
-        "・ドリンク代別途",
-        "・特典付き（内容はA+シーティングと同様）",
-        "・お一人様2枚まで",
-      ],
-    },
-    {
-      id: "a_seating",
-      title: "Aチケット シーティング",
-      price: "¥3,000",
-      details: [
-        "・Aチケットエリア内自由席、整理番号",
-        "・ドリンク代別途",
-        "・特典付き（特典会参加権）",
-        "・お一人様4枚まで",
-      ],
-    },
-    {
-      id: "a_standing",
-      title: "Aチケット スタンディング",
-      price: "¥3,000",
-      details: [
-        "・Aチケットエリア内自由、整理番号",
-        "・ドリンク代別途",
-        "・特典付き（内容はAチケットシーティングと同様）",
-        "・お一人様4枚まで",
-      ],
-    },
-    {
-      id: "b_ticket",
-      title: "Bチケット",
-      price: "¥500",
-      details: [
-        "・Bチケットエリア内自由、整理番号（スタンディング・シーティングの事前選択不可）",
-        "・ドリンク代別途",
-        "・特典付き（特典会参加権）",
-        "・お一人様4枚まで",
-      ],
-    },
-    {
-      id: "camera",
-      title: "カメラチケット",
-      price: "¥15,000",
-      details: [
-        "・カメラチケットエリア内自由、整理番号",
-        "・ドリンク代別途",
-        "・特典付き",
-        "　・当日公演のBlu-ray",
-        "　・後日開催の特典会参加権",
-        "・お一人様1枚まで",
-        "・カメラチケット：顔写真付き身分証による本人確認を実施する場合があります",
-        "・撮影チケット：脚立90cm以内／三脚OK／フラッシュ禁止／全編静止画のみ",
-        "・撮影素材の転売・無断使用禁止",
-        "・SNS投稿は運営許可が必要（MyDearDarlin'公式XのDMへファイル送付）",
-      ],
-    },
-  ];
 
   return (
     <motion.section
@@ -344,11 +343,9 @@ const Ticket = () => {
                 </div>
               </div>
               <div className="w-full lg:w-[600px] flex justify-center lg:justify-end">
-                <Image
-                  src="/images/0725MDD豊洲LP/0725エリアマップ-入場順.jpg"
+                <img
+                  src="/toyosupit-fullbandsetlive/images/0725MDD豊洲LP/areamap.jpg"
                   alt="エリアマップ"
-                  width={600}
-                  height={1500}
                   className="w-full max-w-[600px] rounded-lg shadow-lg"
                   style={{
                     boxShadow: "0 8px 32px rgba(31, 38, 135, 0.15)",
@@ -476,7 +473,7 @@ const Ticket = () => {
                 href="https://eplus.jp/sf/detail/3533830001?P6=001&P1=0402&P59=1"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block px-16 py-4 bg-gradient-to-r from-blue-500 to-sky-500 hover:from-blue-600 hover:to-sky-600 text-white rounded-lg shadow-lg transition-all duration-300 text-lg font-bold"
+                className="inline-block px-8 sm:px-16 py-4 bg-gradient-to-r from-blue-500 to-sky-500 hover:from-blue-600 hover:to-sky-600 text-white rounded-lg shadow-lg transition-all duration-300 text-base sm:text-lg font-bold whitespace-nowrap"
                 style={{ fontFamily: "serif" }}
               >
                 チケットを購入する

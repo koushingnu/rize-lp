@@ -1,14 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: "export",
   images: {
-    formats: ["image/webp"],
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "images.unsplash.com",
-      },
-    ],
+    unoptimized: true,
   },
+  trailingSlash: true,
+  distDir: "out",
+  basePath: "/toyosupit-fullbandsetlive",
+  assetPrefix: "/toyosupit-fullbandsetlive",
 };
 
 module.exports = nextConfig;

@@ -88,7 +88,7 @@ export default function Footer() {
               className="relative w-[240px] h-[44px] hover:opacity-80 transition-opacity duration-300"
             >
               <Image
-                src="/images/footer/footer_logo.webp"
+                src="images/footer/footer_logo.webp"
                 alt="MY DEAR DARLIN'"
                 fill
                 className="object-contain"
