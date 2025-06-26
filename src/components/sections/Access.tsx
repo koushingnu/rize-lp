@@ -89,17 +89,17 @@ export default function Access() {
           >
             <div className="flex flex-col lg:flex-row lg:justify-between">
               <div className="w-full lg:w-40 shrink-0 mb-4 lg:mb-0">
-                <div
+            <div
                   className="text-lg font-bold whitespace-nowrap bg-clip-text text-transparent bg-gradient-to-r from-blue-700 via-sky-400 to-blue-300"
-                  style={{ fontFamily: "serif" }}
-                >
+              style={{ fontFamily: "serif" }}
+            >
                   会場
                 </div>
-              </div>
-              <div
+            </div>
+            <div
                 className="w-full lg:w-[600px] text-base text-slate-700"
-                style={{ fontFamily: "serif" }}
-              >
+              style={{ fontFamily: "serif" }}
+            >
                 <div className="space-y-4">
                   <div>
                     <div className="font-bold text-blue-800 mb-2">豊洲PIT</div>
@@ -110,7 +110,7 @@ export default function Access() {
                     </div>
                   </div>
                 </div>
-              </div>
+            </div>
             </div>
           </motion.div>
 
@@ -122,7 +122,7 @@ export default function Access() {
           >
             <div className="flex flex-col lg:flex-row lg:justify-between">
               <div className="w-full lg:w-40 shrink-0 mb-4 lg:mb-0">
-                <div
+            <div
                   className="text-lg font-bold whitespace-nowrap bg-clip-text text-transparent bg-gradient-to-r from-blue-700 via-sky-400 to-blue-300"
                   style={{ fontFamily: "serif" }}
                 >
@@ -131,8 +131,8 @@ export default function Access() {
               </div>
               <div
                 className="w-full lg:w-[600px] text-base text-slate-700"
-                style={{ fontFamily: "serif" }}
-              >
+              style={{ fontFamily: "serif" }}
+            >
                 <div className="space-y-6">
                   <div>
                     <div className="font-bold text-blue-800 mb-2">
@@ -151,7 +151,7 @@ export default function Access() {
                     <div className="pl-4">豊洲駅（7番出口）徒歩15分</div>
                   </div>
                 </div>
-              </div>
+            </div>
             </div>
           </motion.div>
 
@@ -163,17 +163,17 @@ export default function Access() {
           >
             <div className="flex flex-col lg:flex-row lg:justify-between">
               <div className="w-full lg:w-40 shrink-0 mb-4 lg:mb-0">
-                <div
+            <div
                   className="text-lg font-bold whitespace-nowrap bg-clip-text text-transparent bg-gradient-to-r from-blue-700 via-sky-400 to-blue-300"
-                  style={{ fontFamily: "serif" }}
-                >
+              style={{ fontFamily: "serif" }}
+            >
                   駐車場
                 </div>
               </div>
-              <div
+                  <div
                 className="w-full lg:w-[600px] text-base text-slate-700"
-                style={{ fontFamily: "serif" }}
-              >
+                    style={{ fontFamily: "serif" }}
+                  >
                 <ul className="list-none space-y-2">
                   <li className="flex items-start">
                     <span className="text-blue-400 mr-2">•</span>
@@ -188,8 +188,8 @@ export default function Access() {
                     公共交通機関でのご来場を推奨しています
                   </li>
                 </ul>
-              </div>
-            </div>
+                  </div>
+                </div>
           </motion.div>
 
           {/* 地図 */}
@@ -200,10 +200,10 @@ export default function Access() {
           >
             <div className="flex flex-col lg:flex-row lg:justify-between">
               <div className="w-full lg:w-40 shrink-0 mb-4 lg:mb-0">
-                <div
+            <div
                   className="text-lg font-bold whitespace-nowrap bg-clip-text text-transparent bg-gradient-to-r from-blue-700 via-sky-400 to-blue-300"
-                  style={{ fontFamily: "serif" }}
-                >
+              style={{ fontFamily: "serif" }}
+            >
                   地図
                 </div>
               </div>

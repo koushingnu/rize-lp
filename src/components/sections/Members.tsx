@@ -201,7 +201,7 @@ export default function Members() {
               className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-sky-400 to-blue-300 tracking-wider drop-shadow-lg"
               style={{
                 letterSpacing: "0.05em",
-                fontFamily: "'Shippori Mincho B1', serif",
+                fontFamily: "serif",
               }}
             >
               MEMBERS
@@ -245,6 +245,7 @@ export default function Members() {
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   className="object-cover"
                   style={{ borderRadius: 0 }}
+                  priority
                 />
               </motion.div>
               {/* 名前 */}
@@ -255,17 +256,6 @@ export default function Members() {
               >
                 {extractName(filename)}
               </motion.div>
-
-              {/* メッセージボタン（後で使用）
-              <motion.button
-                className="px-8 py-2 bg-gradient-to-r from-blue-600 via-sky-400 to-blue-300 text-white font-semibold text-base tracking-wide shadow-md hover:from-blue-700 hover:to-sky-500 transition-all duration-300 border-none"
-                style={{ borderRadius: 0, fontFamily: "serif" }}
-                variants={buttonVariants}
-                whileTap="tap"
-                onClick={() => handleOpenPopup(memberData.find(m => extractName(filename) === m.name)?.id || 0)}
-              >
-                メッセージを読む
-              </motion.button> */}
             </motion.div>
           ))}
         </div>

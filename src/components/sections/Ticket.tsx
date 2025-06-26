@@ -368,14 +368,14 @@ const Ticket = () => {
             <div className="flex flex-col lg:flex-row lg:justify-between">
               <div className="w-full lg:w-40 shrink-0 mb-4 lg:mb-0">
                 <div
-                  className="text-lg font-bold whitespace-nowrap bg-clip-text text-transparent bg-gradient-to-r from-blue-700 via-sky-400 to-blue-300"
+                  className="text-[16px] sm:text-lg font-bold whitespace-nowrap bg-clip-text text-transparent bg-gradient-to-r from-blue-700 via-sky-400 to-blue-300"
                   style={{ fontFamily: "serif" }}
                 >
                   チケット販売情報
                 </div>
               </div>
               <div
-                className="w-full lg:w-[600px] text-base text-slate-700"
+                className="w-full lg:w-[600px] text-[14px] sm:text-base text-slate-700"
                 style={{ fontFamily: "serif" }}
               >
                 <div className="space-y-6">
@@ -400,7 +400,7 @@ const Ticket = () => {
                         <div className="font-bold text-blue-800">
                           VIPチケット シーティング【一般販売】
                         </div>
-                        <div className="pl-4">
+                        <div className="pl-4 text-[14px] sm:text-base">
                           先着／お一人様1枚まで／WEB受付
                           <br />
                           6月24日(火)20:30〜7月24日(木)23:59
@@ -476,7 +476,7 @@ const Ticket = () => {
                 href="https://eplus.jp/sf/detail/3533830001?P6=001&P1=0402&P59=1"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block px-16 py-4 bg-gradient-to-r from-blue-500 to-sky-500 hover:from-blue-600 hover:to-sky-600 text-white rounded-lg shadow-lg transition-all duration-300 text-lg font-bold"
+                className="inline-block px-8 sm:px-16 py-3 sm:py-4 bg-gradient-to-r from-blue-500 to-sky-500 hover:from-blue-600 hover:to-sky-600 text-white rounded-lg shadow-lg transition-all duration-300 text-[15px] sm:text-lg font-bold whitespace-nowrap"
                 style={{ fontFamily: "serif" }}
               >
                 チケットを購入する

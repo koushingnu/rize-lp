@@ -53,7 +53,7 @@ export default function Introduction() {
       >
         <motion.div className="w-full" variants={fadeInUp}>
           <motion.p
-            className="text-left text-slate-700 text-base md:text-lg font-light leading-relaxed tracking-wide mb-12 break-words text-balance"
+            className="text-left text-slate-700 text-[14px] sm:text-base md:text-lg font-light leading-relaxed tracking-wide mb-12"
             style={{ fontFamily: "serif", letterSpacing: "0.04em" }}
             variants={fadeInUp}
           >
@@ -61,20 +61,13 @@ export default function Introduction() {
             <br />
             <br />
             『ALL IN the
-            LIVE』には、“すべてをこのライブに賭ける“という想いを込めています。
+            LIVE』には、"すべてをこのライブに賭ける"という想いを込めています。
             <br />
             <br />
-            “LIVE”には、“ライブ“と”生きる“というふたつの意味を重ね、
-            <br />
-            これまで積み重ねてきた日々やメンバー、応援してくださっている皆様の想い、
-            <br />
-            そのすべてをこの1日に込めて、
-            <br />
-            MyDearDarlin&#39;が最高のライブをお届けします。
+            "LIVE"には、"ライブ"と"生きる"というふたつの意味を重ね、これまで積み重ねてきた日々やメンバー、応援してくださっている皆様の想い、そのすべてをこの1日に込めて、MyDearDarlin&#39;が最高のライブをお届けします。
             <br />
             <br />
-            メンバーもファンもひとつになって、
-            悔いなく全力で、この瞬間を楽しみましょう！
+            メンバーもファンもひとつになって、悔いなく全力で、この瞬間を楽しみましょう！
           </motion.p>
           <motion.div
             className="flex items-start"

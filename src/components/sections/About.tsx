@@ -34,11 +34,11 @@ export default function About() {
     >
       <motion.div
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-100px" }}
-        variants={containerVariants}
-      >
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-100px" }}
+      variants={containerVariants}
+    >
         {/* タイトル */}
         <motion.div
           className="relative inline-block mb-16"
@@ -46,10 +46,10 @@ export default function About() {
         >
           <h2
             className="text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-sky-400 to-blue-300 tracking-wider drop-shadow-lg"
-            style={{
+        style={{
               letterSpacing: "0.05em",
               fontFamily: "'Shippori Mincho B1', serif",
-            }}
+        }}
           >
             ABOUT
           </h2>
