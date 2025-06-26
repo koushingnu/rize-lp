@@ -219,7 +219,7 @@ export default function Members() {
         </div>
 
         {/* メンバーグリッド */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 xs:gap-6 sm:gap-8 sm:gap-12">
           {members.map((filename) => (
             <motion.div
               key={filename}
@@ -230,7 +230,7 @@ export default function Members() {
             >
               {/* 画像＋シルバー縁＋下に青系シャドウ（角丸なし） */}
               <motion.div
-                className="relative w-full aspect-[3/4] overflow-hidden mb-6"
+                className="relative w-full aspect-[3/4] overflow-hidden mb-4 xs:mb-6"
                 style={{
                   boxShadow:
                     "0 8px 0 0 #b0c4de, 0 16px 32px 0 rgba(79,195,247,0.15)",
@@ -250,7 +250,7 @@ export default function Members() {
               </motion.div>
               {/* 名前 */}
               <motion.div
-                className="text-center font-bold text-slate-800 text-lg sm:text-xl tracking-wide mb-4"
+                className="text-center font-bold text-slate-800 text-[14px] xs:text-[15px] sm:text-lg md:text-xl tracking-wide mb-4"
                 style={{ fontFamily: "serif" }}
                 variants={nameVariants}
               >
