@@ -77,6 +77,15 @@ const MessagePopup: React.FC<MessagePopupProps> = ({
                 </a>
               </div>
             </div>
+            <div className="mt-6">
+              <Image
+                src={`/images/writeMessage/${memberData.id}.PNG`}
+                alt={`${memberData.name}からの直筆メッセージ`}
+                width={400}
+                height={200}
+                className="w-full h-auto object-contain"
+              />
+            </div>
           </div>
         </div>
       </div>

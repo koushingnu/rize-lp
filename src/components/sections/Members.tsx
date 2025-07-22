@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-/* import { useState } from "react";
-import MessagePopup from "../ui/MessagePopup"; */
+import { useState } from "react";
+import MessagePopup from "../ui/MessagePopup";
 
 const members = [
   "01東條ゆりあ_2505.jpg",
@@ -62,42 +62,19 @@ const imageHoverVariants = {
   },
 };
 
-const nameVariants = {
+// メッセージ機能用のアニメーション設定
+const buttonVariants = {
   initial: {
-    y: 0,
-    opacity: 0.8,
-    transition: {
-      duration: 0.2,
-      ease: "easeOut",
-    },
-  },
-  hover: {
-    y: -5,
-    opacity: 1,
-    transition: {
-      duration: 0.2,
-      ease: "easeOut",
-    },
-  },
-};
-
-// メッセージ機能用のアニメーション設定（後で使用）
-/* const buttonVariants = {
-  initial: {
-    y: 0,
-    opacity: 0.9,
     scale: 1,
     transition: {
-      duration: 0.2,
+      duration: 0.03,
       ease: "easeOut",
     },
   },
   hover: {
-    y: 5,
-    opacity: 1,
     scale: 1.05,
     transition: {
-      duration: 0.2,
+      duration: 0.01,
       ease: "easeOut",
     },
   },
@@ -107,9 +84,9 @@ const nameVariants = {
       duration: 0.1,
     },
   },
-}; */
+};
 
-/* メッセージ機能用のデータ（後で使用）
+// メッセージ機能用のデータ
 const memberData = [
   {
     id: 1,
@@ -171,11 +148,11 @@ const memberData = [
       tiktok: "https://tiktok.com/@example6",
     },
   },
-]; */
+];
 
 export default function Members() {
-  // メッセージ機能用のstate（後で使用）
-  /* const [selectedMember, setSelectedMember] = useState<number | null>(null);
+  // メッセージ機能用のstate
+  const [selectedMember, setSelectedMember] = useState<number | null>(null);
 
   const handleOpenPopup = (memberId: number) => {
     setSelectedMember(memberId);
@@ -183,7 +160,7 @@ export default function Members() {
 
   const handleClosePopup = () => {
     setSelectedMember(null);
-  }; */
+  };
 
   return (
     <section id="message" className="relative w-full py-24 bg-transparent">
@@ -220,23 +197,24 @@ export default function Members() {
 
         {/* メンバーグリッド */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 xs:gap-6 sm:gap-8 sm:gap-12">
-          {members.map((filename) => (
+          {members.map((filename, index) => (
             <motion.div
               key={filename}
               className="flex flex-col items-center"
               variants={memberCardVariants}
-              initial="initial"
-              whileHover="hover"
             >
               {/* 画像＋シルバー縁＋下に青系シャドウ（角丸なし） */}
               <motion.div
-                className="relative w-full aspect-[3/4] overflow-hidden mb-4 xs:mb-6"
+                className="relative w-full aspect-[3/4] overflow-hidden mb-4 xs:mb-6 cursor-pointer"
                 style={{
                   boxShadow:
                     "0 8px 0 0 #b0c4de, 0 16px 32px 0 rgba(79,195,247,0.15)",
                   border: "2px solid #b0c4de",
                 }}
                 variants={imageHoverVariants}
+                initial="initial"
+                whileHover="hover"
+                onClick={() => handleOpenPopup(index + 1)}
               >
                 <Image
                   src={`/images/0725MDD豊洲LP/A写/個人/${filename}`}
@@ -249,25 +227,37 @@ export default function Members() {
                 />
               </motion.div>
               {/* 名前 */}
-              <motion.div
-                className="text-center font-bold text-slate-800 text-[14px] xs:text-[15px] sm:text-lg md:text-xl tracking-wide mb-4"
+              <div
+                className="text-center font-bold text-slate-800 text-[16px] xs:text-[18px] sm:text-xl md:text-2xl tracking-wide mb-4 cursor-pointer"
                 style={{ fontFamily: "serif" }}
-                variants={nameVariants}
+                onClick={() => handleOpenPopup(index + 1)}
               >
                 {extractName(filename)}
-              </motion.div>
+              </div>
+              {/* メッセージボタン */}
+              <motion.button
+                className="px-8 py-3 bg-gradient-to-r from-blue-600 to-sky-400 text-white text-base rounded-full shadow-md hover:shadow-lg transition-all duration-300"
+                variants={buttonVariants}
+                initial="initial"
+                whileHover="hover"
+                whileTap="tap"
+                onClick={() => handleOpenPopup(index + 1)}
+              >
+                メッセージを見る
+              </motion.button>
             </motion.div>
           ))}
         </div>
       </motion.div>
 
-      {/* メッセージポップアップ（後で使用）
+      {/* メッセージポップアップ */}
       {selectedMember && (
         <MessagePopup
-          member={memberData.find(m => m.id === selectedMember)!}
+          isOpen={true}
+          memberData={memberData.find((m) => m.id === selectedMember)!}
           onClose={handleClosePopup}
         />
-      )} */}
+      )}
     </section>
   );
 }

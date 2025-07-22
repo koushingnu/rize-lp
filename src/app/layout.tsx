@@ -18,8 +18,10 @@ const shipporiMincho = Shippori_Mincho_B1({
 });
 
 export const metadata: Metadata = {
-  title: "MY DEAR DARLIN' 5th ANNIVERSARY LIVE",
-  description: "MY DEAR DARLIN' 5周年記念ライブ特設サイト",
+  title:
+    "MyDearDarlin’フルバンドセットワンマン LIVE『ALL IN the LIVE』@豊洲PIT",
+  description:
+    "MyDearDarlin’フルバンドセットワンマン LIVE『ALL IN the LIVE』@豊洲PIT",
 };
 
 export default function RootLayout({

@@ -61,7 +61,7 @@ const Ticket = () => {
     {
       id: "vip_standing",
       title: "VIPスタンディング",
-      price: "¥15,000",
+      price: "Sold Out",
       details: [
         "・VIPエリア内自由、整理番号",
         "・ドリンク代別途",
@@ -232,98 +232,158 @@ const Ticket = () => {
           </motion.div>
 
           {/* チケット料金（アコーディオン） */}
-          <motion.div className="w-full" variants={fadeInUp}>
+          <motion.div className="w-full" variants={fadeInUp} layout>
             <div
               className="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-700 via-sky-400 to-blue-300 mb-4 ml-6"
               style={{ fontFamily: "serif" }}
             >
               チケット料金
             </div>
-            <div className="space-y-4">
+            <div className="flex flex-col space-y-4">
               {tickets.map((ticket) => (
-                <div key={ticket.id} className="mb-4">
+                <motion.div
+                  key={ticket.id}
+                  layout
+                  transition={{
+                    layout: {
+                      duration: 0.3,
+                      ease: "easeOut",
+                    },
+                  }}
+                >
                   <button
                     onClick={() =>
+                      ticket.id !== "vip_standing" &&
                       setSelectedId(selectedId === ticket.id ? null : ticket.id)
                     }
-                    className="w-full px-6 py-4 text-left rounded-lg bg-gradient-to-r from-blue-200 to-sky-200 hover:from-blue-300 hover:to-sky-300 transition-colors duration-300 shadow-sm"
+                    className={`w-full px-6 py-4 text-left rounded-lg transition-colors duration-300 shadow-sm ${
+                      ticket.id === "vip_standing"
+                        ? "bg-gray-200 cursor-not-allowed relative overflow-hidden"
+                        : "bg-gradient-to-r from-blue-200 to-sky-200 hover:from-blue-300 hover:to-sky-300"
+                    }`}
                   >
                     <div className="flex justify-between items-center">
                       <div
-                        className="inline-block text-blue-700 text-lg font-bold px-4 py-2 rounded"
+                        className={`inline-block text-lg font-bold ${
+                          ticket.id === "vip_standing"
+                            ? "text-gray-600"
+                            : "text-blue-700"
+                        }`}
                         style={{ fontFamily: "serif" }}
                       >
                         {ticket.title}
                       </div>
                       <div className="flex items-center">
-                        <span
-                          className="text-xl font-bold text-blue-700"
-                          style={{
-                            fontFamily: "'Shippori Mincho B1', serif",
-                            fontWeight: 700,
-                          }}
-                        >
-                          {ticket.price}
-                        </span>
-                        <motion.div
-                          className="ml-4 text-blue-700"
-                          animate={{
-                            rotate: selectedId === ticket.id ? 180 : 0,
-                          }}
-                        >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
+                        {ticket.id === "vip_standing" ? (
+                          <span
+                            className="text-gray-600 font-bold text-lg"
+                            style={{
+                              fontFamily: "'Shippori Mincho B1', serif",
+                              fontWeight: 700,
+                            }}
                           >
-                            <path d="m6 9 6 6 6-6" />
-                          </svg>
-                        </motion.div>
+                            SOLD OUT
+                          </span>
+                        ) : (
+                          <>
+                            <span
+                              className="text-xl font-bold text-blue-700"
+                              style={{
+                                fontFamily: "'Shippori Mincho B1', serif",
+                                fontWeight: 700,
+                              }}
+                            >
+                              {ticket.price}
+                            </span>
+                            <motion.div
+                              className="ml-4 text-blue-700"
+                              animate={{
+                                rotate: selectedId === ticket.id ? 180 : 0,
+                              }}
+                              transition={{
+                                duration: 0.3,
+                                ease: "easeOut",
+                              }}
+                            >
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeWidth="2"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                              >
+                                <path d="m6 9 6 6 6-6" />
+                              </svg>
+                            </motion.div>
+                          </>
+                        )}
                       </div>
                     </div>
                   </button>
                   <AnimatePresence>
-                    {selectedId === ticket.id && (
-                      <motion.div
-                        initial={{ height: 0 }}
-                        animate={{ height: "auto" }}
-                        exit={{ height: 0 }}
-                        transition={{ duration: 0.3 }}
-                        className="overflow-hidden"
-                      >
-                        <div className="px-6 py-4 bg-gradient-to-r from-blue-100 to-sky-100 backdrop-blur-sm">
-                          <ul
-                            className="list-none space-y-2 text-[15px] text-blue-900 pl-8"
-                            style={{ fontFamily: "serif" }}
-                          >
-                            {ticket.details.map((detail, index) => (
-                              <li key={index} className="flex items-start">
-                                {detail}
+                    {selectedId === ticket.id &&
+                      ticket.id !== "vip_standing" && (
+                        <motion.div
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{
+                            height: "auto",
+                            opacity: 1,
+                            transition: {
+                              height: {
+                                duration: 0.3,
+                                ease: "easeOut",
+                              },
+                              opacity: {
+                                duration: 0.2,
+                              },
+                            },
+                          }}
+                          exit={{
+                            height: 0,
+                            opacity: 0,
+                            transition: {
+                              height: {
+                                duration: 0.3,
+                                ease: "easeOut",
+                              },
+                              opacity: {
+                                duration: 0.1,
+                              },
+                            },
+                          }}
+                          className="overflow-hidden"
+                        >
+                          <div className="px-6 py-4 mt-2 bg-gradient-to-r from-blue-100 to-sky-100 backdrop-blur-sm rounded-lg">
+                            <ul
+                              className="list-none space-y-2 text-[15px] text-blue-900 pl-8"
+                              style={{ fontFamily: "serif" }}
+                            >
+                              {ticket.details.map((detail, index) => (
+                                <li key={index} className="flex items-start">
+                                  {detail}
+                                </li>
+                              ))}
+                              <li className="mt-6 flex justify-center">
+                                <a
+                                  href="https://eplus.jp/sf/detail/3533830001?P6=001&P1=0402&P59=1"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="inline-block px-12 py-3 bg-gradient-to-r from-blue-500 to-sky-500 hover:from-blue-600 hover:to-sky-600 text-white rounded-lg shadow-lg transition-all duration-300 text-base font-bold"
+                                  style={{ fontFamily: "serif" }}
+                                >
+                                  チケットを購入
+                                </a>
                               </li>
-                            ))}
-                            <li className="mt-6 flex justify-center">
-                              <a
-                                href="https://eplus.jp/sf/detail/3533830001?P6=001&P1=0402&P59=1"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-block px-12 py-3 bg-gradient-to-r from-blue-500 to-sky-500 hover:from-blue-600 hover:to-sky-600 text-white rounded-lg shadow-lg transition-all duration-300 text-base font-bold"
-                                style={{ fontFamily: "serif" }}
-                              >
-                                チケットを購入
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                      </motion.div>
-                    )}
+                            </ul>
+                          </div>
+                        </motion.div>
+                      )}
                   </AnimatePresence>
-                </div>
+                </motion.div>
               ))}
             </div>
           </motion.div>
@@ -404,6 +464,14 @@ const Ticket = () => {
                           先着／お一人様1枚まで／WEB受付
                           <br />
                           6月24日(火)20:30〜7月24日(木)23:59
+                          <br />
+                          ◆特典付き◆
+                          <br />
+                          　・当日の終演後特典会優先案内
+                          <br />
+                          　・当日公演のBlu-ray
+                          <br />
+                          　・7月27日（日）開催の「豊洲PITワンマン開催記念特典会イベント」参加権
                         </div>
                       </div>
                       <div>
@@ -414,6 +482,14 @@ const Ticket = () => {
                           先着／お一人様1枚まで／WEB受付
                           <br />
                           6月10日(火)20:00〜7月24日23:59
+                          <br />
+                          ◆特典付き◆
+                          <br />
+                          　・当日の終演後特典会優先案内
+                          <br />
+                          　・当日公演のBlu-ray
+                          <br />
+                          　・7月27日（日）開催の「豊洲PITワンマン開催記念特典会イベント」参加権
                         </div>
                       </div>
                       <div>
@@ -424,6 +500,14 @@ const Ticket = () => {
                           先着／お一人様2枚まで／WEB受付
                           <br />
                           6月24日(火)21:00〜7月24日23:59
+                          <br />
+                          ◆特典付き◆
+                          <br />
+                          　・当日の終演後特典会優先案内
+                          <br />
+                          　・当日公演のBlu-ray
+                          <br />
+                          　・7月27日（日）開催の「豊洲PITワンマン開催記念特典会イベント」参加権
                         </div>
                       </div>
                       <div>
@@ -434,6 +518,14 @@ const Ticket = () => {
                           先着／お一人様2枚まで／WEB受付
                           <br />
                           6月24日(火)21:30〜7月24日23:59
+                          <br />
+                          ◆特典付き◆
+                          <br />
+                          　・当日の終演後特典会優先案内
+                          <br />
+                          　・当日公演のBlu-ray
+                          <br />
+                          　・7月27日（日）開催の「豊洲PITワンマン開催記念特典会イベント」参加権
                         </div>
                       </div>
                       <div>
@@ -444,6 +536,15 @@ const Ticket = () => {
                           先着／お一人様4枚まで／WEB受付
                           <br />
                           6月25日(水)21:30〜7月24日23:59
+                          <br />
+                          <br />
+                          ◆特典付き◆
+                          <br />
+                          　・当日の終演後特典会優先案内
+                          <br />
+                          　・当日公演のBlu-ray
+                          <br />
+                          　・7月27日（日）開催の「豊洲PITワンマン開催記念特典会イベント」参加権
                         </div>
                       </div>
                       <div>
@@ -454,6 +555,14 @@ const Ticket = () => {
                           先着／お一人様4枚まで／WEB受付
                           <br />
                           6月25日(水)22:00〜7月24日23:59
+                          <br />
+                          ◆特典付き◆
+                          <br />
+                          　・当日の終演後特典会優先案内
+                          <br />
+                          　・当日公演のBlu-ray
+                          <br />
+                          　・7月27日（日）開催の「豊洲PITワンマン開催記念特典会イベント」参加権
                         </div>
                       </div>
                       <div>
@@ -462,6 +571,14 @@ const Ticket = () => {
                           先着／お一人様4枚まで／WEB受付
                           <br />
                           6月30日(月)21:00〜7月24日23:59
+                          <br />
+                          ◆特典付き◆
+                          <br />
+                          　・当日の終演後特典会優先案内
+                          <br />
+                          　・当日公演のBlu-ray
+                          <br />
+                          　・7月27日（日）開催の「豊洲PITワンマン開催記念特典会イベント」参加権
                         </div>
                       </div>
                     </div>
@@ -481,6 +598,67 @@ const Ticket = () => {
               >
                 チケットを購入する
               </a>
+            </div>
+
+            {/* 区切り線 */}
+            <div className="w-full h-px bg-gradient-to-r from-blue-100 to-sky-100"></div>
+
+            {/* 後日特典会情報 */}
+            <div className="flex flex-col lg:flex-row lg:justify-between">
+              <div className="w-full lg:w-40 shrink-0 mb-4 lg:mb-0">
+                <div
+                  className="text-lg font-bold whitespace-nowrap bg-clip-text text-transparent bg-gradient-to-r from-blue-700 via-sky-400 to-blue-300"
+                  style={{ fontFamily: "serif" }}
+                >
+                  後日特典会情報
+                </div>
+              </div>
+              <div
+                className="w-full lg:w-[600px] text-base text-slate-700 space-y-4"
+                style={{ fontFamily: "serif" }}
+              >
+                <div>
+                  <div className="font-bold text-blue-800 mb-2">
+                    7月27日（日）開催「豊洲PITワンマン開催記念特典会イベント」
+                  </div>
+                  <div className="pl-4">
+                    MyDearDarlin&apos; フルバンドセットワンマンLIVE『ALL IN the
+                    LIVE』のチケットをお持ちの皆様を対象とした特典会イベントを実施します。
+                  </div>
+                </div>
+                <div>
+                  <div className="font-bold text-blue-800 mb-2">会場</div>
+                  <div className="pl-4">
+                    バトゥール東京【BATUR TOKYO】
+                    <br />
+                    （〒160-0021 東京都新宿区歌舞伎町2-4-10 KDX 東新宿ビル1階）
+                    <br />
+                    <a
+                      href="https://www.andativa-batur.com/tokyo/party/enkai/access.html"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:text-blue-800 underline"
+                    >
+                      https://www.andativa-batur.com/tokyo/party/enkai/access.html
+                    </a>
+                  </div>
+                </div>
+                <div>
+                  <div className="font-bold text-blue-800 mb-2">詳細情報</div>
+                  <div className="pl-4">
+                    実施スケジュール／詳細はこちら！
+                    <br />
+                    <a
+                      href="https://ameblo.jp/mydear-darlin/entry-12913173172.html"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:text-blue-800 underline"
+                    >
+                      https://ameblo.jp/mydear-darlin/entry-12913173172.html
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* 区切り線 */}
