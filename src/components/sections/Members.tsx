@@ -139,7 +139,7 @@ const memberData = [
       twitter: "https://twitter.com/mydear2020_nana",
       instagram:
         "https://www.instagram.com/hamada_nana7?igsh=cDlnZnpzZXRrc20=/",
-      tiktok: "https://tiktok.com/",
+      tiktok: "https://www.tiktok.com/@hamada_nana7?_t=ZS-8yEqPhzMAFz&_r=1",
     },
   },
   {
