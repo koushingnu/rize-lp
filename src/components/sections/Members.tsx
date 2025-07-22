@@ -93,9 +93,9 @@ const memberData = [
     name: "東條 ゆりあ",
     nameEn: "Tojo Yuria",
     social: {
-      twitter: "https://twitter.com/example1",
-      instagram: "https://instagram.com/example1",
-      tiktok: "https://tiktok.com/@example1",
+      twitter: "https://twitter.com/mydear2020_yuri",
+      instagram: "https://www.instagram.com/yurichoco___",
+      tiktok: "https://www.tiktok.com/@yurichoco___",
     },
   },
   {
@@ -103,9 +103,11 @@ const memberData = [
     name: "咲真 ゆか",
     nameEn: "Sakuma Yuka",
     social: {
-      twitter: "https://twitter.com/example2",
-      instagram: "https://instagram.com/example2",
-      tiktok: "https://tiktok.com/@example2",
+      twitter: "https://twitter.com/mydear2020_yuka",
+      instagram:
+        "https://www.instagram.com/__sakumarumorimori?igsh=MTE1anRoeGtuZXltNA==/",
+      tiktok:
+        "https://www.tiktok.com/@__sakumarumorimori?_t=ZS-8yEKmJTq60V&_r=1",
     },
   },
   {
@@ -113,9 +115,9 @@ const memberData = [
     name: "是枝 優美",
     nameEn: "Koreeda Yumi",
     social: {
-      twitter: "https://twitter.com/example3",
-      instagram: "https://instagram.com/example3",
-      tiktok: "https://tiktok.com/@example3",
+      twitter: "https://twitter.com/mydear2020_yumi",
+      instagram: "https://www.instagram.com/yu_mi1226?igsh=Z24zOGI2ZGpucHI3/",
+      tiktok: "https://www.tiktok.com/@mydear2020_yumi?_t=ZS-8yEKw9970M6&_r=1",
     },
   },
   {
@@ -123,9 +125,10 @@ const memberData = [
     name: "夢実 あすか",
     nameEn: "Yumemi Asuka",
     social: {
-      twitter: "https://twitter.com/example4",
-      instagram: "https://instagram.com/example4",
-      tiktok: "https://tiktok.com/@example4",
+      twitter: "https://twitter.com/mydear2020_yume",
+      instagram:
+        "https://www.instagram.com/asukadayou213?igsh=MTYwZGlmNGRvM3lu",
+      tiktok: "https://www.tiktok.com/@asukadayou213?_t=ZS-8yEKy22jcrY&_r=1",
     },
   },
   {
@@ -133,9 +136,10 @@ const memberData = [
     name: "濱田 菜々",
     nameEn: "Hamada Nana",
     social: {
-      twitter: "https://twitter.com/example5",
-      instagram: "https://instagram.com/example5",
-      tiktok: "https://tiktok.com/@example5",
+      twitter: "https://twitter.com/mydear2020_nana",
+      instagram:
+        "https://www.instagram.com/hamada_nana7?igsh=cDlnZnpzZXRrc20=/",
+      tiktok: "https://tiktok.com/",
     },
   },
   {
@@ -143,9 +147,9 @@ const memberData = [
     name: "広山 楓",
     nameEn: "Hiroyama Kaede",
     social: {
-      twitter: "https://twitter.com/example6",
-      instagram: "https://instagram.com/example6",
-      tiktok: "https://tiktok.com/@example6",
+      twitter: "https://twitter.com/mydear2020_hiro",
+      instagram: "https://www.instagram.com/maple.1018/",
+      tiktok: "https://www.tiktok.com/@kaedeofhiroyama?_t=ZS-8yEL10AP85P&_r=1",
     },
   },
 ];
