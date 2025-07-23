@@ -405,7 +405,7 @@ const Ticket = () => {
               </div>
               <div className="w-full lg:w-[600px] flex justify-center lg:justify-end">
                 <Image
-                  src="/images/0725MDD豊洲LP/0725エリアマップ-入場順.jpg"
+                  src="/images_new/ticket/0725_area_map_entrance_order.jpg"
                   alt="エリアマップ"
                   width={600}
                   height={1500}

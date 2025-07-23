@@ -12,8 +12,8 @@
 
 body {
   color: var(--color-text);
-  background: url("/images/0725エリアマップ背景.jpg") no-repeat center center
-    fixed;
+  background: url("/images_new/ticket/0725_area_map_bg.jpg") no-repeat center
+    center fixed;
   background-size: cover;
   font-feature-settings: "palt";
   letter-spacing: 0.02em;

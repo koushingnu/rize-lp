@@ -42,11 +42,11 @@ export default function Header() {
           className="relative w-[220px] h-14 block bg-white/50 backdrop-blur-sm rounded-full px-4"
         >
           <Image
-            src="/images/footer/footer_logo.webp"
-            alt="MY DEAR DARLIN'"
-            fill
+            src="/images_new/footer/footer_logo.webp"
+            alt="Footer Logo"
+            width={120}
+            height={40}
             className="object-contain"
-            style={{ filter: "brightness(0)" }}
           />
         </button>
       </div>

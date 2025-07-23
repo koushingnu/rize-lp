@@ -34,7 +34,9 @@ export default function RootLayout({
       lang="ja"
       className={`${notoSansJP.variable} ${shipporiMincho.variable}`}
     >
-      <body className="relative min-h-screen bg-transparent font-jp before:content-[''] before:fixed before:inset-0 before:-z-10 before:bg-[url('/images/0725エリアマップ背景.jpg')] before:bg-cover before:bg-center before:bg-no-repeat before:bg-fixed">
+      <body
+        className={`${notoSansJP.variable} font-sans relative before:content-[''] before:absolute before:inset-0 before:-z-10 before:bg-[url('/images_new/ticket/0725_area_map_bg.jpg')] before:bg-cover before:bg-center before:bg-no-repeat before:bg-fixed`}
+      >
         <main>{children}</main>
         <Footer />
       </body>

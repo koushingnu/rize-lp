@@ -36,7 +36,7 @@ const MessagePopup: React.FC<MessagePopupProps> = ({
         <div className="flex flex-col md:flex-row gap-8">
           <div className="flex-1">
             <Image
-              src={`/images/squre_message/${memberData.id}.jpg`}
+              src={`/images_new/message/square/${memberData.id}.jpg`}
               alt={`Message from ${memberData.name}`}
               width={500}
               height={500}
@@ -79,11 +79,11 @@ const MessagePopup: React.FC<MessagePopupProps> = ({
             </div>
             <div className="mt-6">
               <Image
-                src={`/images/writeMessage/${memberData.id}.PNG`}
-                alt={`${memberData.name}からの直筆メッセージ`}
+                src={`/images_new/message/write/${memberData.id}.PNG`}
+                alt={`Handwritten message from ${memberData.name}`}
                 width={400}
-                height={200}
-                className="w-full h-auto object-contain"
+                height={300}
+                className="w-full h-auto mt-4"
               />
             </div>
           </div>

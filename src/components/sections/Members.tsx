@@ -6,18 +6,25 @@ import { useState } from "react";
 import MessagePopup from "../ui/MessagePopup";
 
 const members = [
-  "01東條ゆりあ_2505.jpg",
-  "02咲真ゆか_2505.jpg",
-  "03是枝優美_2505.jpg",
-  "04夢実あすか_2505.jpg",
-  "05濱田菜々_2505.jpg",
-  "06広山楓_2505.jpg",
+  "01_tojo_yuria_2505.jpg",
+  "02_sakuma_yuka_2505.jpg",
+  "03_koreeda_yumi_2505.jpg",
+  "04_yumemi_asuka_2505.jpg",
+  "05_hamada_nana_2505.jpg",
+  "06_hiroyama_kaede_2505.jpg",
 ];
 
 function extractName(filename: string) {
-  // 01東條ゆりあ_2505.jpg → 東條ゆりあ
-  const match = filename.match(/^\d+(.+?)_\d+\.jpg$/);
-  return match ? match[1] : filename;
+  // 01_tojo_yuria_2505.jpg → 東條ゆりあ
+  const nameMap: { [key: string]: string } = {
+    "01_tojo_yuria_2505.jpg": "東條ゆりあ",
+    "02_sakuma_yuka_2505.jpg": "咲真ゆか",
+    "03_koreeda_yumi_2505.jpg": "是枝優美",
+    "04_yumemi_asuka_2505.jpg": "夢実あすか",
+    "05_hamada_nana_2505.jpg": "濱田菜々",
+    "06_hiroyama_kaede_2505.jpg": "広山楓",
+  };
+  return nameMap[filename] || filename;
 }
 
 const containerVariants = {
@@ -221,7 +228,7 @@ export default function Members() {
                 onClick={() => handleOpenPopup(index + 1)}
               >
                 <Image
-                  src={`/images/0725MDD豊洲LP/A写/個人/${filename}`}
+                  src={`/images_new/members/${filename}`}
                   alt={extractName(filename)}
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"

@@ -88,11 +88,11 @@ export default function Footer() {
               className="relative w-[240px] h-[44px] hover:opacity-80 transition-opacity duration-300"
             >
               <Image
-                src="/images/footer/footer_logo.webp"
-                alt="MY DEAR DARLIN'"
-                fill
+                src="/images_new/footer/footer_logo.webp"
+                alt="Footer Logo"
+                width={150}
+                height={50}
                 className="object-contain"
-                style={{ filter: "brightness(0)" }}
               />
             </button>
           </div>
