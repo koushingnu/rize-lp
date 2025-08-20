@@ -228,7 +228,7 @@ export default function Members() {
                 onClick={() => handleOpenPopup(index + 1)}
               >
                 <Image
-                  src={`/images_new/members/${filename}`}
+                  src={`/toyosupit-fullbandsetlive/members/${filename}`}
                   alt={extractName(filename)}
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"

@@ -405,7 +405,7 @@ const Ticket = () => {
               </div>
               <div className="w-full lg:w-[600px] flex justify-center lg:justify-end">
                 <Image
-                  src="/images_new/ticket/0725_area_map_entrance_order.jpg"
+                  src="/toyosupit-fullbandsetlive/ticket/0725_area_map_entrance_order.jpg"
                   alt="エリアマップ"
                   width={600}
                   height={1500}
@@ -664,7 +664,87 @@ const Ticket = () => {
             {/* 区切り線 */}
             <div className="w-full h-px bg-gradient-to-r from-blue-100 to-sky-100"></div>
 
-            {/* 注意事項 */}
+            {/* 販売スケジュール */}
+            <div className="flex flex-col lg:flex-row lg:justify-between">
+              <div className="w-full lg:w-40 shrink-0 mb-4 lg:mb-0">
+                <div
+                  className="text-lg font-bold whitespace-nowrap bg-clip-text text-transparent bg-gradient-to-r from-blue-700 via-sky-400 to-blue-300"
+                  style={{ fontFamily: "serif" }}
+                >
+                  販売スケジュール
+                </div>
+              </div>
+              <div
+                className="w-full lg:w-[600px] text-base text-slate-700"
+                style={{ fontFamily: "serif" }}
+              >
+                <ul className="list-none space-y-2">
+                  <li>15:00〜　SPくじ事前販売</li>
+                  <li>15:30〜　グッズ・チェキ券事前販売</li>
+                  <li>17:30〜　開場</li>
+                </ul>
+              </div>
+            </div>
+
+            {/* 区切り線 */}
+            <div className="w-full h-px bg-gradient-to-r from-blue-100 to-sky-100"></div>
+
+            {/* グッズ販売詳細情報 */}
+            <div className="flex flex-col lg:flex-row lg:justify-between">
+              <div className="w-full lg:w-40 shrink-0 mb-4 lg:mb-0">
+                <div
+                  className="text-lg font-bold whitespace-nowrap bg-clip-text text-transparent bg-gradient-to-r from-blue-700 via-sky-400 to-blue-300"
+                  style={{ fontFamily: "serif" }}
+                >
+                  グッズ販売詳細情報
+                </div>
+              </div>
+              <div
+                className="w-full lg:w-[600px] text-base text-slate-700"
+                style={{ fontFamily: "serif" }}
+              >
+                <div className="space-y-4">
+                  <Image
+                    src="/toyosupit-fullbandsetlive/ticket/S__2433070_0.jpg"
+                    alt="スペシャルくじ"
+                    width={600}
+                    height={400}
+                    className="w-full rounded-lg shadow-lg"
+                  />
+                  <Image
+                    src="/toyosupit-fullbandsetlive/ticket/S__2433068_0.jpg"
+                    alt="オフィシャルグッズ"
+                    width={600}
+                    height={400}
+                    className="w-full rounded-lg shadow-lg"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* チケット購入ボタン */}
+            <div className="flex flex-col items-center space-y-4 w-full">
+              <div
+                className="text-[14px] xs:text-[15px] sm:text-base md:text-lg font-bold text-blue-800"
+                style={{ fontFamily: "'Shippori Mincho B1', serif" }}
+              >
+                スケジュール／ラインナップなど
+              </div>
+              <a
+                href="https://ameblo.jp/mydear-darlin/entry-12918355685.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block px-6 sm:px-8 md:px-16 py-3 sm:py-4 bg-gradient-to-r from-blue-500 to-sky-500 hover:from-blue-600 hover:to-sky-600 text-white rounded-lg shadow-lg transition-all duration-300 text-[14px] xs:text-[15px] sm:text-base md:text-lg font-bold whitespace-nowrap"
+                style={{ fontFamily: "serif" }}
+              >
+                詳細はこちら！
+              </a>
+            </div>
+
+            {/* 区切り線 */}
+            <div className="w-full h-px bg-gradient-to-r from-blue-100 to-sky-100"></div>
+
+            {/* ご注意事項 */}
             <div className="flex flex-col lg:flex-row lg:justify-between">
               <div className="w-full lg:w-40 shrink-0 mb-4 lg:mb-0">
                 <div
