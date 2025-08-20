@@ -557,7 +557,7 @@ const Ticket = () => {
                   className="text-lg font-bold whitespace-nowrap bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 via-yellow-400 to-yellow-300"
                   style={{ fontFamily: "serif" }}
                 >
-                  販売スケジュール
+                  全体スケジュール
                 </div>
               </div>
               <div
@@ -570,7 +570,11 @@ const Ticket = () => {
                   <li>19:00〜　開演</li>
                   <li>19:00-21:00　LIVE</li>
                   <li>21:20-22:20　終演後特典会</li>
+                  <li>
+                    ※LIVEでは新メンバー・美怜寿莉亜がプレデビュー。終演後特典会にも参加いたします。
+                  </li>
                   <li>※別会場にて延長特典会を予定しております。</li>
+                  <li>※咲真のみ、別会場にて延長特典会を予定しております。</li>
                 </ul>
               </div>
             </div>

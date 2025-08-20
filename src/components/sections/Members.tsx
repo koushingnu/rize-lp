@@ -6,8 +6,8 @@ import { useState } from "react";
 import MessagePopup from "../ui/MessagePopup";
 
 const members = [
-  "01_tojo_yuria_2505.jpg",
   "02_sakuma_yuka_2505.jpg",
+  "01_tojo_yuria_2505.jpg",
   "03_koreeda_yumi_2505.jpg",
   "04_yumemi_asuka_2505.jpg",
   "05_hamada_nana_2505.jpg",
@@ -17,8 +17,8 @@ const members = [
 function extractName(filename: string) {
   // 01_tojo_yuria_2505.jpg → 東條ゆりあ
   const nameMap: { [key: string]: string } = {
-    "01_tojo_yuria_2505.jpg": "東條ゆりあ",
     "02_sakuma_yuka_2505.jpg": "咲真ゆか",
+    "01_tojo_yuria_2505.jpg": "東條ゆりあ",
     "03_koreeda_yumi_2505.jpg": "是枝優美",
     "04_yumemi_asuka_2505.jpg": "夢実あすか",
     "05_hamada_nana_2505.jpg": "濱田菜々",
@@ -97,16 +97,6 @@ const buttonVariants = {
 const memberData = [
   {
     id: 1,
-    name: "東條 ゆりあ",
-    nameEn: "Tojo Yuria",
-    social: {
-      twitter: "https://twitter.com/mydear2020_yuri",
-      instagram: "https://www.instagram.com/yurichoco___",
-      tiktok: "https://www.tiktok.com/@yurichoco___",
-    },
-  },
-  {
-    id: 2,
     name: "咲真 ゆか",
     nameEn: "Sakuma Yuka",
     social: {
@@ -115,6 +105,16 @@ const memberData = [
         "https://www.instagram.com/__sakumarumorimori?igsh=MTE1anRoeGtuZXltNA==/",
       tiktok:
         "https://www.tiktok.com/@__sakumarumorimori?_t=ZS-8yEKmJTq60V&_r=1",
+    },
+  },
+  {
+    id: 2,
+    name: "東條 ゆりあ",
+    nameEn: "Tojo Yuria",
+    social: {
+      twitter: "https://twitter.com/mydear2020_yuri",
+      instagram: "https://www.instagram.com/yurichoco___",
+      tiktok: "https://www.tiktok.com/@yurichoco___",
     },
   },
   {
