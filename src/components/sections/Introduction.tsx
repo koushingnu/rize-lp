@@ -75,7 +75,7 @@ export default function Introduction() {
             variants={fadeInUp}
           >
             <Image
-              src="/images_new/logo/logo_bl.png"
+              src="/yukasakuma-grad0904/logo/logo_bl.png"
               alt="MY DEAR DARLIN' ロゴ"
               width={180}
               height={54}

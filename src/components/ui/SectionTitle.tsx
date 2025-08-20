@@ -26,10 +26,9 @@ export default function SectionTitle({ title, variant }: SectionTitleProps) {
         />
       </div>
       {/* タイトル */}
-      <h2 className="font-bold text-[28px] tracking-wider text-[#666666] -mt-8">
+      <h2 className="font-bold text-[28px] tracking-wider text-gray-700 -mt-8">
         {title}
       </h2>
     </div>
   );
 }
- 

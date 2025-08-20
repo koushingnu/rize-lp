@@ -42,7 +42,7 @@ export default function Header() {
           className="relative w-[220px] h-14 block bg-white/50 backdrop-blur-sm rounded-full px-4"
         >
           <Image
-            src="/images_new/footer/footer_logo.webp"
+            src="/yukasakuma-grad0904/footer/footer_logo.webp"
             alt="Footer Logo"
             width={120}
             height={40}
@@ -58,17 +58,17 @@ export default function Header() {
         aria-label="メニュー"
       >
         <span
-          className={`w-8 h-[3px] bg-[#4fc3f7] rounded-full transition-all duration-300 ${
+          className={`w-8 h-[3px] bg-[#FFD54F] rounded-full transition-all duration-300 ${
             isOpen ? "rotate-45 translate-y-[13px]" : ""
           }`}
         />
         <span
-          className={`w-8 h-[3px] bg-[#4fc3f7] rounded-full transition-all duration-300 ${
+          className={`w-8 h-[3px] bg-[#FFD54F] rounded-full transition-all duration-300 ${
             isOpen ? "opacity-0 scale-0" : "scale-100"
           }`}
         />
         <span
-          className={`w-8 h-[3px] bg-[#4fc3f7] rounded-full transition-all duration-300 ${
+          className={`w-8 h-[3px] bg-[#FFD54F] rounded-full transition-all duration-300 ${
             isOpen ? "-rotate-45 -translate-y-[13px]" : ""
           }`}
         />
@@ -91,7 +91,7 @@ export default function Header() {
               <button
                 onClick={() => handleClick(item.href)}
                 style={{ fontFamily: "var(--font-shippori-mincho)" }}
-                className="block text-2xl font-[700] tracking-widest text-[#4fc3f7] hover:text-[#0288d1] transition-all duration-300"
+                className="block text-2xl font-[700] tracking-widest text-[#FFD54F] hover:text-[#FFC107] transition-all duration-300"
               >
                 {item.name}
               </button>

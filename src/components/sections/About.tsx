@@ -30,33 +30,33 @@ export default function About() {
   return (
     <section
       id="about"
-      className="relative w-full py-24 overflow-hidden bg-gradient-to-b from-white to-blue-50"
+      className="relative w-full py-24 overflow-hidden bg-gradient-to-b from-white to-yellow-50"
     >
       <motion.div
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, margin: "-100px" }}
-      variants={containerVariants}
-    >
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+        variants={containerVariants}
+      >
         {/* タイトル */}
         <motion.div
           className="relative inline-block mb-16"
           variants={itemVariants}
         >
           <h2
-            className="text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-sky-400 to-blue-300 tracking-wider drop-shadow-lg"
-        style={{
+            className="text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 via-yellow-400 to-yellow-300 tracking-wider drop-shadow-lg"
+            style={{
               letterSpacing: "0.05em",
               fontFamily: "'Shippori Mincho B1', serif",
-        }}
+            }}
           >
             ABOUT
           </h2>
           <span
             className="block mt-2 h-1 w-24 rounded-full"
             style={{
-              background: "linear-gradient(90deg, #4fc3f7 0%, #b0c4de 100%)",
+              background: "linear-gradient(90deg, #ffca28 0%, #ffd54f 100%)",
             }}
           ></span>
         </motion.div>
@@ -69,7 +69,7 @@ export default function About() {
             variants={itemVariants}
           >
             <Image
-              src="/images/about/about.webp"
+              src="/yukasakuma-grad0904/about/about.webp"
               alt="About Image"
               fill
               className="object-cover rounded-lg shadow-xl"
@@ -93,7 +93,7 @@ export default function About() {
             </p>
             <div className="pt-6">
               <motion.button
-                className="inline-block px-8 py-3 bg-gradient-to-r from-blue-600 to-sky-400 text-white text-lg font-medium rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
+                className="inline-block px-8 py-3 bg-gradient-to-r from-yellow-500 to-amber-500 text-white text-lg font-medium rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => {

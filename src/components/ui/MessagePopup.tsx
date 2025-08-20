@@ -36,7 +36,7 @@ const MessagePopup: React.FC<MessagePopupProps> = ({
         <div className="flex flex-col md:flex-row gap-8">
           <div className="flex-1">
             <Image
-              src={`/images_new/message/square/${memberData.id}.jpg`}
+              src={`/yukasakuma-grad0904/message/square/${memberData.id}.jpg`}
               alt={`Message from ${memberData.name}`}
               width={500}
               height={500}
@@ -63,7 +63,7 @@ const MessagePopup: React.FC<MessagePopupProps> = ({
                   href={memberData.social.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-700 hover:text-pink-500"
+                  className="text-gray-700 hover:text-yellow-500"
                 >
                   <FaInstagram size={24} />
                 </a>
@@ -79,7 +79,7 @@ const MessagePopup: React.FC<MessagePopupProps> = ({
             </div>
             <div className="mt-6">
               <Image
-                src={`/images_new/message/write/${memberData.id}.PNG`}
+                src={`/yukasakuma-grad0904/message/write/${memberData.id}.PNG`}
                 alt={`Handwritten message from ${memberData.name}`}
                 width={400}
                 height={300}

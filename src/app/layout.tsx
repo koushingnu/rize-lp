@@ -18,10 +18,8 @@ const shipporiMincho = Shippori_Mincho_B1({
 });
 
 export const metadata: Metadata = {
-  title:
-    "MyDearDarlin’フルバンドセットワンマン LIVE『ALL IN the LIVE』@豊洲PIT",
-  description:
-    "MyDearDarlin’フルバンドセットワンマン LIVE『ALL IN the LIVE』@豊洲PIT",
+  title: "咲真ゆか卒業ライブ@EX THEATER ROPPONGI",
+  description: "9/4開催 MyDearDarlin'咲真ゆか卒業ライブ@EX THEATER ROPPONGI",
 };
 
 export default function RootLayout({

@@ -1,5 +1,5 @@
 import Hero from "@/components/sections/Hero";
-import Introduction from "@/components/sections/Introduction";
+// import Introduction from "@/components/sections/Introduction";
 // import Movie from "@/components/sections/Movie";
 import Message from "@/components/sections/Members";
 import Ticket from "@/components/sections/Ticket";
@@ -13,7 +13,7 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <Introduction />
+        {/* <Introduction /> */}
         <Message />
         <Ticket />
         <Access />

@@ -9,40 +9,40 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        pink: {
-          50: "#FFF5F6",
-          100: "#FFE6E8",
-          200: "#FFD1D6",
-          300: "#FFB6BE",
-          400: "#FF8FA0",
-          500: "#FF6B82",
-          600: "#FF4764",
-          700: "#FF234B",
-          800: "#FF0037",
-          900: "#DB002F",
+        yellow: {
+          50: "#FFFDF5",
+          100: "#FFF9E6",
+          200: "#FFF3CC",
+          300: "#FFECB3",
+          400: "#FFE082",
+          500: "#FFD54F",
+          600: "#FFCA28",
+          700: "#FFC107",
+          800: "#FFB300",
+          900: "#FF9800",
         },
         idol: {
-          light: "#FFE6E8", // 最も薄いピンク（背景用）
-          lighter: "#FFD1D6", // 薄いピンク
-          primary: "#FFB6BE", // メインのピンク
-          secondary: "#FF8FA0", // セカンダリーピンク
-          accent: "#FF6B82", // アクセントピンク
-          dark: "#FF4764", // 濃いピンク
+          light: "#FFF9E6", // 最も薄い黄色（背景用）
+          lighter: "#FFF3CC", // 薄い黄色
+          primary: "#FFECB3", // メインの黄色
+          secondary: "#FFE082", // セカンダリー黄色
+          accent: "#FFD54F", // アクセント黄色
+          dark: "#FFCA28", // 濃い黄色
         },
         background: {
-          main: "#FFF5F6", // メイン背景（最も薄いピンク）
+          main: "#FFFDF5", // メイン背景（最も薄い黄色）
           secondary: "#FFFFFF", // 白背景
-          accent: "#FFE6E8", // アクセント背景
+          accent: "#FFF9E6", // アクセント背景
         },
         text: {
           primary: "#4A4A4A", // メインテキスト（ダークグレー）
           secondary: "#757575", // セカンダリーテキスト
-          accent: "#FF4764", // アクセントテキスト
+          accent: "#FFC107", // アクセントテキスト
         },
         border: {
-          light: "#FFD1DC", // 薄いピンク
-          main: "#FFB6C1", // メインのピンク
-          dark: "#DB7093", // 濃いピンク
+          light: "#FFF3CC", // 薄い黄色
+          main: "#FFECB3", // メインの黄色
+          dark: "#FFD54F", // 濃い黄色
         },
       },
       fontFamily: {
@@ -63,12 +63,12 @@ const config: Config = {
         "2xl": "2rem",
       },
       boxShadow: {
-        soft: "0 4px 6px -1px rgba(255, 107, 130, 0.1), 0 2px 4px -1px rgba(255, 107, 130, 0.06)",
-        card: "0 10px 15px -3px rgba(255, 107, 130, 0.1), 0 4px 6px -2px rgba(255, 107, 130, 0.05)",
+        soft: "0 4px 6px -1px rgba(255, 213, 79, 0.1), 0 2px 4px -1px rgba(255, 213, 79, 0.06)",
+        card: "0 10px 15px -3px rgba(255, 213, 79, 0.1), 0 4px 6px -2px rgba(255, 213, 79, 0.05)",
       },
       backgroundImage: {
-        "gradient-pink": "linear-gradient(135deg, #FFB6BE 0%, #FF8FA0 100%)",
-        "gradient-light": "linear-gradient(135deg, #FFE6E8 0%, #FFD1D6 100%)",
+        "gradient-yellow": "linear-gradient(135deg, #FFE082 0%, #FFD54F 100%)",
+        "gradient-light": "linear-gradient(135deg, #FFF9E6 0%, #FFF3CC 100%)",
         "gradient-overlay":
           "linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.7) 100%)",
       },

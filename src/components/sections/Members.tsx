@@ -186,7 +186,7 @@ export default function Members() {
         <div className="mb-16">
           <div className="relative inline-block">
             <motion.h2
-              className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-sky-400 to-blue-300 tracking-wider drop-shadow-lg"
+              className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 via-yellow-400 to-yellow-300 tracking-wider drop-shadow-lg"
               style={{
                 letterSpacing: "0.05em",
                 fontFamily: "serif",
@@ -200,7 +200,7 @@ export default function Members() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="block mt-2 h-1 w-24 rounded-full"
               style={{
-                background: "linear-gradient(90deg, #4fc3f7 0%, #b0c4de 100%)",
+                background: "linear-gradient(90deg, #ffca28 0%, #ffd54f 100%)",
               }}
             ></motion.span>
           </div>
@@ -219,8 +219,8 @@ export default function Members() {
                 className="relative w-full aspect-[3/4] overflow-hidden mb-4 xs:mb-6 cursor-pointer"
                 style={{
                   boxShadow:
-                    "0 8px 0 0 #b0c4de, 0 16px 32px 0 rgba(79,195,247,0.15)",
-                  border: "2px solid #b0c4de",
+                    "0 8px 0 0 #ffd54f, 0 16px 32px 0 rgba(255,213,79,0.15)",
+                  border: "2px solid #ffd54f",
                 }}
                 variants={imageHoverVariants}
                 initial="initial"
@@ -228,7 +228,7 @@ export default function Members() {
                 onClick={() => handleOpenPopup(index + 1)}
               >
                 <Image
-                  src={`/images_new/members/${filename}`}
+                  src={`/yukasakuma-grad0904/members/${filename}`}
                   alt={extractName(filename)}
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -247,7 +247,7 @@ export default function Members() {
               </div>
               {/* メッセージボタン */}
               <motion.button
-                className="px-8 py-3 bg-gradient-to-r from-blue-600 to-sky-400 text-white text-base rounded-full shadow-md hover:shadow-lg transition-all duration-300"
+                className="px-8 py-3 bg-gradient-to-r from-yellow-500 to-amber-500 text-white text-base rounded-full shadow-md hover:shadow-lg transition-all duration-300"
                 variants={buttonVariants}
                 initial="initial"
                 whileHover="hover"

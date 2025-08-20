@@ -77,7 +77,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-gradient-to-r from-blue-100 via-sky-50 to-blue-100 py-12 border-t border-sky-100">
+    <footer className="bg-gradient-to-r from-yellow-100 via-amber-50 to-yellow-100 py-12 border-t border-yellow-100">
       <div className="max-w-[1800px] mx-auto px-4 md:px-8 lg:px-16 xl:px-0">
         <div className="flex flex-col md:flex-row md:justify-between md:items-start">
           {/* 左側のコンテンツ */}
@@ -88,7 +88,7 @@ export default function Footer() {
               className="relative w-[240px] h-[44px] hover:opacity-80 transition-opacity duration-300"
             >
               <Image
-                src="/images_new/footer/footer_logo.webp"
+                src="/yukasakuma-grad0904/footer/footer_logo.webp"
                 alt="Footer Logo"
                 width={150}
                 height={50}
